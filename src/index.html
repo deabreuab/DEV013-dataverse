@@ -1,11 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>DATAVERSE</title>
+</head>
+<body>
+  
+  <header>
+    <h1>
+      Tarjetas Animal Crossing
+    </h1>
+  </header>
+
+  <main>
+    <label for="name">USUARIO</label>
+    <input type="search" name="name" id="user">
+    <button type="button">BORRAR</button>
+    
+    <h2>Personajes</h2>
+    
+    <section>
+      <label for="order">ORDENAR</label><!--CHECAR BIEN-->
+      <select name="name" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
+        <option value="asc">A-Z</option> <!--tiene 2 option uno asc y otro desc-->
+        <option value="desc">Z-A</option>
+      </select><!--para ordenar la data-->
+    </section>
+    
+    <section data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
+      <label for="filter">FILTROS POR ESPECIE</label>
+      <select name="5" id="5">
+        <option value="species">todos</option>
+        <option value="species">Tigre</option><!--los option tendran el atributo value y el valor del filtro si es por type "fire"(<value="fire"> fire)-->
+        <option value="species">Perro</option>
+        <option value="species">Ardilla</option>
+        <option value="species">Pollo</option>
+        <option value="species">Ratón</option>
+      </select> 
+      <!--<p>FILTROS</p>
+      <input type="checkbox" name="1" id="1">
+      <label for="">Especies</label>
+      <input type="checkbox" name="2" id="2">
+      <label for="">Género</label>
+      <input type="checkbox" name="3" id="3">
+      <label for="personalidad">Personalidad</label>
+      <input type="checkbox" name="4" id="4">
+      <label for="">Signo zodiacal</label>
+      <button type="button">FILTRAR</button>
+      <select name="" id="">
+        <option value="tigre">Tigre</option>
+        <option value="perro">Perro</option>
+        <option value="ardilla">ardilla</option>
+        <option value="pollo">pollo</option>
+        <option value="raton">raton</option>
+      </select>--><!--para filtra la data-->
+      <button type="button" data-testid="button-clear">LIMPIAR</button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
+    </section>
+
+    <nav id="root">
+      <ul>
+        <li class="card rolf" itemscope itemtype="https://schema.org/"> 
+          <img src="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" alt="tigerRolf">
+          <!--<img itemprop="imageUrl" src="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" alt="tigerRolf"/>
+           <a href="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" itemprop="imageUrl">Ver más</a>-->
+          <span itemprop="name">Rolf</span>
+          <span itemprop="species">tigre</span>
+          <span itemprop="personality">gruñon</span>
+          <span itemprop="gender">masculino</span>
+          <span itemprop="zodiacSignOne">leo</span> 
+          <span itemprop="catchphraseTwo">¡grrrr!</span> 
+          <span itemprop="birthdayThree">22 de Agosto</span>
+        </li>
+        <li itemprop="imageUrl" class="card bree"> <img src="https://dodo.ac/np/images/thumb/1/12/Bree_NH.png/398px-Bree_NH.png" alt="mouseBree"> </li>
+        <li itemprop="name" class="card leonardo"> <img src="https://dodo.ac/np/images/thumb/0/0a/Leonardo_NH.png/800px-Leonardo_NH.png" alt="tigerLeonardo"></li>
+        <li itemprop="name" class="card rod"> <img src="https://dodo.ac/np/images/e/ea/Rod_NH.png" alt="mouseRod"></li>
+        <li itemprop="name" class="card sally"> <img src="https://dodo.ac/np/images/thumb/a/a3/Sally_NH.png/501px-Sally_NH.png" alt="squirrelSally"></li>
+        <li itemprop="name" class="card rizzo"> <img src="https://dodo.ac/np/images/6/69/Rizzo_NH.png" alt="mouseRizzo"></li>
+        <li itemprop="name" class="card ken"> <img src="https://dodo.ac/np/images/e/e0/Ken_NH.png" alt="chickenKen"></li>
+        <li itemprop="name" class="card bones"> <img src="https://dodo.ac/np/images/thumb/2/2b/Bones_NH.png/150px-Bones_NH.png" alt="dogBones"></li>
+        <li itemprop="name" class="card biskit"> <img src="https://dodo.ac/np/images/thumb/7/78/Biskit_NH.png/150px-Biskit_NH.png" alt="dogBiskit"></li>
+        <li itemprop="name" class="card goose"> <img src="https://dodo.ac/np/images/9/91/Goose_NH.png" alt="chickenGoose"></li>
+        <li itemprop="name" class="card claudia"> <img src="https://dodo.ac/np/images/thumb/d/d6/Claudia_NH.png/320px-Claudia_NH.png" alt="tigerClaudia"></li>
+        <li itemprop="name" class="card bea"> <img src="https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png" alt="dogBea"></li>
+      </ul>
+    </nav>
+  </main>
+
+<!---->
+<!---->
+<!---->
+
+<!--
+    <section>
+      <select name="6" id="6">
+        <option value="">todos</option>
+        <option value="dulce">dulce</option>
+        <option value="altanera">altanera</option>
+        <option value="deportiva">deportiva</option>
+        <option value="gruñona">gruñona</option>
+        <option value="perezosa">perezosa</option>
+      </select> 
+    </section>
+    <section>
+      <select name="7" id="7">
+        <option value="">todos</option>
+        <option value="leo">leo</option>
+        <option value="virgo">virgo</option>
+        <option value="libra">libra</option>
+        <option value="tauro">tauro</option>
+        <option value="aries">aries</option>
+      </select> 
+      <select name="8" id="8">
+        <option value="todos"></option>
+        <option value="mujer">mujer</option>
+        <option value="hombre">hombre</option>
+      </select>
+    </section>
+  -->
+  <!--
+  <h2>WIKINOOK</h2>
+  <div>
+    <P>Bienvenido a la wikinook, a continuación te explicaremos de que trata</P>
+    <button type="button">Continuar</button>
+    <button type="button">Saltar</button>
+  </div>
+  <div>
+    <h2 hidden>WIKINOOK</h2>
+    <P hidden>Aquí podrás encontrar diferentes vecinos de Animal Crossing y conocerlos mucho mejor</P>
+    <button type="button">Continuar</button>
+  </div>
+  <div>
+    <p hidden>Visualizarás a tus vecinos preferidos en tarjetas que guardan su informació</p>
+    <figure hidden><img src="https://areajugones.sport.es/wp-content/uploads/2020/09/cartas-amiibo-animal-crossing-2.jpg" alt="tajetas animal Crossing" ></figure>
+  </div>
+  <div hidden>
+    <label for="filtros">PERSONALIDAD</label>
+    <input type="checkbox" name="check" id="check"> Dulce
+    <input type="checkbox" name="check1" id="check1"> Altanera
+    <input type="checkbox" name="check2" id="check2"> Gruñona
+    <input type="checkbox" name="check3" id="check3"> Deportiva
+    <input type="checkbox" name="check4" id="check4"> perezosa
+    <input type="checkbox" name="check5" id="check5"> Esnob
+  </div>
+  <div hidden>
+    <label for="especie">ESPECIE</label>
+    <input type="checkbox" name="check" id="check"> Perro
+    <input type="checkbox" name="check1" id="check1"> Gato
+    <input type="checkbox" name="check2" id="check2"> Pollo
+    <input type="checkbox" name="check3" id="check3"> Ardilla
+    <input type="checkbox" name="check4" id="check4"> Ratón
+    <p>Y además podrás filtrarlos por especie, personalidad y hasta signo zodiacal</p>
+  </div>
+  <div hidden>
+    <h2>WIKINOOK</h2>
+    <p>¡Ahora si! ¿Puedes brindarnos tu nombre antes de comenzar? Te registraremos en un segundo...</p>
+    <input type="text" name="name" id="name" placeholder="Nombre">
+    <button type="button" >COMENZAR</button>
+
+  </div>
+-->
+ <!--
+
+    <header id="header" class="header">
+      <h1 id="title" class="title">TITULO</h1>
+    </header >
+    <main id="root">
+      <h2>Animal Crossing Personajes</h2>
+
+      <form action="name">
+        <fieldset>
+          <legend>Nombre de usuario:</legend>
+          <label for="nameComplete">Nombre</label>
+          <input type="text" name="" id="nameComplete" value=""/>
+          <button type="button">Enviar</button>
+        </fieldset>
+      </form>
+
+        <fieldset>
+          <legend>Personajes</legend>
+          <label for="">NOMBRE</label>
+          <input type="" name="" id="" value="">
+        </fieldset>
+      </form>
+        <input type="radio" name="" id="">
+        <label for=""></label>
+
+      <label for="">
+        <input type="search" name="" id="">
+        <button data-testid="button-clear">Clear</button>
+      </label>-->
+    <footer>
+        REALIZADO POR BARBARA Y DANILU
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
