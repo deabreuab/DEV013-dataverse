@@ -1,0 +1,9 @@
+@media (min-width: 1200px) {
+    body {
+      font-size: 18px;
+      background-color:beige;}
+
+    p {
+        font-size: 18px;
+    }
+}
