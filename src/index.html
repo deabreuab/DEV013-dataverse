@@ -4,20 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleTablet.css">
+  <link rel="stylesheet" href="styleLaptop.css">
+  <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
+  
   <title>DATAVERSE</title>
 </head>
 <body>
-  
-  <header>
+  <header >
     <h1>
       Tarjetas Animal Crossing
     </h1>
   </header>
-
   <main>
-    <label for="name">USUARIO</label>
-    <input type="search" name="name" id="user">
-    <button type="button">BORRAR</button>
+  <article class="contentVisible" hidden="hidden" >
+  <h2>WIKINOOK</h2>
+    <p>Bienvenido a la wikinook, a continuación te explicaremos de que trata</p> <!--ME FALTA OCULTAR ESTE APARTADO-->
+    <button type="button" id="continue">
+      <a href="#sectionOne">
+        <ion-icon name="caret-forward"></ion-icon>
+      </a>
+    </button>
+    <button type="button" id="following">
+      <a href="#sectionFour">SALTAR</a>
+    </button>
+</article>
+
+  <article id="sectionOne" hidden="until-found" class="contentHidden">
+    <h2 >WIKINOOK</h2>
+    <p>Aquí podrás encontrar diferentes vecinos de Animal Crossing y conocerlos mucho mejor</p>
+    <button type="button">
+      <a href="#sectionTwo"> <ion-icon name="caret-forward"></ion-icon></a></button>
+  </article>
+
+  <article id="sectionTwo" hidden="until-found" class="contentHidden">
+    <p>Visualizarás a tus vecinos preferidos en tarjetas que guardan su información</p>
+    <figure><img src="https://areajugones.sport.es/wp-content/uploads/2020/09/cartas-amiibo-animal-crossing-2.jpg" alt="tajetas animal Crossing" ></figure>
+    <button type="button">
+      <a href="#sectionThree"><ion-icon name="caret-forward"></ion-icon></a>
+    </button>
+  </article>
+
+  <article id="sectionThree" hidden="until-found" class="contentHidden">
+    <span>
+      <p>Podrás filtrarlos por especie, personalidad y hasta signo zodiacal</p>
+      <p>PERSONALIDAD</p>    
+      <span>
+        <input type="radio" name="checkSweet" id="checkOne"> 
+        <label for="checkOne">Dulce</label>
+      </span>
+    <span>
+      <input type="radio" name="checkSnooty" id="checkTwo"> 
+      <label for="checkTwo">Altanera</label>
+    </span>
+    <span>
+      <input type="radio" name="checkCranky" id="checkThree">
+      <label for="checkThree">Gruñona</label> 
+    </span>
+    <span>
+      <input type="radio" name="checkJock" id="checkFour">
+      <label for="checkFour">Deportiva</label> 
+    </span>
+    <span>
+      <input type="radio" name="checkLazy" id="checkFive">
+      <label for="checkFive">Perezosa</label> 
+    </span>
+    <span>
+      <input type="radio" name="checkSmug" id="checkSix">
+      <label for="checkSix">Esnob</label> 
+    </span>
+  <p>ESPECIES</p>
+    <span>
+      <input type="radio" name="checkDog" id="dog"> 
+      <label for="dog">Perro</label>
+    </span>
+    <span>
+      <input type="radio" name="checkCat" id="cat"> 
+      <label for="cat">Gato</label>
+    </span>
+    <span>
+      <input type="radio" name="checkChicken" id="chicken"> 
+      <label for="chicken">Pollo</label>
+    </span>
+    <span>
+      <input type="radio" name="checkSquirrel" id="squirrel"> 
+      <label for="squirrel">Ardilla</label>
+    </span>
+    <span>
+      <input type="radio" name="checkMouse" id="mouse"> 
+      <label for="mouse">Ratón</label>
+    </span>
+  </span>
+<span>
+  <button type="button">
+      <a href="#sectionFour"><ion-icon name="caret-forward"></ion-icon></a>
+  </button>
+</span>
+  </article>
+
+  <article id="sectionFour" hidden="until-found" class="contentHidden">
+    <h2>WIKINOOK</h2>
+    <p>¡Ahora si! ¿Puedes brindarnos tu nombre antes de comenzar? Te registraremos en un segundo...</p>
+    <input type="text" name="name" id="name" placeholder="Nombre">
+    <button type="button"><a href="#root">COMENZAR</a></button>
+  </article>
+
+  
+    <article id="root" hidden="until-found">
+    <h2>
+      Animal Crossing Personajes
+    </h2>
+    <span>
+      <label for="searchAnimal">Buscar</label>
+        <input type="search" name="search" id="searchAnimal">
+        <button data-testid="button-clearName">Clear</button>
+    </span>
     
     <h2>Personajes</h2>
     
@@ -39,32 +140,18 @@
         <option value="species">Pollo</option>
         <option value="species">Ratón</option>
       </select> 
-      <!--<p>FILTROS</p>
-      <input type="checkbox" name="1" id="1">
-      <label for="">Especies</label>
-      <input type="checkbox" name="2" id="2">
-      <label for="">Género</label>
-      <input type="checkbox" name="3" id="3">
-      <label for="personalidad">Personalidad</label>
-      <input type="checkbox" name="4" id="4">
-      <label for="">Signo zodiacal</label>
-      <button type="button">FILTRAR</button>
-      <select name="" id="">
-        <option value="tigre">Tigre</option>
-        <option value="perro">Perro</option>
-        <option value="ardilla">ardilla</option>
-        <option value="pollo">pollo</option>
-        <option value="raton">raton</option>
-      </select>--><!--para filtra la data-->
-      <button type="button" data-testid="button-clear">LIMPIAR</button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
     </section>
+    <button type="button" data-testid="button-clear"> 
+      <ion-icon name="trash"></ion-icon>
+    </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
+  </article>
 
-    <nav id="root">
+    <nav>
       <ul>
-        <li class="card rolf" itemscope itemtype="https://schema.org/"> 
+        <!--<li class="card rolf" itemscope itemtype="https://schema.org/"> 
           <img src="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" alt="tigerRolf">
           <!--<img itemprop="imageUrl" src="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" alt="tigerRolf"/>
-           <a href="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" itemprop="imageUrl">Ver más</a>-->
+           <a href="https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png" itemprop="imageUrl">Ver más</a>--
           <span itemprop="name">Rolf</span>
           <span itemprop="species">tigre</span>
           <span itemprop="personality">gruñon</span>
@@ -83,117 +170,15 @@
         <li itemprop="name" class="card biskit"> <img src="https://dodo.ac/np/images/thumb/7/78/Biskit_NH.png/150px-Biskit_NH.png" alt="dogBiskit"></li>
         <li itemprop="name" class="card goose"> <img src="https://dodo.ac/np/images/9/91/Goose_NH.png" alt="chickenGoose"></li>
         <li itemprop="name" class="card claudia"> <img src="https://dodo.ac/np/images/thumb/d/d6/Claudia_NH.png/320px-Claudia_NH.png" alt="tigerClaudia"></li>
-        <li itemprop="name" class="card bea"> <img src="https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png" alt="dogBea"></li>
+        <li itemprop="name" class="card bea"> <img src="https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png" alt="dogBea"></li>-->
       </ul>
     </nav>
   </main>
+  <footer>
+    Hecho por Barbara y Danilu
+  </footer>
 
-<!---->
-<!---->
-<!---->
-
-<!--
-    <section>
-      <select name="6" id="6">
-        <option value="">todos</option>
-        <option value="dulce">dulce</option>
-        <option value="altanera">altanera</option>
-        <option value="deportiva">deportiva</option>
-        <option value="gruñona">gruñona</option>
-        <option value="perezosa">perezosa</option>
-      </select> 
-    </section>
-    <section>
-      <select name="7" id="7">
-        <option value="">todos</option>
-        <option value="leo">leo</option>
-        <option value="virgo">virgo</option>
-        <option value="libra">libra</option>
-        <option value="tauro">tauro</option>
-        <option value="aries">aries</option>
-      </select> 
-      <select name="8" id="8">
-        <option value="todos"></option>
-        <option value="mujer">mujer</option>
-        <option value="hombre">hombre</option>
-      </select>
-    </section>
-  -->
-  <!--
-  <h2>WIKINOOK</h2>
-  <div>
-    <P>Bienvenido a la wikinook, a continuación te explicaremos de que trata</P>
-    <button type="button">Continuar</button>
-    <button type="button">Saltar</button>
-  </div>
-  <div>
-    <h2 hidden>WIKINOOK</h2>
-    <P hidden>Aquí podrás encontrar diferentes vecinos de Animal Crossing y conocerlos mucho mejor</P>
-    <button type="button">Continuar</button>
-  </div>
-  <div>
-    <p hidden>Visualizarás a tus vecinos preferidos en tarjetas que guardan su informació</p>
-    <figure hidden><img src="https://areajugones.sport.es/wp-content/uploads/2020/09/cartas-amiibo-animal-crossing-2.jpg" alt="tajetas animal Crossing" ></figure>
-  </div>
-  <div hidden>
-    <label for="filtros">PERSONALIDAD</label>
-    <input type="checkbox" name="check" id="check"> Dulce
-    <input type="checkbox" name="check1" id="check1"> Altanera
-    <input type="checkbox" name="check2" id="check2"> Gruñona
-    <input type="checkbox" name="check3" id="check3"> Deportiva
-    <input type="checkbox" name="check4" id="check4"> perezosa
-    <input type="checkbox" name="check5" id="check5"> Esnob
-  </div>
-  <div hidden>
-    <label for="especie">ESPECIE</label>
-    <input type="checkbox" name="check" id="check"> Perro
-    <input type="checkbox" name="check1" id="check1"> Gato
-    <input type="checkbox" name="check2" id="check2"> Pollo
-    <input type="checkbox" name="check3" id="check3"> Ardilla
-    <input type="checkbox" name="check4" id="check4"> Ratón
-    <p>Y además podrás filtrarlos por especie, personalidad y hasta signo zodiacal</p>
-  </div>
-  <div hidden>
-    <h2>WIKINOOK</h2>
-    <p>¡Ahora si! ¿Puedes brindarnos tu nombre antes de comenzar? Te registraremos en un segundo...</p>
-    <input type="text" name="name" id="name" placeholder="Nombre">
-    <button type="button" >COMENZAR</button>
-
-  </div>
--->
- <!--
-
-    <header id="header" class="header">
-      <h1 id="title" class="title">TITULO</h1>
-    </header >
-    <main id="root">
-      <h2>Animal Crossing Personajes</h2>
-
-      <form action="name">
-        <fieldset>
-          <legend>Nombre de usuario:</legend>
-          <label for="nameComplete">Nombre</label>
-          <input type="text" name="" id="nameComplete" value=""/>
-          <button type="button">Enviar</button>
-        </fieldset>
-      </form>
-
-        <fieldset>
-          <legend>Personajes</legend>
-          <label for="">NOMBRE</label>
-          <input type="" name="" id="" value="">
-        </fieldset>
-      </form>
-        <input type="radio" name="" id="">
-        <label for=""></label>
-
-      <label for="">
-        <input type="search" name="" id="">
-        <button data-testid="button-clear">Clear</button>
-      </label>-->
-    <footer>
-        REALIZADO POR BARBARA Y DANILU
-    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>

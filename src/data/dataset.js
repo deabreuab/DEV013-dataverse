@@ -1,4 +1,4 @@
-export default animalCrossing = [
+export default [
   {
     "id": "beaDog",
     "name": "Bea",
