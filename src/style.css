@@ -22,25 +22,4 @@ footer {
 p {
     font-size: 14px;
 }
-/*estos se utilizan para que no aparezca el contenido del HTML hasta que le das clic al botón*/
-.contentVisible {
-    display: block;
-    font-size: 48px;
-    text-align: center;
-    background-image: url(../src/images/nookipedia.png);
-    background-size: cover;
-}
-.contentHidden {
-    font-size: 48px;
-    text-align: center;
-    display: none;
-}
-.contentHidden:target {
-    display: block;
-    background-image: url(../src/images/nookipedia.png);
-    background-size: cover;
-}
-.contentVisible:target {
-    display: none;
-}
 /*esta hoja de estilos queda adaptada a celular*/
