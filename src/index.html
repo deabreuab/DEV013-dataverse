@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styleTablet.css">
   <link rel="stylesheet" href="styleLaptop.css">
-
-  
   <title>DATAVERSE</title>
 </head>
+
 <body>
-  <button type="button"><ion-icon name="menu"></ion-icon></button>
+  <header>
+    <h1>Animal Crossing Personajes</h1>
+  </header>
+  <main>
   <button type="button"><a href="info.html" target="_blank"><ion-icon name="information-circle"></ion-icon></a></button>
-      <article> <!--id="animal" hidden="until-found"-->
+
+  <article> <!--id="animal" hidden="until-found"-->
     <h2>
-      Animal Crossing Personajes
+      Personajes
     </h2>
     <span>
       <label for="searchAnimal">Buscar</label>
-        <input type="search" name="search" id="searchAnimal">
+        <input type="search" name="search" id="searchAnimal" placeholder="nombre del personaje">
         <button data-testid="button-clearName">Clear</button>
     </span>
-    
-    <h2>Personajes</h2>
-    
     <section>
       <label for="order">ORDENAR</label><!--CHECAR BIEN-->
       <select name="name" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
@@ -33,7 +33,6 @@
         <option value="desc">Z-A</option>
       </select><!--para ordenar la data-->
     </section>
-    
     <section data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
       <label for="filter">FILTROS POR ESPECIE</label>
       <select name="5" id="5">
@@ -49,10 +48,8 @@
       <ion-icon name="trash"></ion-icon>
     </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
   </article>
-
-    <nav id="root">
-      
-    </nav>
+  <nav id="root">
+  </nav>
   </main>
   <footer>
     Hecho por Barbara y Danilu

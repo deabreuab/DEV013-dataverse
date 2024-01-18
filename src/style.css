@@ -23,3 +23,15 @@ p {
     font-size: 14px;
 }
 /*esta hoja de estilos queda adaptada a celular*/
+
+li {
+    display: inline-block;
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    /*
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;*/
+}
