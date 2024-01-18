@@ -1,62 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styleTablet.css">
-  <link rel="stylesheet" href="styleLaptop.css">
-  <title>DATAVERSE</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>WikiNook</title>
+  </head>
+  <body>
+    <header>
+      <h1>WikiNook</h1>
+      <div>Usuario</div>
+    </header>
+    <main>
 
-<body>
-  <header>
-    <h1>Animal Crossing Personajes</h1>
-  </header>
-  <main>
-  <button type="button"><a href="info.html" target="_blank"><ion-icon name="information-circle"></ion-icon></a></button>
+      <aside>
 
-  <article> <!--id="animal" hidden="until-found"-->
-    <h2>
-      Personajes
-    </h2>
-    <span>
-      <label for="searchAnimal">Buscar</label>
-        <input type="search" name="search" id="searchAnimal" placeholder="nombre del personaje">
-        <button data-testid="button-clearName">Clear</button>
-    </span>
-    <section>
-      <label for="order">ORDENAR</label><!--CHECAR BIEN-->
-      <select name="name" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
-        <option value="asc">A-Z</option> <!--tiene 2 option uno asc y otro desc-->
-        <option value="desc">Z-A</option>
-      </select><!--para ordenar la data-->
-    </section>
-    <section data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
-      <label for="filter">FILTROS POR ESPECIE</label>
-      <select name="5" id="5">
-        <option value="species">todos</option>
-        <option value="species">Tigre</option><!--los option tendran el atributo value y el valor del filtro si es por type "fire"(<value="fire"> fire)-->
-        <option value="species">Perro</option>
-        <option value="species">Ardilla</option>
-        <option value="species">Pollo</option>
-        <option value="species">Ratón</option>
-      </select> 
-    </section>
-    <button type="button" data-testid="button-clear"> 
-      <ion-icon name="trash"></ion-icon>
-    </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
-  </article>
-  <nav id="root">
-  </nav>
-  </main>
-  <footer>
-    Hecho por Barbara y Danilu
-  </footer>
+        <h2>Genero</h2>
+        <ul>
 
-    <script src="main.js" type="module"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <li>
+          <input type="radio" name="gender" id="masculino" value="masculino">
+          <label for="masculino">Masculino</label>
+        </li>
 
+        <li>
+          <input type="radio" name="gender" id="femenino" value="femenino">
+          <label for="femenino">Femenino</label>
+        </li>
+
+        <li>
+          <input type="radio" name="gender" id="cualquiera" value="cualquiera">
+          <label for="cualquiera">Cualquiera</label>
+        </li>
+
+        </ul>
+        <hr>
+        <!-- // Genero -->
+
+        <h2>Especie</h2>
+        <ul>
+          <li>
+            <input type="checkbox" id="perro" name="species" value="perro"/>
+            <label for="perro">Perro</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="gallo" name="species" value="gallo"/>
+            <label for="gallo">Gallo</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="raton" name="species" value="raton"/>
+            <label for="raton">Ratón</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="ardilla" name="species" value="ardilla"/>
+            <label for="ardilla">Ardilla</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="tigre" name="species" value="tigre"/>
+            <label for="tigre">Tigre</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="lobo" name="species" value="lobo"/>
+            <label for="lobo">Lobo</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="ciervo" name="species" value="ciervo"/>
+            <label for="ciervo">Ciervo</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="pato" name="species" value="pato"/>
+            <label for="pato">Pato</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="gato" name="species" value="gato"/>
+            <label for="gato">Gato</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="cabra" name="species" value="cabra"/>
+            <label for="cabra">Cabra</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="oso" name="species" value="oso"/>
+            <label for="oso">Oso</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="aguila" name="species" value="aguila"/>
+            <label for="aguila">Aguila</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="caballo" name="species" value="caballo"/>
+            <label for="caballo">Caballo</label>
+          </li>
+
+        </ul>
+        <hr>
+        <!-- // Especie -->
+        
+        <h2>Personalidad</h2>
+        <ul>
+          <li>
+            <input type="checkbox" id="dulce" name="personality" value="dulce"/>
+            <label for="dulce">Dulce</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="perezoso" name="personality" value="perezoso"/>
+            <label for="perezoso">Perezoso</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="deportista" name="personality" value="deportista"/>
+            <label for="deportista">Deportista</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="esnob" name="personality" value="esnob"/>
+            <label for="esnob">Esnob</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="grunon" name="personality" value="grunon"/>
+            <label for="grunon">Gruñón</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="altanera" name="personality" value="altanera"/>
+            <label for="altanera">Altanera</label>
+          </li>
+
+          <li>
+            <input type="checkbox" id="vivaracha" name="personality" value="vivaracha"/>
+            <label for="vivaracha">Vivaracha</label>
+          </li>
+
+        </ul>
+        <hr>
+        <!-- // Personalidad -->
+
+      </aside>
+      <section>
+        <div class="buscador">
+          <h2>Lista de vecinos</h2>
+          <div>
+            <label for="sort">Ordenar por:</label>
+            <select name="sort" id="sort">
+              <option value="az">Ordenar de la A-Z</option>
+              <option value="za">Ordenar de la Z-A</option>
+            </select>
+            <input type="text" id="search" placeholder="Buscar vecino">
+            <!-- <button id="search-btn">Buscar</button> -->
+          </div>
+        </div>
+        <div id="root">
+        </div> <!-- // este será el contenedor de las cards -->
+      </section>
+    </main>
+    <!-- <footer></footer> -->
+    <footer>
+      <p>
+        2024. All rights reserved
+      </p>
+      <img src="./images/island.png" alt="island" width="100">
+      <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+        <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#aaeaf0" />
+        <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#86CFD5" />
+      </svg>
+    </footer>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

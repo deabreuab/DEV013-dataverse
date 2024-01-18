@@ -1,37 +1,113 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-}
-body {
-    font-size: 14px;
-    background-color: bisque;
-}
-img {
-    width: 150px;
-    height: 200px;
-}
-h1 {
-    color: rgb(164, 116, 219);
-    text-align: center;
-}
-footer {
-    color: gray;
-    text-align: end;
-}
-p {
-    font-size: 14px;
-}
-/*esta hoja de estilos queda adaptada a celular*/
-
-li {
-    display: inline-block;
+    font-family: "Encode Sans Condensed", sans-serif;
+  }
+  header {
+    /* background-color: #F7F3E7; */
+    /* background-color: rgb(235, 210, 131); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  body {
+    font-family: "Encode Sans Condensed", sans-serif;
+    background-color: #f7f3e7;
+  }
+  
+  footer {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  footer p {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  footer svg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  footer img {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 2;
+  }
+  
+  aside {
+    /* background-color: rgb(255, 230, 175); Los colores que están comentados los uso para guiarme al momento de hacer el css */
+    padding: 3rem;
+  }
+  
+  main {
+    /* background-color: rgba(222, 252, 141, 0.76); */
+    display: flex;
+    margin-bottom: 100px;
+  }
+  
+  section {
+    /* background-color: rgb(255, 175, 199); */
+    /* width: 100%; */
+    flex: 1;
+  }
+  
+  hr {
+    border: 1px solid #e0e0e0;
+    margin: 1rem 0;
+  }
+  
+  ul {
     list-style: none;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    /*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;*/
-}
+  }
+  
+  .buscador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 600px) {
+    /* CSS rules for sizes smaller than 600px */
+    header {
+      padding: 10px 5%;
+    }
+  
+    aside {
+      padding: 1.5rem;
+      display: none;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    section {
+      width: 100%;
+    }
+  
+    .buscador h2{
+      display: none;
+    }
+  
+    .buscador div{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

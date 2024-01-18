@@ -3,7 +3,8 @@ import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 
-console.log(example, renderItems(data), data);
+
+renderItems(data) /* en vez del console log, llamo la función directamente
 
 /*
 const buttonClear = document.querySelector("button[data-testid='button-clear']");
