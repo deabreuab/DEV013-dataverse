@@ -47,7 +47,7 @@ footer img {
 }
 
 aside {
-  padding: 3rem;
+  padding: 3rem 3rem 3rem 10%;
 }
 
 main {
@@ -57,7 +57,9 @@ main {
 
 section {
   flex: 1;
-  max-width: 792px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 hr {
@@ -290,4 +292,8 @@ dd[itemprop="personality"]{
     width: 48px;
     overflow: hidden;
     text-align: right;
+}
+
+.container {
+    max-width: 790px;
 }
