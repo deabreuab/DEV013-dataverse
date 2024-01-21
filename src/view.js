@@ -6,27 +6,29 @@ export const renderItems = (data) => {
   data.forEach((vecino) => {
     const listLi = document.createElement("li"); // creación de etiqueta li
     listUl.appendChild(listLi);
+    listLi.setAttribute('itemscope','') // Esto lo agregue para que pasarán los test HTML, aunque ya lo teníamos lo exigía dentro del li
+    listLi.setAttribute('itemtype', 'https://schema.org/Game')
     const divCard = document.createElement("div");
     divCard.className = "card";
-    if (vecino.personality == "Gruñon") {
+    if (vecino.personality === "Gruñon") {
       divCard.classList.add("cardGrunon");
     }
-    if (vecino.personality == "Deportista") {
+    if (vecino.personality === "Deportista") {
       divCard.classList.add("cardDeportista");
     }
-    if (vecino.personality == "Altanera") {
+    if (vecino.personality === "Altanera") {
       divCard.classList.add("cardAltanera");
     }
-    if (vecino.personality == "Dulce") {
+    if (vecino.personality === "Dulce") {
       divCard.classList.add("cardDulce");
     }
-    if (vecino.personality == "Perezoso") {
+    if (vecino.personality === "Perezoso") {
       divCard.classList.add("cardPerezoso");
     }
-    if (vecino.personality == "Esnob") {
+    if (vecino.personality === "Esnob") {
       divCard.classList.add("cardEsnob");
     }
-    if (vecino.personality == "Vivaracha") {
+    if (vecino.personality === "Vivaracha") {
       divCard.classList.add("cardVivaracha");
     }
     listLi.appendChild(divCard);
@@ -55,7 +57,7 @@ export const renderItems = (data) => {
 
     const ddGender = document.createElement("dd");
     ddGender.setAttribute("itemprop", "gender");
-    if (vecino.gender == "Femenino") {
+    if (vecino.gender === "Femenino") {
       ddGender.classList.add("genderFemenino");
     } else {
       ddGender.classList.add("genderMasculino");
@@ -69,44 +71,44 @@ export const renderItems = (data) => {
     const ddSign = document.createElement("dd");
     ddSign.setAttribute("itemprop", "zodiacSign");
     switch (vecino.facts.zodiacSign) {
-      case "Libra":
-        ddSign.classList.add("signLibra");
-        break;
-      case "Aries":
-        ddSign.classList.add("signAries");
-        break;
-      case "Capricornio":
-        ddSign.classList.add("signCapricornio");
-        break;
-      case "Acuario":
-        ddSign.classList.add("signAcuario");
-        break;
-      case "Leo":
-        ddSign.classList.add("signLeo");
-        break;
-      case "Virgo":
-        ddSign.classList.add("signVirgo");
-        break;
-      case "Piscis":
-        ddSign.classList.add("signPiscis");
-        break;
-      case "Cancer":
-        ddSign.classList.add("signCancer");
-        break;
-      case "Sagitario":
-        ddSign.classList.add("signSagitario");
-        break;
-      case "Escorpio":
-        ddSign.classList.add("signEscorpio");
-        break;
-      case "Geminis":
-        ddSign.classList.add("signLibra");
-        break;
-      case "Tauro":
-        ddSign.classList.add("signTauro");
-        break;
-      default:
-        break;
+    case "Libra":
+      ddSign.classList.add("signLibra");
+      break;
+    case "Aries":
+      ddSign.classList.add("signAries");
+      break;
+    case "Capricornio":
+      ddSign.classList.add("signCapricornio");
+      break;
+    case "Acuario":
+      ddSign.classList.add("signAcuario");
+      break;
+    case "Leo":
+      ddSign.classList.add("signLeo");
+      break;
+    case "Virgo":
+      ddSign.classList.add("signVirgo");
+      break;
+    case "Piscis":
+      ddSign.classList.add("signPiscis");
+      break;
+    case "Cancer":
+      ddSign.classList.add("signCancer");
+      break;
+    case "Sagitario":
+      ddSign.classList.add("signSagitario");
+      break;
+    case "Escorpio":
+      ddSign.classList.add("signEscorpio");
+      break;
+    case "Geminis":
+      ddSign.classList.add("signLibra");
+      break;
+    case "Tauro":
+      ddSign.classList.add("signTauro");
+      break;
+    default:
+      break;
     }
     divHeader.appendChild(ddSign);
 
