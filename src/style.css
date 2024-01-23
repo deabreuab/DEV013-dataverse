@@ -296,4 +296,6 @@ dd[itemprop="personality"]{
 
 .container {
     max-width: 790px;
+    width: 790px;
+    height: 100%;
 }

@@ -90,7 +90,7 @@ export default [
   {
     id: "rizzoMouse",
     name: "Rizzo",
-    species: "Ratón",
+    species: "Raton",
     personality: "Gruñon",
     gender: "Masculino",
     shortDescription:
@@ -125,7 +125,7 @@ export default [
   {
     id: "rodMouse",
     name: "Rod",
-    species: "Ratón",
+    species: "Raton",
     personality: "Deportista",
     gender: "Masculino",
     shortDescription:
@@ -142,7 +142,7 @@ export default [
   {
     id: "breeMouse",
     name: "Bree",
-    species: "Ratón",
+    species: "Raton",
     personality: "Altanera",
     gender: "Femenino",
     shortDescription:

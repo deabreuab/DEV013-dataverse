@@ -1,7 +1,8 @@
 export const renderItems = (data) => {
   // Aquí comienza tu código y puedes retornar lo que tu necesites
-
   const navRoot = document.getElementById("root"); // id del nav donde van los elemento ul y li
+  navRoot.innerHTML = ''
+  
   const listUl = document.createElement("ul"); // creación de etiqueta ul
   data.forEach((vecino) => {
     const listLi = document.createElement("li"); // creación de etiqueta li

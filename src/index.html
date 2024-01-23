@@ -19,50 +19,29 @@
     </header>
     <main>
       <aside>
-        <h2>Genero</h2>
-        <ul>
-          <li>
-            <input
-              type="radio"
-              name="gender"
-              id="masculino"
-              value="masculino"
-            />
-            <label for="masculino">Masculino</label>
-          </li>
-
-          <li>
-            <input type="radio" name="gender" id="femenino" value="femenino" />
-            <label for="femenino">Femenino</label>
-          </li>
-
-          <li>
-            <input
-              type="radio"
-              name="gender"
-              id="cualquiera"
-              value="cualquiera"
-            />
-            <label for="cualquiera">Cualquiera</label>
-          </li>
-        </ul>
+        <label for="gender">Genero</label>
+        <select name="gender" id="gender" data-testid="select-filter">
+          <option value="Cualquiera">Cualquiera</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
         <hr />
         <!-- // Genero -->
 
         <h2>Especie</h2>
         <ul>
           <li>
-            <input type="checkbox" id="perro" name="species" value="perro" />
+            <input type="checkbox" id="perro" name="species" value="Perro" />
             <label for="perro">Perro</label>
           </li>
 
           <li>
-            <input type="checkbox" id="gallo" name="species" value="gallo" />
+            <input type="checkbox" id="gallo" name="species" value="Gallo" />
             <label for="gallo">Gallo</label>
           </li>
 
           <li>
-            <input type="checkbox" id="raton" name="species" value="raton" />
+            <input type="checkbox" id="raton" name="species" value="Raton" />
             <label for="raton">Ratón</label>
           </li>
 
@@ -71,48 +50,48 @@
               type="checkbox"
               id="ardilla"
               name="species"
-              value="ardilla"
+              value="Ardilla"
             />
             <label for="ardilla">Ardilla</label>
           </li>
 
           <li>
-            <input type="checkbox" id="tigre" name="species" value="tigre" />
+            <input type="checkbox" id="tigre" name="species" value="Tigre" />
             <label for="tigre">Tigre</label>
           </li>
 
           <li>
-            <input type="checkbox" id="lobo" name="species" value="lobo" />
+            <input type="checkbox" id="lobo" name="species" value="Lobo" />
             <label for="lobo">Lobo</label>
           </li>
 
           <li>
-            <input type="checkbox" id="ciervo" name="species" value="ciervo" />
+            <input type="checkbox" id="ciervo" name="species" value="Ciervo" />
             <label for="ciervo">Ciervo</label>
           </li>
 
           <li>
-            <input type="checkbox" id="pato" name="species" value="pato" />
+            <input type="checkbox" id="pato" name="species" value="Pato" />
             <label for="pato">Pato</label>
           </li>
 
           <li>
-            <input type="checkbox" id="gato" name="species" value="gato" />
+            <input type="checkbox" id="gato" name="species" value="Gato" />
             <label for="gato">Gato</label>
           </li>
 
           <li>
-            <input type="checkbox" id="cabra" name="species" value="cabra" />
+            <input type="checkbox" id="cabra" name="species" value="Cabra" />
             <label for="cabra">Cabra</label>
           </li>
 
           <li>
-            <input type="checkbox" id="oso" name="species" value="oso" />
+            <input type="checkbox" id="oso" name="species" value="Oso" />
             <label for="oso">Oso</label>
           </li>
 
           <li>
-            <input type="checkbox" id="aguila" name="species" value="aguila" />
+            <input type="checkbox" id="aguila" name="species" value="Águila" />
             <label for="aguila">Aguila</label>
           </li>
 
@@ -121,7 +100,7 @@
               type="checkbox"
               id="caballo"
               name="species"
-              value="caballo"
+              value="Caballo"
             />
             <label for="caballo">Caballo</label>
           </li>
@@ -136,7 +115,7 @@
               type="checkbox"
               id="dulce"
               name="personality"
-              value="dulce"
+              value="Dulce"
             />
             <label for="dulce">Dulce</label>
           </li>
@@ -146,7 +125,7 @@
               type="checkbox"
               id="perezoso"
               name="personality"
-              value="perezoso"
+              value="Perezoso"
             />
             <label for="perezoso">Perezoso</label>
           </li>
@@ -156,7 +135,7 @@
               type="checkbox"
               id="deportista"
               name="personality"
-              value="deportista"
+              value="Deportista"
             />
             <label for="deportista">Deportista</label>
           </li>
@@ -166,7 +145,7 @@
               type="checkbox"
               id="esnob"
               name="personality"
-              value="esnob"
+              value="Esnob"
             />
             <label for="esnob">Esnob</label>
           </li>
@@ -176,9 +155,9 @@
               type="checkbox"
               id="grunon"
               name="personality"
-              value="grunon"
+              value="Gruñon"
             />
-            <label for="grunon">Gruñón</label>
+            <label for="grunon">Gruñon</label>
           </li>
 
           <li>
@@ -186,7 +165,7 @@
               type="checkbox"
               id="altanera"
               name="personality"
-              value="altanera"
+              value="Altanera"
             />
             <label for="altanera">Altanera</label>
           </li>
@@ -196,7 +175,7 @@
               type="checkbox"
               id="vivaracha"
               name="personality"
-              value="vivaracha"
+              value="Vivaracha"
             />
             <label for="vivaracha">Vivaracha</label>
           </li>
@@ -211,6 +190,7 @@
             <div>
               <label for="sort">Ordenar por:</label>
               <select name="sort" id="sort">
+                <option value="">Elige una opción</option>
                 <option value="az">Ordenar de la A-Z</option>
                 <option value="za">Ordenar de la Z-A</option>
               </select>
