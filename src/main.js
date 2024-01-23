@@ -12,19 +12,20 @@ const selectPersonality = document.querySelectorAll(
   'input[name="personality"]'
 );
 const selectSpecie = document.querySelectorAll('input[name="species"]');
-const selectSort = document.querySelector("#sort");
 
-selectSort.addEventListener("change", () => {
-  selectedSort = selectSort.value;
-  const dataFiltrada = filtrarVecinos(
-    data,
-    selectedGender,
-    selectedSpecies,
-    selectedPersonalities,
-    selectedSort
-  );
-  renderItems(dataFiltrada);
-});
+// const selectSort = document.querySelector("#sort"); aquí estaba probando como funcionaría desde el DOM todo junto 
+
+// selectSort.addEventListener("change", () => {
+//   selectedSort = selectSort.value;
+//   const dataFiltrada = filtrarVecinos(
+//     data,
+//     selectedGender,
+//     selectedSpecies,
+//     selectedPersonalities,
+//     selectedSort
+//   );
+//   renderItems(dataFiltrada);
+// });
 
 selectGender.addEventListener("change", () => {
   selectedGender = selectGender.value;
