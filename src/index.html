@@ -3,53 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styleTablet.css">
   <link rel="stylesheet" href="styleLaptop.css">
+  <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
   <title>DATAVERSE</title>
 </head>
 
 <body>
   <header>
-    <h1>Animal Crossing Personajes</h1>
+    <h1>Animal Crossing</h1>
   </header>
   <main>
-  <button type="button"><a href="info.html" target="_blank"><ion-icon name="information-circle"></ion-icon></a></button>
-
-  <article> <!--id="animal" hidden="until-found"-->
-    <h2>
-      Personajes
-    </h2>
-    <span>
-      <label for="searchAnimal">Buscar</label>
+    <div class="info">
+      <button type="button" id="info">
+        <a href="info.html" target="_blank"><ion-icon name="help-circle-outline"></ion-icon>Información</a>
+      </button>
+      </div>
+      <div id="search">
+        <label for="searchAnimal"> Buscar </label>
         <input type="search" name="search" id="searchAnimal" placeholder="nombre del personaje">
-        <button data-testid="button-clearName">Clear</button>
-    </span>
-    <section>
-      <label for="order">ORDENAR</label><!--CHECAR BIEN-->
-      <select name="name" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
-        <option value="asc">A-Z</option> <!--tiene 2 option uno asc y otro desc-->
-        <option value="desc">Z-A</option>
-      </select><!--para ordenar la data-->
-    </section>
-    <section data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
-      <label for="filter">FILTROS POR ESPECIE</label>
-      <select name="5" id="5">
-        <option value="species">todos</option>
-        <option value="species">Tigre</option><!--los option tendran el atributo value y el valor del filtro si es por type "fire"(<value="fire"> fire)-->
-        <option value="species">Perro</option>
-        <option value="species">Ardilla</option>
-        <option value="species">Pollo</option>
-        <option value="species">Ratón</option>
-      </select> 
-    </section>
-    <button type="button" data-testid="button-clear"> 
-      <ion-icon name="trash"></ion-icon>
-    </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
-  </article>
+        <button data-testid="button-clearName">Limpiar buscador</button>
+      </div>
+      <article>
+        <h2 id="personage">
+          Personajes
+        </h2>
+        <section id="containerOrder">
+          <label for="order">ORDENAR</label><!--CHECAR BIEN-->
+          <select name="name" id="order" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
+            <option value="all">...</option> <!--tiene 2 option uno asc y otro desc-->
+            <option value="asc">A-Z</option> <!--tiene 2 option uno asc y otro desc-->
+            <option value="desc">Z-A</option>
+        </select><!--para ordenar la data-->
+        </section>
+        <h2>Filtros</h2>
+        <div class="container-nav">
+          <nav data-testid="select-filterGender" name="gender">
+            <label for="filter">GÉNERO</label>
+            <ul>
+              <li>
+                <input type="checkbox" name="optionOne" id="genderAll" value="genderOne">
+                <label for="genderTiger">Todos</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionTwo" id="genderMasculine" value="genderTwo">
+                <label for="genderDog">Masculino</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionThree" id="genderWomen" value="genderThree">
+                <label for="genderThree">Femenino</label> 
+              </li>
+            </ul>
+          </nav>
+          <nav data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
+            <label for="filterForSpecies">ESPECIE</label>
+            <ul>
+              <li>
+                <input type="checkbox" name="optionOne" id="specieTiger" value="specieOne">
+                <label for="specieTiger">Tigre</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionTwo" id="specieDog" value="specieTwo">
+                <label for="specieDog">Perro</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionThree" id="specieSquirrel" value="specieThree">
+                <label for="specieThree">Ardilla</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionFour" id="specieChicken" value="specieFour">
+                <label for="specieFour">Gallo</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionFive" id="specieMouse" value="specieFive">
+                <label for="specieFive">Ratón</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionSix" id="specieWolf" value="specieSix">
+                <label for="specieSix">Lobo</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionSeven" id="specieDeer" value="specieSeven">
+                <label for="specieSeven">Ciervo</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionEight" id="specieDuck" value="specieEight">
+                <label for="specieEight">Pato</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionNine" id="specieCat" value="specieNine">
+                <label for="specieNine">Gato</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionTen" id="specieGoat" value="specieTen">
+                <label for="specieTen">Cabra</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionEleven" id="specieBear" value="specieEleven">
+                <label for="specieEleven">Oso</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionTwelve" id="specieEagle" value="specieTwelve">
+                <label for="specieTwelve">Águila</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionThirteen" id="specieHorse" value="specieThirteen">
+                <label for="specieThirteen">Caballo</label> 
+              </li>
+            </ul>
+          </nav>
+          <nav data-testid="select-filterPersonality" name="personality">
+            <label for="filterForPersonality">PERSONALIDAD</label>
+            <ul>
+              <li>
+                <input type="checkbox" name="optionOne" id="personalityJock" value="personalityOne">
+                <label for="personalityTiger">Deportista</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionTwo" id="personalityCranky" value="personalityTwo">
+                <label for="personalityDog">Gruñón</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionThree" id="personalityLazy" value="personalityThree">
+                <label for="personalityThree">Perezoso</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionFour" id="personalitySmug" value="personalityFour">
+                <label for="personalityFour">Esnob</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionFive" id="personalitySweet" value="personalityFive">
+                <label for="personalityFive">Dulce</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionSix" id="personalityPeppy" value="personalitySix">
+                <label for="personalitySix">Vivaracha</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="optionSeven" id="personalitySnooty" value="personalitySeven">
+                <label for="personalitySeven">Altanera</label> 
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <button type="button" data-testid="button-clear"> 
+            <ion-icon name="trash"></ion-icon> Limpiar filtros
+          </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
+        </div>
+      </article>
   <nav id="root">
   </nav>
+  <button id="details" ><ion-icon name="stats-chart-outline"></ion-icon>Estadística</button> <!--onclick="window.statistics.showModal()"-->
+      <dialog id="statistics">
+        <h2>hola mucho gusto</h2>
+        <button type="reset" id="close"> <!--onclick="window.statistics.close()-->
+          <ion-icon name="close-circle-outline"></ion-icon>Cerrar
+        </button>  
+      </dialog>
+
   </main>
   <footer>
     Hecho por Barbara y Danilu

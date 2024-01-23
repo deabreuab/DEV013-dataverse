@@ -29,7 +29,7 @@ const renderDOM = (data) => {
     throw new Error('Error: renderItems should return an HTML string or an HTMLElement');
   }
 }
-      
+
 const getRulesForSelector = (selector) => {
   return rules.filter(
     (rule) =>
@@ -58,54 +58,53 @@ const getDeclarationsForElClasses = (el) => {
     return [...allDeclarations, ...declarationsForClass];
   }, []);
 }
+    describe('CSS', () => {
 
-describe('CSS', () => {
-
-  describe('Uso de selectores de CSS', () => {
-
-    beforeEach(() => {
-      renderDOM(fakeData);
-    });
+      describe('Uso de selectores de CSS', () => {
     
-    it('elementos <li> tienen un class con CSS', () => {
-      const elementsLi = document.querySelectorAll('#root > ul > li');
-      // all lis should have same classes since rendered dinamically
-      // so not checking for common classes here
-      elementsLi.forEach((li) => {
-        const liRulesAttributes = getDeclarationsForElClasses(li);
-        expect(liRulesAttributes.length).toBeGreaterThan(0);
-      });
-      expect.hasAssertions();
-    });
+        beforeEach(() => {
+          renderDOM(fakeData);
+        });
+        
+        it('elementos <li> tienen un class con CSS', () => {
+          const elementsLi = document.querySelectorAll('#root > ul > li');
+          // all lis should have same classes since rendered dinamically
+          // so not checking for common classes here
+          elementsLi.forEach((li) => {
+            const liRulesAttributes = getDeclarationsForElClasses(li);
+            expect(liRulesAttributes.length).toBeGreaterThan(0);
+          });
+          expect.hasAssertions();
+        });  
 
-    it('Se usan selectores CSS de tipo para <header>', () => {
-      const headerRules = getRulesForSelector('header');
-      expect(headerRules.length).toBeGreaterThan(0);
-    });
-
-    it('Se usan selectores CSS de tipo para <footer>', () => {
-      const footerRules = getRulesForSelector('footer');
-      expect(footerRules.length).toBeGreaterThan(0);
-    });
-
-    it('Se usan selectores CSS de tipo para <select>', () => {
-      const selectRules = getRulesForSelector('select');
-      expect(selectRules.length).toBeGreaterThan(0);
-    });
+  it('Se usan selectores CSS de tipo para <header>', () => {
+    const headerRules = getRulesForSelector('header');
+    expect(headerRules.length).toBeGreaterThan(0);
   });
 
-  describe('Uso de flexbox', () => {
+  it('Se usan selectores CSS de tipo para <footer>', () => {
+    const footerRules = getRulesForSelector('footer');
+    expect(footerRules.length).toBeGreaterThan(0);
+  });
 
-    beforeEach(() => {
-      renderDOM(fakeData);
-    });
+  it('Se usan selectores CSS de tipo para <select>', () => {
+    const selectRules = getRulesForSelector('select');
+    expect(selectRules.length).toBeGreaterThan(0);
+  });
+});
 
-    it('Uso de flexbox en el elemento de <ul>', () => {
-      const ul = document.querySelector('#root > ul');
-      const cssForTag = getCSSDeclarationsForRules(getRulesForSelector(ul.tagName.toLowerCase()));
-      const cssForId = getCSSDeclarationsForRules(getRulesForSelector(`#${ul.id}`));
-      const cssForClasses = getDeclarationsForElClasses(ul);
-      const cssDeclarations = [...cssForClasses, ...cssForId, ...cssForTag];
+describe('Uso de flexbox', () => {
+
+  beforeEach(() => {
+    renderDOM(fakeData);
+  });
+
+  it('Uso de flexbox en el elemento de <ul>', () => {
+    const ul = document.querySelector('#root > ul');
+    const cssForTag = getCSSDeclarationsForRules(getRulesForSelector(ul.tagName.toLowerCase()));
+    const cssForId = getCSSDeclarationsForRules(getRulesForSelector(`#${ul.id}`));
+    const cssForClasses = getDeclarationsForElClasses(ul);
+    const cssDeclarations = [...cssForClasses, ...cssForId, ...cssForTag];
 
       // expect to have display: flex 
       expect(
