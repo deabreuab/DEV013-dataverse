@@ -6,26 +6,42 @@ let selectedGender = "Cualquiera";
 let selectedSpecies = [];
 let selectedPersonalities = [];
 let selectedSort = "";
+let searchText = "";
 
 const selectGender = document.querySelector("#gender");
 const selectPersonality = document.querySelectorAll(
   'input[name="personality"]'
 );
 const selectSpecie = document.querySelectorAll('input[name="species"]');
+const selectSort = document.querySelector("#sort");
+const searchBar = document.querySelector('#search')
 
-// const selectSort = document.querySelector("#sort"); aquí estaba probando como funcionaría desde el DOM todo junto 
+searchBar.addEventListener("keyup", () => {
+  searchText = searchBar.value
+  const dataFiltrada = filtrarVecinos(
+    data,
+    selectedGender,
+    selectedSpecies,
+    selectedPersonalities,
+    selectedSort,
+    searchText
+  )
+  renderItems(dataFiltrada);
+})
 
-// selectSort.addEventListener("change", () => {
-//   selectedSort = selectSort.value;
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort
-//   );
-//   renderItems(dataFiltrada);
-// });
+
+selectSort.addEventListener("change", () => {
+  selectedSort = selectSort.value;
+  const dataFiltrada = filtrarVecinos(
+    data,
+    selectedGender,
+    selectedSpecies,
+    selectedPersonalities,
+    selectedSort,
+    searchText
+  );
+  renderItems(dataFiltrada);
+});
 
 selectGender.addEventListener("change", () => {
   selectedGender = selectGender.value;
@@ -34,7 +50,8 @@ selectGender.addEventListener("change", () => {
     selectedGender,
     selectedSpecies,
     selectedPersonalities,
-    selectedSort
+    selectedSort,
+    searchText
   );
   // const dataFiltrada = filterBy(data, "gender", selectedGender)
   renderItems(dataFiltrada);
@@ -51,7 +68,8 @@ const checkboxPersonality = () => {
     selectedGender,
     selectedSpecies,
     selectedPersonalities,
-    selectedSort
+    selectedSort,
+    searchText
   );
   renderItems(dataFiltrada);
 };
@@ -67,7 +85,8 @@ const checkboxSpecie = () => {
     selectedGender,
     selectedSpecies,
     selectedPersonalities,
-    selectedSort
+    selectedSort,
+    searchText
   );
   renderItems(dataFiltrada);
 };
