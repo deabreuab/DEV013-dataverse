@@ -27,15 +27,17 @@ buttonClearName.addEventListener("click", function() {//con esto limpio el nombr
 
 buttonClear.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   console.log("hola");
-  nav.innerHTML.reset();
-  //nav.innerHTML.value//debo llamar algo que me muestre las imagenes en pantalla inicial
-  //e.target.value = order.textContent;
-  //e.target.value = "";
-  //let event = e.target.value = " ";
-  //return event = renderItems(data);//e.target.value = "" + renderItems(data);//` ${renderItems(data)}` 
-  //location.reload();//recarga la página limpiando los filtros y ordenar
-  /*nav.reset();
-  return false;*/
+  nav.innerHTML =  `<dl>
+  <img src=${items.imageUrl} alt=${items.name}/>      
+  <dd>${items.name}</dd>
+  <dd itemprop="species">${items.species}</dd>
+  <dd itemprop="gender">${items.gender}</dd>
+  <dd itemprop="personality">${items.personality}</dd>
+  <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
+  <dd itemprop="birthDate">${items.facts.birthDate}</dd>
+  <dd itemprop="shortDescription">${items.shortDescription}</dd>
+  </dl>
+  `
 });
 
 details.addEventListener("click", (e) => {
