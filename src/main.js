@@ -27,17 +27,16 @@ buttonClearName.addEventListener("click", function() {//con esto limpio el nombr
 
 buttonClear.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   console.log("hola");
-  nav.innerHTML =  `<dl>
-  <img src=${items.imageUrl} alt=${items.name}/>      
-  <dd>${items.name}</dd>
-  <dd itemprop="species">${items.species}</dd>
-  <dd itemprop="gender">${items.gender}</dd>
-  <dd itemprop="personality">${items.personality}</dd>
-  <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
-  <dd itemprop="birthDate">${items.facts.birthDate}</dd>
-  <dd itemprop="shortDescription">${items.shortDescription}</dd>
+  nav.innerHTML = 
+  /*`<dl>
+  <img src=${data.imageUrl} alt=${data.name}/>      
+  <dd>${data.gender}</dd>
+  <dd itemprop="personality">${data.personality}</dd>
+  <dd itemprop="zodiacSign">${data.facts.zodiacSign}</dd>
+  <dd itemprop="birthDate">${data.facts.birthDate}</dd>
+  <dd itemprop="shortDescription">${data.shortDescription}</dd>
   </dl>
-  `
+  `*/
 });
 
 details.addEventListener("click", (e) => {
@@ -210,7 +209,7 @@ const filterNames = () => { //Buscador
   const dataNames = inputName.value.toLowerCase() //pasa todo a minuscula
   for (const items of data) { //recorrer la data
     const name = items.name.toLowerCase();
-    if (name.indexOf(dataNames) !== -1) {// retonrna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
+    if (name.indexOf(dataNames) !== -1) {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
       nav.innerHTML += `
       <dl>
       <img src=${items.imageUrl} alt=${items.name}/>      
@@ -221,14 +220,12 @@ const filterNames = () => { //Buscador
       <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
       <dd itemprop="birthDate">${items.facts.birthDate}</dd>
       <dd itemprop="shortDescription">${items.shortDescription}</dd>
-      </dl>
-      `
+      </dl>  `
     }
   } //si sigue vacio en nav
   if (nav.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
     nav.innerHTML += `
-    <li>Sin resultados</li>
-    `
+    <li>Sin resultados</li>`
   }
 }
 buttonSearch.addEventListener("click", filterNames);
