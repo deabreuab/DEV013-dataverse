@@ -1,25 +1,27 @@
 export const renderItems = (data) => {
-  //console.log(data[0].id)
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
-  /*const navRoot = document.getElementById("root");
-  const listUl = document.createElement("ul");
-  data.forEach(element => {
-    const listLi = document.createElement("li");
-    const image = document.createElement("img")
-    image.src = element.imageUrl;
-    listLi.textContent =  `
-    Signo zodiacal ${element.facts.zodiacSign},
-    Nombre: ${element.name},
-    species: ${element.species},
-    Genero: ${element.gender}
-    `;
-    listLi.appendChild(image)
-    listUl.appendChild(listLi);
-
-
-  });
-  console.log(navRoot.appendChild(listUl));
-  return navRoot.appendChild(listUl);*/
+    const nav = document.getElementById("root");
+    const listUl = document.createElement("ul");
+    console.log(data.length);
+    data.forEach(element => {
+      const listLi = document.createElement('li');
+      listLi.setAttribute("itemscope", "")
+      listLi.setAttribute("itemtype", "http://schema.org/Person")
+      listLi.innerHTML = `
+      <dl>
+      <img src=${element.imageUrl} alt=${element.name}/>
+      <dt>Nombre:</dt><dd itemprop="name">${element.name}</dd>
+      <dt>Especies:</dt><dd itemprop="species">${element.species}</dd>
+      <dt>Genero:</dt><dd itemprop="gender">${element.gender}</dd>
+      <dt>Personalidad:</dt><dd itemprop="personality">${element.personality}</dd>
+      <dt>Signo zodiacal:</dt><dd itemprop="zodiacSign">${element.facts.zodiacSign}</dd>
+      <dt>Cumpleaños:</dt><dd itemprop="birthDate">${element.facts.birthDate}</dd>
+      <dt>Descripción:</dt><dd itemprop="shortDescription">${element.shortDescription}</dd>
+      </dl>`
+      listUl.appendChild(listLi);
+    });
+    nav.appendChild(listUl)
+  };
+  /*
   const navRoot = document.getElementById("root");// id del nav donde van los elemento ul y li 
   const listUl = document.createElement("ul");// creación de etiqueta ul
   data.forEach(element => {
@@ -43,7 +45,7 @@ export const renderItems = (data) => {
     /*listLi.textContent =  `
     Nombre: ${element.name}
     Especie: ${element.species}
-    `;*/
+    `;*
     //listLi.appendChild(image);
     listLi.appendChild(listLiSpan);
     listLiSpan.appendChild(image);
@@ -53,4 +55,4 @@ export const renderItems = (data) => {
   });
   return navRoot.appendChild(listUl);
 
-};
+};*/
