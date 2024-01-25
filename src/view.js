@@ -1,6 +1,7 @@
 export const renderItems = (data) => {
   const nav = document.getElementById("root");
   const listUl = document.createElement("ul");
+  console.log(data.length);
   data.forEach(element => {
     const listLi = document.createElement('li');
     listLi.setAttribute("itemscope", "")
@@ -18,5 +19,5 @@ export const renderItems = (data) => {
     </dl>`
     listUl.appendChild(listLi);
   });
-  return nav.appendChild(listUl)
+  nav.appendChild(listUl)
 };
