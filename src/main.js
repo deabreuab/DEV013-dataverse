@@ -4,12 +4,12 @@ import { renderItems } from './view.js';
 import data from './data/dataset.js';
 //ctrl + k + c
 //ctrl + k + u
-renderItems(data);
+renderItems(data);//contiene la data incial
 let filteredData;
 //const nav = document.getElementById("root");//llamarla y borrar su contenido para que al llamar la función aparezcan
-const nav = document.querySelector('#root');
+const nav = document.querySelector('#root'); //contenedor
 const buttonClear = document.querySelector("button[data-testid='button-clear']"); //botón limpiar filtros
-const buttonSearch = document.querySelector("button[data-testid='button-search']");//buscar por nombre
+const inputName = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const buttonClearName = document.querySelector("button[data-testid='button-clearName']"); //botón limpiar nombre
 const order = document.querySelector("[data-testid='select-sort']");//para ordenar
 const statistics = document.getElementById("statistics");//contenedor modal
@@ -17,12 +17,14 @@ const close = document.querySelector("#close");//cerrar modal
 const details = document.querySelector("#details"); //abrir el modal
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filter = document.querySelector("[data-testid='select-filter']");
-const inputName = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
 filteredData = data; //acomplar la inf de la base de datos para usarla de manera interna, ya la uso de forma que quiera, para mantener la data filtrada()
 
 buttonClear.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   console.log("hola");//mandar llamar la función
+  //nav.innerHTML = ""; con esto se borran las imagenes no los botones
+  //e.target.value = nav.innerHTML = ""; //no se deseleccionan los botones
+  //e.target.value = 
   nav.innerHTML = "";
   renderItems(data);
 });
@@ -63,8 +65,8 @@ close.addEventListener("click", function () {
   return renderItems(dataOrdered);
 }) */
 
-order.addEventListener("change", (event) => {//ordenar
-  //let dataOrdered;//inicializar donde se estan guardando las tarjetas
+order.addEventListener("change", (event) => {//ordenar SE MANTIENEN LOS DATOS ordenados AL LIMPIAR FILTRO
+  let dataOrdered;//inicializar donde se estan guardando las tarjetas
   //if (event.target.value === "asc") {
   nav.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
@@ -74,7 +76,7 @@ order.addEventListener("change", (event) => {//ordenar
   filteredData = sortData(filteredData, "name", event.target.value);
   //}
   console.log("fil",filteredData);
-  //console.log("render", dataOrdered);
+  console.log("render", dataOrdered);
   renderItems(filteredData);
 });
 
@@ -84,7 +86,7 @@ filterPersonality.addEventListener("click", (e) => {//filtro personalidad
     return;
   }
   nav.innerHTML = "";
-  filteredData = filterData(filteredData, "personality", e.target.value);
+  filteredData = filterData(filteredData, "personality", e.target.value);//filteredData me esta guardando los filtros, si al filtrar quedan 10, se filtra sobre eso
   //filterResult.push(filterData(data, "gender", gender));
   renderItems(filteredData);
 });
@@ -166,7 +168,8 @@ filterGender.addEventListener("click", (e) => {//  CON ESTE CÓDIGO LLAMO AL FIL
   if(!e.target.value) {
     return;
   }
-  nav.innerHTML = "";
+  nav.innerHTML = "";//si es masculino que me muestre el contenido, si es mujer que me muetre el contenido
+  //filterdData = "";
   filteredData =  filterData(filteredData, "gender", e.target.value);
   /*if (document.getElementById("genderAll").checked){
     //nav.innerHTML;
@@ -188,12 +191,13 @@ filterGender.addEventListener("click", (e) => {//  CON ESTE CÓDIGO LLAMO AL FIL
   renderItems(filteredData);
 });
 
+
 const filterNames = () => { //Buscador
   //console.log(inputName.value);
   nav.innerHTML = "";// debe iniciar vacio
   const dataNames = inputName.value.toLowerCase() //pasa todo a minuscula
   for (const items of data) { //recorrer la data
-    const name = items.name.toLowerCase();
+    const name = items.name.toLowerCase();//name referencia a la data
     if (name.indexOf(dataNames) !== -1) {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
       nav.innerHTML += `
       <dl>
@@ -213,11 +217,11 @@ const filterNames = () => { //Buscador
     <li>Sin resultados</li>`
   }
 };
-buttonSearch.addEventListener("click", filterNames);
 inputName.addEventListener("keyup", filterNames); 
-buttonClearName.addEventListener("click", function() {//con esto limpio el nombre escrito
-  inputName.value += "";
-  //renderItems(data);
+buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
+  e.target.value = inputName.value = "";
+  nav.innerHTML = "";
+  renderItems(data);//corregir al dar clic me aparecen todos y el que busque
 });
 //filterNames();
 

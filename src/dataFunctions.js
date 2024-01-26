@@ -1,9 +1,12 @@
+/*El método sort es mutable y consiste en ordenar un array a partir de los valores Unicode de los caracteres y este retorna un array con la misma referencia en memoria que el original 
+RECIBE 2 PARAMETROS A COMPARAR A Y B*/
+/*De manera ascendente (a, b) => a - b   De manera descendente (a, b) => b - a */
 export const sortData = (data, sortBy, sortOrder ) => {//aquí debo llamar lo que debe realizar que es el sort
   data.sort( (a, b) => {
     const valueA = a[sortBy];  
     const valueB = b[sortBy]; 
-    const compare = valueA.localeCompare(valueB);
-    return (sortOrder === "asc" ? compare : -compare);//operador ternario
+    const compare = valueA.localeCompare(valueB);//El método localeCompare(), PARA COMPARARLO EN ORDEN ALFABÉTICO es fundamental para tener una ordenación correcta
+    return (sortOrder === "asc" ? compare : -compare);//operador ternario si el 1ro es true se cumple el asc si es false se hace lo contrario desc
   })
   return data;
 };
