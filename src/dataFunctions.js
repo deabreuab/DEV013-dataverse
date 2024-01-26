@@ -13,7 +13,7 @@ export const sortData = (data, sortBy, sortOrder ) => {//aquí debo llamar lo qu
 //sortOrder indica si se quiere ordenar ascendente o descendente(asc, desc)
 
 
-/* FUNCIÓN DE FILTRADO SIN MAP
+/* FUNCIÓN DE FILTRADO SIN MAP*
 export const filterData = (data, filterBy, value) => {
   let arraySpecies = 0; 
   //let arrayPersonality = 0;
@@ -24,16 +24,23 @@ export const filterData = (data, filterBy, value) => {
       console.log(arraySpecies++);
       return arraySpecies;
     }
-    /*if (item[filterBy] === value) {
-      console.log(arrayPersonality++);
-      return arrayPersonality;
-    }
-    if (item[filterBy] === value) {
-      console.log(arrayGender++);
-      return arrayGender;
-    }*
   })
-  console.log(array);
+  return array;
+
+}
+
+*/
+
+/*if (item[filterBy] === value) {
+  console.log(arrayPersonality++);
+  return arrayPersonality;
+  }
+  if (item[filterBy] === value) {
+    console.log(arrayGender++);
+    return arrayGender;
+    }*
+    })
+    console.log(array);
   return array;
 /*
   let arrayAll = 0; //este código ya esta bien, filtra por género
@@ -61,21 +68,63 @@ export const filterData = (data, filterBy, value) => {
 
 
 
-
-
-
-
+/* FILTRO TRATANDO DE USAR MAP*/
 export const filterData = (data, filterBy, value) => {
-  let arraySpecies = 0; 
+  const array = data.filter((items => items[filterBy] === value));
+  //el map usarlo para modificar el array solo regresar  los datos que estoy ocupando de la data
+  const filterMap = array.map(item => {
+    return {
+      name: item.name,
+      species: item.species,
+      personality: item.personality,
+      gender: item.gender,
+      shortDescription: item.shortDescription,
+      imageUrl: item.imageUrl,
+      facts:{birthDate: item.facts.birthDate, zodiacSign: item.facts.zodiacSign},
+    };
+  })
+  return filterMap;
+
+  /*
+  array = data.filter((items => items[filterBy] == value));
+  array.map(item => {
+    if (item[filterBy] == value);
+    console.log(array);
+    return array;
+})*/
+
+  //let arraySpecies = 0; 
+  /*
+  const array = data.filter((items => items[filterBy] == value));
+    console.log(array);
+    return array;*/
+
+  //items[filterBy] === value;
+  /*if ((items[filterBy] === value) === true) {
+      items
+      console.log(arraySpecies);
+      return arraySpecies++;
+    }
+  console.log(array);//undefined
+  console.log(arraySpecies);
+  return arraySpecies;*/
+
+  /*
+  const array = data.map(items => items[filterBy] === value)
+  console.log(array);//returna true y false
+  return array
+}*/
+
   //let array; 
-  const array = data.map(items => items[filterBy]).filter((item) => {
+  /*const array = data.map(items => items[filterBy]).filter((item) => {
     if (item[filterBy] === value) {
       console.log(arraySpecies++);
       return arraySpecies;
     }
-  })
+  })con esto no sale error pero sale un array vacio
   console.log(array);
-  return array;
+  console.log(arraySpecies);
+  return array;*/
 }
 
 
@@ -121,10 +170,29 @@ export const computeStats = (data) => {
     const women =  (acumuladorWomen / totalPeople) * 100;
     const men =  (acumuladorMen / totalPeople) * 100;
     console.log(typeof women);
-    console.log(typeof parseFloat(women.toFixed(2)), typeof parseFloat(men.toFixed(2)));
     //return sum;// no lo ocupe
     return `El porcentaje de personajes femeninos es: ${parseFloat(women.toFixed(2))}% y el porcentaje de personajes masculinos: ${parseFloat(men.toFixed(2))}%`;
   })
+  /*
+  let array;
+  array = data.reduce((sum, item) => {
+      if (item === "Femenino") {
+        return sum++;
+  }
+  if(item === "masculino"){
+    return sum++;
+  }
+ })
+ array.map(item => {
+  return {
+    ...item,
+    percentage: 100,
+  }
+  console.log(sum);
+ })
+*/
+
+
 
   //primero sumo totoal de personas=  data.gender + data.gender m+h
   //mujeres /totalpersonas * 100

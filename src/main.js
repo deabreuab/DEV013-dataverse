@@ -2,7 +2,9 @@ import { computeStats, filterData, sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
-
+//ctrl + k + c
+//ctrl + k + u
+renderItems(data);
 let filteredData;
 //const nav = document.getElementById("root");//llamarla y borrar su contenido para que al llamar la función aparezcan
 const nav = document.querySelector('#root');
@@ -17,41 +19,22 @@ const filterGender = document.querySelector("[data-testid='select-filterGender']
 const filter = document.querySelector("[data-testid='select-filter']");
 const inputName = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
-renderItems(data);
-filteredData = data;
-
-buttonClearName.addEventListener("click", function() {//con esto limpio el nombre escrito
-  //inputName.value = " " + nav.textContent;
-  inputName.value = "";
-});
+filteredData = data; //acomplar la inf de la base de datos para usarla de manera interna, ya la uso de forma que quiera, para mantener la data filtrada()
 
 buttonClear.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
-  console.log("hola");
-  nav.innerHTML = 
-  /*`<dl>
-  <img src=${data.imageUrl} alt=${data.name}/>      
-  <dd>${data.gender}</dd>
-  <dd itemprop="personality">${data.personality}</dd>
-  <dd itemprop="zodiacSign">${data.facts.zodiacSign}</dd>
-  <dd itemprop="birthDate">${data.facts.birthDate}</dd>
-  <dd itemprop="shortDescription">${data.shortDescription}</dd>
-  </dl>
-  `*/
+  console.log("hola");//mandar llamar la función
+  nav.innerHTML = "";
+  renderItems(data);
 });
 
 details.addEventListener("click", (e) => {
   statistics.showModal();//showModal es una función establecida para abrir el modal
   console.log("gola");
-  //let prueba;
   const titleH2 = document.getElementById("stats");
   if (e.target === details ) {
-    //prueba = computeStats(data);
-    titleH2.innerHTML = computeStats(data);     //sustituir el h2 donde va el texto
+    titleH2.innerHTML = computeStats(data);//sustituir el h2 donde va el texto
     console.log("prueba", titleH2);
   }
-  //console.log("pru", renderItems(titleH2));
-  //renderItems(titleH2);
-
   /*if (e.target === details) {
     //nav.innerHTML = " ";
     console.log("adiso");
@@ -61,11 +44,11 @@ details.addEventListener("click", (e) => {
     console.log(renderItems( prueba));
   }
   return details.innerHTML = computeStats(data);*/
-})
+});
 
 close.addEventListener("click", function () {
   statistics.close(); 
-})
+});
 
 /*order.addEventListener("change", (event) => {//
   let dataOrdered;//inicializar donde se estan guardando las tarjetas
@@ -81,21 +64,23 @@ close.addEventListener("click", function () {
 }) */
 
 order.addEventListener("change", (event) => {//ordenar
-  let dataOrdered;//inicializar donde se estan guardando las tarjetas
-  if (event.target.value === "asc") {
-    nav.textContent = "";
-    dataOrdered = sortData(data, "name", "asc");
-  } if (event.target.value === "desc") {
-    nav.textContent = "";
-    dataOrdered = sortData(data, "name", "desc");
-  }
-  console.log("render", dataOrdered);
-  renderItems(dataOrdered);
+  //let dataOrdered;//inicializar donde se estan guardando las tarjetas
+  //if (event.target.value === "asc") {
+  nav.textContent = "";
+  filteredData = sortData(filteredData, "name", event.target.value);
+  //} 
+  //if (event.target.value === "desc") {
+  nav.textContent = "";
+  filteredData = sortData(filteredData, "name", event.target.value);
+  //}
+  console.log("fil",filteredData);
+  //console.log("render", dataOrdered);
+  renderItems(filteredData);
 });
 
 
 filterPersonality.addEventListener("click", (e) => {//filtro personalidad
-  if(!e.target.value) {
+  if(!e.target.value) {//para que al dar clic fuera no haga nada
     return;
   }
   nav.innerHTML = "";
@@ -227,9 +212,13 @@ const filterNames = () => { //Buscador
     nav.innerHTML += `
     <li>Sin resultados</li>`
   }
-}
+};
 buttonSearch.addEventListener("click", filterNames);
-inputName.addEventListener("keyup", filterNames) 
+inputName.addEventListener("keyup", filterNames); 
+buttonClearName.addEventListener("click", function() {//con esto limpio el nombre escrito
+  inputName.value += "";
+  //renderItems(data);
+});
 //filterNames();
 
 /*

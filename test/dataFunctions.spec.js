@@ -3,10 +3,10 @@ import { data as fakeData } from './data.js';
 
 console.log(fakeData);
 
-describe('example', () => {//AQUÍ HACEMOS LAS FUNCIONES PARA REVISARLAS
+describe('example', () => {
 
   it('returns `example`', () => {
-    expect(example()).toBe('example');//describo que espero 
+    expect(example()).toBe('example');
   });
 });
 
