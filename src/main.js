@@ -22,10 +22,9 @@ filteredData = data; //acomplar la inf de la base de datos para usarla de manera
 
 buttonClear.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   console.log("hola");//mandar llamar la función
-  //nav.innerHTML = ""; con esto se borran las imagenes no los botones
-  //e.target.value = nav.innerHTML = ""; //no se deseleccionan los botones
-  //e.target.value = 
   nav.innerHTML = "";
+  document.querySelector('[name=optionOne]').Checked =false;
+  //falta que se quite la marca de los botones, el valor queda guardado, se debe resetar los valores no guardar
   renderItems(data);
 });
 
@@ -66,7 +65,7 @@ close.addEventListener("click", function () {
 }) */
 
 order.addEventListener("change", (event) => {//ordenar SE MANTIENEN LOS DATOS ordenados AL LIMPIAR FILTRO
-  let dataOrdered;//inicializar donde se estan guardando las tarjetas
+  //let dataOrdered;//inicializar donde se estan guardando las tarjetas
   //if (event.target.value === "asc") {
   nav.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
@@ -75,8 +74,6 @@ order.addEventListener("change", (event) => {//ordenar SE MANTIENEN LOS DATOS or
   nav.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
   //}
-  console.log("fil",filteredData);
-  console.log("render", dataOrdered);
   renderItems(filteredData);
 });
 
