@@ -2,14 +2,15 @@ import { computeStats, filterData, sortData } from '../src/dataFunctions.js';//I
 import { data as fakeData } from './data.js';//fakedata para trabar pocos elementos y nos los 24 en data.js
 
 const testData = [fakeData[1], fakeData[3], fakeData[2], fakeData[0]];
+const testDataFilterFe = [fakeData[0][3], fakeData[2][3]];
+//const testDataFilterMas = [fakeData[0].gender, fakeData[2].gender];
 const expectDataAsc = [fakeData[0], fakeData[1], fakeData[3], fakeData[2]];
 //const expectDataDesc = [fakeData[3], fakeData[2], fakeData[1], fakeData[0]];
 //const expectDataGender = [fakeData[1]];
 //const expectDataFemale = expectDataGender.gender;
-const prueba = [fakeData[0][4]];
+//const prueba = [fakeData[0][4]];
 //const stats = //total 4 mujer 2/4*100
-const pruebatext = "El porcentaje de personajes femeninos es: "operación " y el porcentaje de personajes masculinos: 66.67%"
-console.log(prueba);
+const pruebatext = "El porcentaje de personajes femeninos es: 33.33% y el porcentaje de personajes masculinos: 66.67%"
 
 describe('Ordenar la data "asc"', () => {//crear una colección de test filter data
   it('Debería ordenarse de forma ascendente y descendente', () => {//inician con it o test, descripción de que estamos configurando, empezar con debería quehace(ordenar en forma ascendente los nombres de la data) //ESO QUE VA HACER MI TEST DEBE HACER... SE PUEDEN AGREGAR DOS O MAS IT
@@ -25,13 +26,13 @@ describe('Ordenar la data "asc"', () => {//crear una colección de test filter d
 
 describe("Filtrar la data por especie, por género y por personalidad", () => {
   it("Debería filtrar los animales por género", () => {
-    expect(filterData(testData, "gender", "Femenino")).toBe(prueba)    
+    expect(filterData(testDataFilterFe, "gender", "Femenino")).no.toEqual("Femenino")    
   })
 })
 
 describe("Estadística númerica por género de los personajes", () => {
   it("Debería darnos el porcentaje de personajes femeninos", () => {
-    expect(computeStats(fakeData)).toEqual(30.43)
+    expect(computeStats(fakeData)).toBe(pruebatext)
   })
 })
 
