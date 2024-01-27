@@ -5,45 +5,6 @@
 }
 body {
     font-size: 14px;
-    background-color: bisque;
-}
-img {
-    width: 150px;
-    height: 200px;
-}
-h1 {
-    color: rgb(164, 116, 219);
-    text-align: center;
-}
-footer {
-    color: gray;
-    text-align: end;
-}
-p {
-    font-size: 14px;
-}
-/*esta hoja de estilos queda adaptada a celular*/
-
-li {
-    display: inline-block;
-    list-style: none;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    /*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;*/
-}
-
-/*
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body {
-    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #F5EFE3, #FEE9D7 90%, #5cc0d4 100%, #02bdd6);
 }
@@ -291,5 +252,3 @@ dt {/*quitar valores nombre, genero, etc*/
 [name="help-circle-outline"] {
     font-size: 40px;
 }
-
-*/

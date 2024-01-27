@@ -23,7 +23,6 @@
       <div id="search">
         <label for="searchAnimal"> Buscar </label>
         <input type="search" name="search" id="searchAnimal" placeholder="nombre del personaje">
-        <button data-testid="button-search">Buscar</button>
         <button data-testid="button-clearName">Limpiar buscador</button>
       </div>
       <article>
@@ -31,12 +30,12 @@
           Personajes
         </h2>
         <section id="containerOrder">
-          <label for="order">ORDENAR</label><!--CHECAR BIEN-->
-          <select name="name" id="order" data-testid="select-sort"><!--name: nombre de la propiedad por la que ordenar-->
-            <option value="all">...</option> <!--tiene 2 option uno asc y otro desc-->
-            <option value="asc">A-Z</option> <!--tiene 2 option uno asc y otro desc-->
+          <label for="order">ORDENAR</label>
+          <select name="name" id="order" data-testid="select-sort">
+            <option value="all">...</option> 
+            <option value="asc">A-Z</option> 
             <option value="desc">Z-A</option>
-        </select><!--para ordenar la data-->
+        </select>
         </section>
         <h2>Filtros</h2>
         <div class="container-nav">
@@ -45,15 +44,15 @@
             <ul>
               <li>
                 <input type="radio" name="optionOne" id="genderMasculine" value="Masculino">
-                <label for="genderDog">Masculino</label> 
+                <label for="genderMasculine">Masculino</label> 
               </li>
               <li>
                 <input type="radio" name="optionOne" id="genderWomen" value="Femenino">
-                <label for="genderThree">Femenino</label> 
+                <label for="genderWomen">Femenino</label> 
               </li>
             </ul>
           </nav>
-          <nav data-testid="select-filter" name="species"><!-- el name lleva la propiedad por la que filtrara-->
+          <nav data-testid="select-filter" name="species">
             <label for="filterForSpecies">ESPECIE</label>
             <ul>
               <li>
@@ -66,47 +65,47 @@
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieSquirrel" value="Ardilla">
-                <label for="specieThree">Ardilla</label> 
+                <label for="specieSquirrel">Ardilla</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieChicken" value="Gallo">
-                <label for="specieFour">Gallo</label> 
+                <label for="specieChicken">Gallo</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieMouse" value="Ratón">
-                <label for="specieFive">Ratón</label> 
+                <label for="specieMouse">Ratón</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieWolf" value="Lobo">
-                <label for="specieSix">Lobo</label> 
+                <label for="specieWolf">Lobo</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieDeer" value="Ciervo">
-                <label for="specieSeven">Ciervo</label> 
+                <label for="specieDeer">Ciervo</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieDuck" value="Pato">
-                <label for="specieEight">Pato</label> 
+                <label for="specieDuck">Pato</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieCat" value="Gato">
-                <label for="specieNine">Gato</label> 
+                <label for="specieCat">Gato</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieGoat" value="Cabra">
-                <label for="specieTen">Cabra</label> 
+                <label for="specieGoat">Cabra</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieBear" value="Oso">
-                <label for="specieEleven">Oso</label> 
+                <label for="specieBear">Oso</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieEagle" value="Águila">
-                <label for="specieTwelve">Águila</label> 
+                <label for="specieEagle">Águila</label> 
               </li>
               <li>
                 <input type="radio" name="optionTwo" id="specieHorse" value="Caballo">
-                <label for="specieThirteen">Caballo</label> 
+                <label for="specieHorse">Caballo</label> 
               </li>
             </ul>
           </nav>
@@ -115,31 +114,31 @@
             <ul>
               <li>
                 <input type="radio" name="optionThree" id="personalityJock" value="Deportista">
-                <label for="personalityTiger">Deportista</label> 
+                <label for="personalityJock">Deportista</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalityCranky" value="Gruñón">
-                <label for="personalityDog">Gruñón</label> 
+                <label for="personalityCranky">Gruñón</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalityLazy" value="Perezoso">
-                <label for="personalityThree">Perezoso</label> 
+                <label for="personalityLazy">Perezoso</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalitySmug" value="Esnob">
-                <label for="personalityFour">Esnob</label> 
+                <label for="personalitySmug">Esnob</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalitySweet" value="Dulce">
-                <label for="personalityFive">Dulce</label> 
+                <label for="personalitySweet">Dulce</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalityPeppy" value="Vivaracha">
-                <label for="personalitySix">Vivaracha</label> 
+                <label for="personalityPeppy">Vivaracha</label> 
               </li>
               <li>
                 <input type="radio" name="optionThree" id="personalitySnooty" value="Altanera">
-                <label for="personalitySeven">Altanera</label> 
+                <label for="personalitySnooty">Altanera</label> 
               </li>
             </ul>
           </nav>
@@ -147,25 +146,24 @@
         <div>
           <button type="button" data-testid="button-clear"> 
             <ion-icon name="trash"></ion-icon> Limpiar filtros
-          </button> <!--DEBE LIMPIAR LOS FILTROS Y EL ORDENAR-->
+          </button>
         </div>
       </article>
   <nav id="root">
   </nav>
   <button id="details" >
     <ion-icon name="stats-chart-outline"></ion-icon>Estadística
-  </button> <!--onclick="window.statistics.showModal()"-->
+  </button> 
   <div class="container-modal">
     <div class="content-modal">
       <dialog id="statistics">
         <h2 id="stats">hola</h2>
-        <button type="reset" id="close"> <!--onclick="window.statistics.close()-->
+        <button type="reset" id="close"> 
           <ion-icon name="close-circle-outline"></ion-icon>Cerrar
         </button>  
       </dialog>
     </div>
   </div>
-
   </main>
   <footer>
     Hecho por Barbara y Danilu
