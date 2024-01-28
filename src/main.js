@@ -12,7 +12,10 @@ const buttonClearName = document.querySelector("button[data-testid='button-clear
 const order = document.querySelector("[data-testid='select-sort']");
 const statistics = document.getElementById("statistics");
 const closeModal = document.querySelector("#close");
-const openModal = document.querySelector("#details");
+const openModal = document.querySelector("#openModal");
+const seeMoreModal = document.querySelector("#seeMoreModal");
+const seeMoreClose = document.querySelector("#seeMoreClose");
+const dialogModal = document.querySelector("#dialogModal");
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
@@ -31,9 +34,21 @@ openModal.addEventListener("click", (e) => {
   }
 });
 
-closeModal.addEventListener("click", function () {
+closeModal.addEventListener("click", ()=> {
   statistics.close(); 
 });
+
+seeMoreModal.addEventListener("click", ()=> { //boton ver mas desde JS abre, solo falta mostrar la información
+  console.log('hola');
+  dialogModal.showModal();
+  let containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  if (e.target === seeMoreModal) {
+    containerModalSeeMore.innerHTML = "";
+  }
+});
+seeMoreClose.addEventListener("click", ()=> {
+  dialogModal.close();
+})
 
 order.addEventListener("change", (event) => {
   nav.textContent = "";
@@ -104,3 +119,8 @@ buttonClearName.addEventListener("click", function() {
   nav.innerHTML = "";
   renderItems(data);
 });
+
+
+
+//prueba para meter fondos al cargar la página carguen las tarjetas con los fondos correspondientes
+

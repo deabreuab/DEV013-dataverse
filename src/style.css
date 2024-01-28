@@ -1,33 +1,130 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Encode Sans Condensed", sans-serif;
     box-sizing: border-box;
 }
 body {
     font-size: 14px;
+    background-color: #f7f3e7;
+    /*
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #F5EFE3, #FEE9D7 90%, #5cc0d4 100%, #02bdd6);
+    background: linear-gradient(to bottom, #F5EFE3, #FEE9D7 90%, #5cc0d4 100%, #02bdd6);*/
 }
-
-header h1{
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10%;
+    /*
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgb(218, 65, 65);
     font-size: 24px;
     font-size: x-large;
     color: yellow;
-    text-align: center;
+    text-align: center;*/
 }
 footer {
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: gray;
-    text-align: end;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    overflow: hidden;
+}
+footer p {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    color: rgb(7, 7, 7);
+    font-weight: bold;
+    z-index: 2;
+}
+  
+footer svg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+  
+footer img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+}
+aside {
+    padding: 3rem 3rem 3rem auto;
+}
+hr {
+    border: 1px solid #e0e0e0;
+    margin: 1rem 0;
+}
+#containerOrder {
+    display: flex;
+    flex-direction: row-reverse;
+}
+ul {
+    display: flexbox;
+    list-style: none;
+}
+.card {
+    width: 184px;
+    height: 279px;
+    display: flex;
+    position: relative; left: 80px; top: -900px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    background-size: cover;
+    background-image: url(images/cardAltanera.png);
+    text-align: center;
+}
+.img {
+    height: 200px;
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 1px;
+}
+dl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+dd {
+    width: 50%;
+    height: 16px;
+    border-radius: 6px;
+}
+dd[itemprop="name"]{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 36%;
+}
+dd[itemprop="species"] {
+    display: flex;
+    float: right; 
+    position: relative; left: 40px;
+    margin-top: 2px;   
+}
+dd[itemprop="birthDate"] {
+    background-color: #e0e0e0;
+    display: flex;
+    text-align: center;
+}
+dd[itemprop="personality"] {
+    padding: auto 1px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    position: relative; top: -14px;
+}
+dt {
+    display: none;
+}
+ion-icon {
+    font-size: 20px;
 }
 p {/*la uso para info html*/
     font-size: 14px;
-}
-ion-icon {/*me falta centrar el icono para centrarlo*/
-    font-size: 20px;
 }
 #info {/*falta centrar el icono al texto*/
     padding: 4px 12px;
@@ -69,13 +166,6 @@ label {/*contenedor de buscar por nombre, input del texto*/
     text-align: center;
     border-top: 1px solid black;/*línea divisora entre personajes y buscar*/
 }
-#containerOrder {
-    display: flexbox;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-self: flex-end;
-
-}
 .container-nav{ /*contenedor de los filtros*/
     position: sticky;
     line-height: 30px;/*espaciado entre palabras en los filtros*/
@@ -83,35 +173,32 @@ label {/*contenedor de buscar por nombre, input del texto*/
 label[for=filter], label[for=filterForSpecies], label[for=filterForPersonality] {/*grosor de letras*/
     font-weight: 800; 
 }
-[data-testid="select-filterGender"] {/*filtro por genero*/
-    /*display: flex;
-    flex-direction: column;*/
-    /*position: relative; con esta opción no me deja acomodarlo ni quitar los puntos*/
-    /*position: sticky; con esto queda fijo pero solo género*/
+/*
+[data-testid="select-filterGender"] {/*filtro por genero*
     top: 100px;
     bottom: 0;
     right: 0;
     left: 200px;
     font-size: 1em;
     list-style: none;
-    border-top: 1px solid black;
-    margin-top: 4px;/*separado de arriba*/
-    margin-bottom: 12px; /*separado entre los apartados género, especie*/
-    margin-left: 8px;/*espacio a la izquierda*/
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*/
+    /*border-top: 1px solid black;*
+    margin-top: 4px;/*separado de arriba*
+    margin-bottom: 12px; /*separado entre los apartados género, especie*
+    margin-left: 8px;/*espacio a la izquierda*
+    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*
 }
-[data-testid="select-filter"] {/*filtro por especies*/
+[data-testid="select-filter"] {/*filtro por especies*
     top: 100px;
     bottom: 0;
     right: 0;
     left: 200px;
     font-size: 1em;
     list-style: none;
-    border-top: 1px solid black;
-    margin-top: 4px;/*separado de arriba*/
-    margin-bottom: 12px; /*separado entre los partados género, especie*/
-    margin-left: 8px;/*espacio a la izquierda*/
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*/
+    /*border-top: 1px solid black;*
+    margin-top: 4px;/*separado de arriba*
+    margin-bottom: 12px; /*separado entre los partados género, especie*
+    margin-left: 8px;/*espacio a la izquierda*
+    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*
 }
 [data-testid="select-filterPersonality"] {
     top: 100px;
@@ -120,97 +207,41 @@ label[for=filter], label[for=filterForSpecies], label[for=filterForPersonality] 
     left: 200px;
     font-size: 1em;
     list-style: none;
-    border-top: 1px solid black;
-    margin-top: 4px;/*separado de arriba*/
-    margin-bottom: 12px; /*separado entre los partados género, especie*/
-    margin-left: 8px;/*espacio a la izquierda*/
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*/ 
-}
+    /*border-top: 1px solid black;*
+    margin-top: 4px;/*separado de arriba*
+    margin-bottom: 12px; /*separado entre los partados género, especie*
+    margin-left: 8px;/*espacio a la izquierda*
+    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje* 
+}*/
 [data-testid="button-clear"] {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
     padding: 6px 12px;
-    letter-spacing: 2px;
     border-radius: 10px;
+    cursor: pointer;
 }
-#root ul{
+/*#root ul{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     grid-template-rows: 1fr 1fr 1fr;
     list-style: none;
     padding: 1rem;
-    /*display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    grid-template-rows: 1fr 1fr 1fr;*/
     justify-content: space-between;
     align-items: center;
-    /*
-    width: 40%;
-    max-width: 220px;
-    height: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    font-size: 6px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    */
 }
-/*
-dl {
-    height: 350px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    background-color: #00a5ec;
-    transition: 300ms;
-    position: absolute;
-}*/
 dd[itemprop]{
     box-sizing: content-box;
     width: 180px;
     display: flex;
     /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*
     flex: 1;
     justify-content: center;
     background-color: rgb(248, 106, 182);
-    /*
-    height: 200px;
-    width: 300px;
-    background-color: white;
-    position: absolute;
-    border-top-right-radius: 10%;
-    border-bottom-left-radius: 10%;
-    margin-top: 150px;
-    z-index: 2;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    transition: 300ms;
-    */
-    /*
-    font-weight: 400;
-    text-decoration: none;
-    width: 350px;
-    height: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-    :hover {
-        transform: translateY(-15px);
-        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-    }*/
 }
 #root dl img {
-    /*
-    margin-top: 20px;
-    margin-bottom: 10px;
-    height: 200px;
-    width: 120px;*/
     width: 100%;
     height: auto;
     background: url(images/cardDulce.png);
@@ -218,33 +249,36 @@ dd[itemprop]{
     transition: 300ms;
     filter: drop-shadow(5px -4px 10px #000);
 }
-dt {/*quitar valores nombre, genero, etc*/
+dt {/*quitar valores nombre, genero, etc*
     display: none;
-    
-}
-#details {
+}*/
+#openModal {
+    margin-top: 50px;
     border-radius: 8px;
     cursor: pointer;
     background: rgba(78, 76, 76, 0.3);
     font-size: 30px;
 }
-#statistics {
-    max-width: 50ch;
-}
 .container-modal {
-    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /*width: 100%;
-    height: 500vh;
-    position: fixed;
-    justify-content: center;
-    align-items: center;*/
+    align-items: center;
+}
+#centerModal {
+    flex-direction: row-reverse;
 }
 #close {
     font-size: 28px;
+}
+#seeMoreModal {/*para quitar el borde y subrayar el texto del boton*/
+    color: blue;
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    float: right;
 }
 [name="stats-chart-outline"] {
     font-size: 30px;

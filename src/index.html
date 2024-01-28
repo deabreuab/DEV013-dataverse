@@ -14,10 +14,10 @@
   <header>
     <h1>Animal Crossing</h1>
   </header>
-  <main>
+  <main load>
     <div class="info">
       <button type="button" id="info">
-        <a href="info.html" target="_blank"><ion-icon name="help-circle-outline"></ion-icon>Información</a>
+        <a href="info.html" target="_blank"><ion-icon name="help-circle-outline"></ion-icon></a>
       </button>
       </div>
       <div id="search">
@@ -25,7 +25,7 @@
         <input type="search" name="search" id="searchAnimal" placeholder="nombre del personaje">
         <button data-testid="button-clearName">Limpiar buscador</button>
       </div>
-      <article>
+      <!--<article>-->
         <h2 id="personage">
           Personajes
         </h2>
@@ -37,7 +37,9 @@
             <option value="desc">Z-A</option>
         </select>
         </section>
+        <aside>
         <h2>Filtros</h2>
+        <hr/>
         <div class="container-nav">
           <nav data-testid="select-filterGender" name="gender">
             <label for="filter">GÉNERO</label>
@@ -52,6 +54,7 @@
               </li>
             </ul>
           </nav>
+          <hr/>
           <nav data-testid="select-filter" name="species">
             <label for="filterForSpecies">ESPECIE</label>
             <ul>
@@ -109,6 +112,7 @@
               </li>
             </ul>
           </nav>
+          <hr/>
           <nav data-testid="select-filterPersonality" name="personality">
             <label for="filterForPersonality">PERSONALIDAD</label>
             <ul>
@@ -148,25 +152,33 @@
             <ion-icon name="trash"></ion-icon> Limpiar filtros
           </button>
         </div>
-      </article>
+      </aside>
+      <!--</article>-->
   <nav id="root">
   </nav>
-  <button id="details" >
-    <ion-icon name="stats-chart-outline"></ion-icon>Estadística
-  </button> 
-  <div class="container-modal">
-    <div class="content-modal">
-      <dialog id="statistics">
-        <h2 id="stats">hola</h2>
-        <button type="reset" id="close"> 
-          <ion-icon name="close-circle-outline"></ion-icon>Cerrar
-        </button>  
-      </dialog>
+  <div id="centerModal">
+    <button id="openModal" >
+      <ion-icon name="stats-chart-outline"></ion-icon>
+    </button> 
+    <div class="container-modal">
+      <div class="content-modal">
+        <dialog id="statistics">
+          <h2 id="stats">hola</h2>
+          <button type="reset" id="close"> 
+            <ion-icon name="close-circle-outline"></ion-icon>Cerrar
+          </button>  
+        </dialog>
+      </div>
     </div>
   </div>
   </main>
   <footer>
-    Hecho por Barbara y Danilu
+    <p>Hecho por Barbara y Danilu</p>
+    <img src="./images/island.png" alt="island" width="100" />
+      <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+        <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#aaeaf0"/>
+        <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#86CFD5" />
+      </svg>
   </footer>
 
     <script src="main.js" type="module"></script>
