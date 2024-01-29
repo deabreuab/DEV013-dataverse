@@ -14,65 +14,49 @@ const order = document.querySelector("[data-testid='select-sort']");//para orden
 const statistics = document.getElementById("statistics");//contenedor modal
 const closeModal = document.querySelector("#close");//cerrar modal
 const openModal = document.querySelector("#details"); //abrir el modal
+const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
+const seeMoreClose = document.querySelector("#seeMoreClose"); //
+const dialogModal = document.querySelector("#dialogModal");
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
 filteredData = data; //acomplar la inf de la base de datos para usarla de manera interna, ya la uso de forma que quiera, para mantener la data filtrada()
 
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
-  console.log("hola");//mandar llamar la función
   nav.innerHTML = "";
   document.querySelector('[name=optionOne]').Checked =false;
   //falta que se quite la marca de los botones, el valor queda guardado, se debe resetar los valores no guardar
   renderItems(data);
 });
-
-openModal.addEventListener("click", (e) => {
-  statistics.showModal();//showModal es una función establecida para abrir el modal
-  console.log("gola");
+/* ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
+openModal.addEventListener("click", (e) => {  
+  statistics.showModal();
   const titleH2 = document.getElementById("stats");
   if (e.target === openModal ) {
-    titleH2.innerHTML = computeStats(data);//sustituir el h2 donde va el texto
-    console.log("prueba", titleH2);
+    titleH2.innerHTML = computeStats(data);
   }
-  /*if (e.target === details) {
-    //nav.innerHTML = " ";
-    console.log("adiso");
-    //console.log(computeStats(data));//undefined
-    //console.log(renderItems(data));//retorna los ul y li
-    prueba = computeStats(data)//stats.innerHTML; //computeStats(data);//tengo que llamar la estadística aparece undefined 
-    console.log(renderItems( prueba));
-  }
-  return details.innerHTML = computeStats(data);*/
 });
 
-closeModal.addEventListener("click", function () {
+closeModal.addEventListener("click", ()=> {
   statistics.close(); 
-});
+});*/
 
-/*order.addEventListener("change", (event) => {//
-  let dataOrdered;//inicializar donde se estan guardando las tarjetas
-  if (event.target.value === "asc") {
-    nav.textContent = "";
-    dataOrdered = sortData(data, "name", "asc");
-  } if (event.target.value === "desc") {
-    nav.textContent = "";
-    dataOrdered = sortData(data, "name", "desc");
+seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
+  dialogModal.showModal();
+  let containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  if (e.target === seeMoreModal) {
+    containerModalSeeMore.innerHTML = "";
   }
-  console.log("render", dataOrdered);
-  return renderItems(dataOrdered);
-}) */
+});
+seeMoreClose.addEventListener("click", ()=> {
+  dialogModal.close();
+})
 
-order.addEventListener("change", (event) => {//ordenar SE MANTIENEN LOS DATOS ordenados AL LIMPIAR FILTRO
-  //let dataOrdered;//inicializar donde se estan guardando las tarjetas
-  //if (event.target.value === "asc") {
+order.addEventListener("change", (event) => {
   nav.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
-  //} 
-  //if (event.target.value === "desc") {
   nav.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
-  //}
   renderItems(filteredData);
 });
 
@@ -94,69 +78,6 @@ filterSpecie.addEventListener("click", (e) => {// CON ESTO FILTRO POR ESPECIES
   }
   nav.innerHTML = "";
   filteredData =  filterData(filteredData, "species", e.target.value);
-  //filterResult.push(filterData(data, "gender", gender));  
-  /*if (document.getElementById("specieDog").checked){
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Perro");
-  }
-  if (document.getElementById("specieSquirrel").checked){
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Ardilla");
-  }
-  if (document.getElementById("specieChicken").checked){
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Gallo");
-  }
-  if (document.getElementById("specieTiger").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Tigre");
-  }
-  if (document.getElementById("specieMouse").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Ratón");
-  }
-  if (document.getElementById("specieWolf").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Lobo");
-  }
-  if (document.getElementById("specieDeer").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Ciervo");
-  }
-  if (document.getElementById("specieDuck").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Pato");
-  }
-  if (document.getElementById("specieCat").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Gato");
-  }
-  if (document.getElementById("specieGoat").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Cabra");
-  }
-  if (document.getElementById("specieBear").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Oso");
-  }
-  if (document.getElementById("specieEagle").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Águila");
-  }
-  if (document.getElementById("specieHorse").checked){
-    console.log("hola");
-    nav.innerHTML = "";
-    filterResult = filterData(data, "species", "Caballo");
-  }*/ 
   renderItems(filteredData);
 });
 

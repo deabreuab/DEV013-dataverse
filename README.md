@@ -76,6 +76,9 @@ En este archivo se relizaron la estructura de las tarjetas mostradas en el THML
 
 ##### Prototipo de alta fidelidad
 
+![prototipo media fidelidad](prototipoMediaFidelidad.png)
+![prototipo alta fidelidad](prototipoAltaFidelidad.png)
+
 
 #### Testeos de usabilidad
 
