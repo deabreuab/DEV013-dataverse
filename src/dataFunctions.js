@@ -9,6 +9,7 @@ export const sortData = (data, sortBy, sortOrder ) => {
 };
 
 export const filterData = (data, filterBy, value) => {
+  console.log(data);
   const array = data.filter((items => items[filterBy] === value));
   const filterMap = array.map(item => {
     return {
@@ -25,19 +26,23 @@ export const filterData = (data, filterBy, value) => {
 };
 
 export const computeStats = (data) => {
-  let acumuladorWomen = 0;
-  let acumuladorMen = 0;
-  return data.reduce((sum, item) => {
-    if (item.gender === "Femenino") {
-      acumuladorWomen++;
-    }
+  const acumuladorMen = data.reduce((acumuladorMen, item) => {
     if (item.gender === "Masculino") {
       acumuladorMen++;
     }
-    const totalPeople = acumuladorWomen + acumuladorMen;
-    const women =  (acumuladorWomen / totalPeople) * 100;
-    const men =  (acumuladorMen / totalPeople) * 100;
-    return `El porcentaje de personajes femeninos es: ${parseFloat(women.toFixed(2))}% y el porcentaje de personajes masculinos: ${parseFloat(men.toFixed(2))}%`;
-  });
-  console.log(acumuladorMen);
+    console.log(acumuladorMen);
+    return acumuladorMen;
+  }, 0);
+  
+  const acumuladorWomen = data.reduce((acumuladorWomen, item) => {
+    if (item.gender === "Femenino") {
+      acumuladorWomen++;
+    }
+    console.log(acumuladorWomen);
+    return acumuladorWomen;
+  }, 0);
+  const totalMen = parseFloat((acumuladorMen/data.length)*100).toFixed(2); 
+  const totalWomen = parseFloat((acumuladorWomen/data.length)*100).toFixed(2); 
+  console.log(typeof totalMen, totalWomen);
+  return `Porcentaje personajes Masculinos ${totalMen}% porcentaje personajes femeninos ${totalWomen}%`
 };

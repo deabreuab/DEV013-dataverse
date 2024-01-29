@@ -140,8 +140,10 @@ buttonClearName.addEventListener("click", function(e) {//con esto limpio el nomb
   
 
 // ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
+
 openModal.addEventListener("click", (e) => {  
   statistics.showModal();
+  computeStats(data)
   const titleH2 = document.getElementById("stats");
   if (e.target === openModal ) {
     titleH2.innerHTML = computeStats(data);
@@ -151,6 +153,7 @@ openModal.addEventListener("click", (e) => {
 closeModal.addEventListener("click", ()=> {
   statistics.close(); 
 });
+
 
 
 
