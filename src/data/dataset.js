@@ -11,7 +11,7 @@ export default [
     facts: {
       zodiacSign: "Leo",
       catchPhrase: "¡A darlo todo!",
-      birthDate: "15 de octubre",
+      birthDate: "15/10",
     },
   },
   {
@@ -26,7 +26,7 @@ export default [
     facts: {
       zodiacSign: "Piscis",
       catchPhrase: "¡Guau galleta!",
-      birthDate: "13 de mayo",
+      birthDate: "13/05",
     },
   },
   {
@@ -41,7 +41,7 @@ export default [
     facts: {
       zodiacSign: "Géminis",
       catchPhrase: "¡Amigo!",
-      birthDate: "4 de agosto",
+      birthDate: "04/08",
     },
   },
   {
@@ -56,7 +56,7 @@ export default [
     facts: {
       zodiacSign: "Aries",
       catchPhrase: "¡Ánimo!",
-      birthDate: "4 de octubre",
+      birthDate: "04/10",
     },
   },
   {
@@ -71,7 +71,7 @@ export default [
     facts: {
       zodiacSign: "Libra",
       catchPhrase: "¡Buen día!",
-      birthDate: "23 de diciembre",
+      birthDate: "23/12",
     },
   },
   {
@@ -86,7 +86,7 @@ export default [
     facts: {
       zodiacSign: "Leo",
       catchPhrase: "¡Cheese!",
-      birthDate: "17 de enero",
+      birthDate: "17/01",
     },
   },
   {
@@ -101,7 +101,7 @@ export default [
     facts: {
       zodiacSign: "Acuario",
       catchPhrase: "¡Bellissima!",
-      birthDate: "19 de junio",
+      birthDate: "19/06",
     },
   },
   {
@@ -116,7 +116,7 @@ export default [
     facts: {
       zodiacSign: "Leo",
       catchPhrase: "¡Sudor y gloria!",
-      birthDate: "14 de agosto",
+      birthDate: "14/08",
     },
   },
   {
@@ -131,7 +131,7 @@ export default [
     facts: {
       zodiacSign: "Virgo",
       catchPhrase: "¡Que interesante!",
-      birthDate: "7 de julio",
+      birthDate: "07/07",
     },
   },
   {
@@ -146,7 +146,7 @@ export default [
     facts: {
       zodiacSign: "Capricornio",
       catchPhrase: "¡A rugir!",
-      birthDate: "22 de noviembre",
+      birthDate: "22/11",
     },
   },
   {
@@ -161,7 +161,7 @@ export default [
     facts: {
       zodiacSign: "Leo",
       catchPhrase: "¡Rugido victorioso!",
-      birthDate: "26 de mayo",
+      birthDate: "26/05",
     },
   },
   {
@@ -176,7 +176,7 @@ export default [
     facts: {
       zodiacSign: "Leo",
       catchPhrase: "¡Grrrr!",
-      birthDate: "22 de agosto",
+      birthDate: "22/08",
     },
   },
   {
@@ -186,10 +186,8 @@ export default [
     personality: "Gruñón",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/a/aa/Wolfgang_NH.png/150px-Wolfgang_NH.png",
-    shortDescription:
-      "Wolfgang es un aldeano lobo gruñón en la serie Animal Crossing que aparece en todos los juegos hasta la fecha.",
-    description:
-      "Wolfi tiene la personalidad gruñona, Por lo general parecerá estar agitado y de mal humor y es más difícil hacerse amigo de él que otros tipos de vecinos. Cuando habla con el Jugador, tiende a enojarse si el jugador no está de acuerdo con él o se niega a hacerle un favor. Al igual que todos los vecinos gruñones, Wolfi tiene una edad avanzada e invertirá su tiempo en su hobby, con frecuencia desafiará al jugador a varias competiciones. Él se entenderá fácilmente con vecinos atléticos, presumidas y otros vecinos gruñones, y en ocasiones también con vecinos perezosos y normales.",
+    shortDescription: "Wolfgang es un aldeano lobo gruñón en la serie Animal Crossing que aparece en todos los juegos hasta la fecha.",
+    description: "Wolfi tiene la personalidad gruñona, Por lo general parecerá estar agitado y de mal humor y es más difícil hacerse amigo de él que otros tipos de vecinos. Cuando habla con el Jugador, tiende a enojarse si el jugador no está de acuerdo con él o se niega a hacerle un favor. Al igual que todos los vecinos gruñones, Wolfi tiene una edad avanzada e invertirá su tiempo en su hobby, con frecuencia desafiará al jugador a varias competiciones. Él se entenderá fácilmente con vecinos atléticos, presumidas y otros vecinos gruñones, y en ocasiones también con vecinos perezosos y normales.",
     facts: {
       zodiacSign: "Sagitario",
       birthDate: "25/11",
@@ -203,10 +201,8 @@ export default [
     personality: "Vivaracha",
     gender: "Femenino",
     imageUrl: "https://dodo.ac/np/images/2/26/Shino_amiibo.png",
-    shortDescription:
-      "Yuki es una aldeana ciervo animada en la serie Animal Crossing",
-    description:
-      "Yuki en una cierva de color blanco amarillento con un hocico de color blanco y pesuñas de color dorado. Yuki tiene unos ojos alargados de color amarillo con una sombra de ojos de color rojo del estilo Hikimayu, además de unos pequeños colmillos que sobresalen de su boca y podrían indicar que pertenece a la especie del ciervo de copete. El diseño de Shino parece estar inspirado por máscaras del teatro Noh japonés, más concretamente a la mascara de los Hannya, demonios de mujeres consumidas por los celos.",
+    shortDescription: "Yuki es una aldeana ciervo animada en la serie Animal Crossing",
+    description: "Yuki en una cierva de color blanco amarillento con un hocico de color blanco y pesuñas de color dorado. Yuki tiene unos ojos alargados de color amarillo con una sombra de ojos de color rojo del estilo Hikimayu, además de unos pequeños colmillos que sobresalen de su boca y podrían indicar que pertenece a la especie del ciervo de copete. El diseño de Shino parece estar inspirado por máscaras del teatro Noh japonés, más concretamente a la mascara de los Hannya, demonios de mujeres consumidas por los celos.",
     facts: {
       zodiacSign: "Libra",
       birthDate: "31/10",
@@ -220,14 +216,12 @@ export default [
     personality: "Dulce",
     gender: "Femenino",
     imageUrl: "https://dodo.ac/np/images/thumb/2/29/Molly_NH.png/150px-Molly_NH.png",
-    shortDescription:
-      "Deira es una aldeana pato normal en la serie Animal Crossing",
-    description:
-      "Deira, al ser de personalidad normal, será tímida y cariñosa con el jugador y los vecinos. Al igual que otras vecinas de la misma personalidad, será obsesiva con la limpieza e higiene. Se llevará bien con vecinos de personalidad esnob, perezosa e incluso también con vecinos de su misma personalidad. Puede llevarse mal con vecinos de personalidad gruñona debido a su naturaleza grosera y arrogante. Por lo general, hablará de otros vecinos en lugar de hablar sobre ella misma y sus problemas. También parece disfrutar de la cocina y con frecuencia le preguntará al jugador sobre comida.",
+    shortDescription: "Deira es una aldeana pato normal en la serie Animal Crossing",
+    description: "Deira, al ser de personalidad normal, será tímida y cariñosa con el jugador y los vecinos. Al igual que otras vecinas de la misma personalidad, será obsesiva con la limpieza e higiene. Se llevará bien con vecinos de personalidad esnob, perezosa e incluso también con vecinos de su misma personalidad. Puede llevarse mal con vecinos de personalidad gruñona debido a su naturaleza grosera y arrogante. Por lo general, hablará de otros vecinos en lugar de hablar sobre ella misma y sus problemas. También parece disfrutar de la cocina y con frecuencia le preguntará al jugador sobre comida.",
     facts: {
       zodiacSign: "Piscis",
       birthDate: "7/3",
-      catchPhrase: "deverd\u00e1",
+      catchPhrase: "deverdá",
     },
   },
   {
@@ -237,14 +231,12 @@ export default [
     personality: "Dulce",
     gender: "Femenino",
     imageUrl: "https://dodo.ac/np/images/4/40/Ione_amiibo.png",
-    shortDescription:
-      "Auri es una aldeana ardilla normal en la serie Animal Crossing",
-    description:
-      "Auri tiene personalidad normal, por lo que actuará con timidez al principio, pero se preocupará por el Jugador. Tendrá preocupaciones de higiene, representadas cuando el jugador visite su casa, y expresará su vergüenza por la apariencia supuestamente sucia de su hogar. Por otra parte, Ella disfrutará de los pasatiempos comunes, tales como la pesca y atrapar bichos, generalmente para mantenerse activa. Mencionará su interés por la lectura y los diversos libros que lee. Ella también disfrutará escribiendo y recibiendo cartas.",
+    shortDescription: "Auri es una aldeana ardilla normal en la serie Animal Crossing",
+    description: "Auri tiene personalidad normal, por lo que actuará con timidez al principio, pero se preocupará por el Jugador. Tendrá preocupaciones de higiene, representadas cuando el jugador visite su casa, y expresará su vergüenza por la apariencia supuestamente sucia de su hogar. Por otra parte, Ella disfrutará de los pasatiempos comunes, tales como la pesca y atrapar bichos, generalmente para mantenerse activa. Mencionará su interés por la lectura y los diversos libros que lee. Ella también disfrutará escribiendo y recibiendo cartas.",
     facts: {
       zodiacSign: "Virgo",
       birthDate: "11/9",
-      catchPhrase: "blinguibl\u00edn",
+      catchPhrase: "blinguiblín",
     },
   },
   {
@@ -269,10 +261,8 @@ export default [
     personality: "Esnob",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/2/2a/Raymond_NH.png",
-    shortDescription:
-      "Narciso es un aldeano gato engre\u00eddo en la serie Animal Crossing",
-    description:
-      "Narciso es un gato con pelaje de color gris con un mechón de pelo rubio en la frente y puntas de sus orejas, patas y cola son de color negro. Narciso tiene heterocromía, por lo que sus ojos son de colores diferentes, su ojo izquierdo es de color verde mientras que su ojo derecho es de color marrón, tiene una boca triangular de la cual sobresalen un par de colmillos que solo pueden verse cuando abre la boca. Lleva un par de gafas de pasta gruesa de color negro.",
+    shortDescription: "Narciso es un aldeano gato Esnob en la serie Animal Crossing",
+    description: "Narciso es un gato con pelaje de color gris con un mechón de pelo rubio en la frente y puntas de sus orejas, patas y cola son de color negro. Narciso tiene heterocromía, por lo que sus ojos son de colores diferentes, su ojo izquierdo es de color verde mientras que su ojo derecho es de color marrón, tiene una boca triangular de la cual sobresalen un par de colmillos que solo pueden verse cuando abre la boca. Lleva un par de gafas de pasta gruesa de color negro.",
     facts: {
       zodiacSign: "Libra",
       birthDate: "1/10",
@@ -286,12 +276,12 @@ export default [
     personality: "Esnob",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/d/da/Marshal_NH.png/150px-Marshal_NH.png",
-    shortDescription: "Munchi es un aldeano ardilla engre\u00eddo en la serie Animal Crossing",
+    shortDescription: "Munchi es un aldeano ardilla Esnob en la serie Animal Crossing.",
     description: "Es una ardilla blanca con un fleco entrecortado de color bronce. También tiene marcas rosadas en sus mejillas y un color de lavanda en el dentro del oído. Sus patas y los remolinos a cada lado de su cola también son de color bronce. Los ojos de Munchi son negros y arqueados con un ojo lateral fijo, y su boca está vuelta hacia abajo. Esto lo hace parecer molesto, lo que hace que muchos lo confundan con un vecino gruñón. El sonrojo también lo hace ver femenino, lo que significa que a menudo también se lo confunde con un vecina.",
     facts: {
       zodiacSign: "Libra",
       birthDate: "29/9",
-      catchPhrase: "tec\u00faen",
+      catchPhrase: "tecúen",
     },
   },
   {
@@ -316,7 +306,7 @@ export default [
     personality: "Perezoso",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/5/56/Stitches_NH.png/150px-Stitches_NH.png",
-    shortDescription: "Parches es un aldeano oso cub gru\u00f1\u00f3n en la serie Animal Crossing.",
+    shortDescription: "Parches es un aldeano oso Peresozo en la serie Animal Crossing.",
     description: "Parches tiene la personalidad perezosa, por lo que será amigable y de trato fácil debido a su estilo de vida relajado. Como a todos los vecinos perezosos, a Parches le encanta la comida y el descanso. Parches disfrutará de participar en los pasatiempos comunes, generalmente por razones que involucran relajarse o comer, como la pesca. Parches se llevará bien con los otros vecinos, pero puede ofender o confundir a los vecinos atléticos, que tienen un estilo de vida de ejercicio y de buen estado físico, en comparación con el estilo de vida perezoso de Parches.",
     facts: {
       zodiacSign: "Acuario",
@@ -327,14 +317,14 @@ export default [
   {
     id: "pbr00",
     name: "Apolo",
-    species: "\u00c1guila",
-    personality: "Gru\u00f1\u00f3n",
+    species: "Águila",
+    personality: "Gruñón",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/0/0e/Apollo_NH_Transparent.png/150px-Apollo_NH_Transparent.png",
     shortDescription: "Apolo tiene la personalidad gruñona, por lo general él parecerá estar agitado y de mal humor.",
     description: "Apolo es un águila calva con un cuerpo de color gris oscuro y una cabeza de color blanca, un aspecto típico de la águila calva, tiene un pico y pies de color amarillo con garras blancas al final de ellos. Las alas de Apolo se degradan lentamente en un color blanco y sus ojos son semicírculos blancos bordados con un contorno negro y pupilas totalmente negras. En Animal Crossing: Población: ¡en aumento! hasta New Leaf su atuendo inicial un jersey cremallera, pero a partir de New Horizons usa una chaqueta de aviación negra.",
     facts: {
-      zodiacSign: "C\u00e1ncer",
+      zodiacSign: "Cáncer",
       birthDate: "4/7",
       catchPhrase: "rapahhh",
     },
@@ -346,7 +336,7 @@ export default [
     personality: "Deportista",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/a/ab/Mac_NH.png/150px-Mac_NH.png",
-    shortDescription: "Pit es un aldeano perro atl\u00e9tico en la serie Animal Crossing",
+    shortDescription: "Pit es un aldeano perro atlético en la serie Animal Crossing",
     description: "Tiene la personalidad deportista, por lo que tendrá un gran interés en la aptitud física y los deportes. Esto lo hará parecer muy competitivo y desafiante, Pit tendrá una actitud hiperactiva y motivada, pero a menudo actuará de forma egoísta y pesada, pero a pesar de esto, sera amigable y amable con el Jugador. Como todo vecino deportista, Pit está muy interesado en su hobby, y puede competir contra el jugador por atrapar Bichos o Peces, Pit se lleva bien con los vecinos esnobs, alegres y dulces, pero tendrá problemas con el estilo de vida relajado de los vecinos perezosos.",
     facts: {
       zodiacSign: "Escorpio",
@@ -358,15 +348,15 @@ export default [
     id: "hrs04",
     name: "Jereza",
     species: "Caballo",
-    personality: "Gru\u00f1\u00f3n",
+    personality: "Gruñón",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/thumb/8/8e/Roscoe_NH.png/150px-Roscoe_NH.png",
-    shortDescription: "Jereza es un aldeano caballo gru\u00f1\u00f3n en la serie Animal Crossing.",
+    shortDescription: "Jereza es un aldeano caballo Gruñón en la serie Animal Crossing.",
     description: "Tiene la personalidad picajosa y por lo general parecerá estar agitado y de mal humor y es más difícil hacerse amigo de él que otros tipos de vecinos. Cuando habla con el Jugador, tiende a enojarse si el jugador no está de acuerdo con él o se niega a hacerle un favor. Al igual que todos los vecinos picajosos, Jereza tiene una edad avanzada e invertirá su tiempo en su hobby, con frecuencia desafiará al jugador a varias competiciones. Él se entenderá fácilmente con vecinos deportistas, altaneras y otros vecinos picajosos, y en ocasiones también con vecinos vagos y dulces.",
     facts: {
-      zodiacSign: "G\u00e9minis",
+      zodiacSign: "Géminis",
       birthDate: "16/6",
-      catchPhrase: "\u00f1iii",
+      catchPhrase: "Ñiii",
     },
   },
 ];

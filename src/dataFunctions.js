@@ -39,4 +39,5 @@ export const computeStats = (data) => {
     const men =  (acumuladorMen / totalPeople) * 100;
     return `El porcentaje de personajes femeninos es: ${parseFloat(women.toFixed(2))}% y el porcentaje de personajes masculinos: ${parseFloat(men.toFixed(2))}%`;
   });
+  console.log(acumuladorMen);
 };

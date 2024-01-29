@@ -11,12 +11,12 @@ const buttonClearFilter = document.querySelector("button[data-testid='button-cle
 const inputSearchAnimal = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const buttonClearName = document.querySelector("button[data-testid='button-clearName']"); //limpiar nombre de inputSearchAnimal
 const order = document.querySelector("[data-testid='select-sort']");//para ordenar
-const statistics = document.getElementById("statistics");//contenedor modal
+const statistics = document.getElementById("statistics");//contenedor modal dialog
 const closeModal = document.querySelector("#close");//cerrar modal
-const openModal = document.querySelector("#details"); //abrir el modal
+const openModal = document.querySelector("#openModal"); //botón abrir el modal
 const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
-const seeMoreClose = document.querySelector("#seeMoreClose"); //
-const dialogModal = document.querySelector("#dialogModal");
+const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
+const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
@@ -24,26 +24,12 @@ filteredData = data; //acomplar la inf de la base de datos para usarla de manera
 
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   nav.innerHTML = "";
-  document.querySelector('[name=optionOne]').Checked =false;
   //falta que se quite la marca de los botones, el valor queda guardado, se debe resetar los valores no guardar
   renderItems(data);
 });
-/* ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
-openModal.addEventListener("click", (e) => {  
-  statistics.showModal();
-  const titleH2 = document.getElementById("stats");
-  if (e.target === openModal ) {
-    titleH2.innerHTML = computeStats(data);
-  }
-});
-
-closeModal.addEventListener("click", ()=> {
-  statistics.close(); 
-});*/
-
 seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
   dialogModal.showModal();
-  let containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  const containerModalSeeMore = document.getElementById("containerModalSeeMore");
   if (e.target === seeMoreModal) {
     containerModalSeeMore.innerHTML = "";
   }
@@ -153,35 +139,8 @@ buttonClearName.addEventListener("click", function(e) {//con esto limpio el nomb
   }*/
   
 
-//funcion para iniciar init
-
-//FUNCIÓN PARA LA ESTADISTICA
-
-
-
-
-/*
-renderItems(data);
-let filteredData;
-const nav = document.querySelector('#root'); 
-const buttonClearFilter = document.querySelector("button[data-testid='button-clear']"); 
-const inputSearchAnimal = document.getElementById("searchAnimal"); 
-const buttonClearName = document.querySelector("button[data-testid='button-clearName']"); 
-const order = document.querySelector("[data-testid='select-sort']");
-const statistics = document.getElementById("statistics");
-const closeModal = document.querySelector("#close");
-const openModal = document.querySelector("#details");
-const filterGender = document.querySelector("[data-testid='select-filterGender']");
-const filterSpecie = document.querySelector("[data-testid='select-filter']");
-const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
-filteredData = data; 
-
-buttonClearFilter.addEventListener("click", () => {
-  nav.innerHTML = "";
-  renderItems(data);
-});
-
-openModal.addEventListener("click", (e) => {
+// ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
+openModal.addEventListener("click", (e) => {  
   statistics.showModal();
   const titleH2 = document.getElementById("stats");
   if (e.target === openModal ) {
@@ -189,77 +148,10 @@ openModal.addEventListener("click", (e) => {
   }
 });
 
-closeModal.addEventListener("click", function () {
+closeModal.addEventListener("click", ()=> {
   statistics.close(); 
 });
 
-order.addEventListener("change", (event) => {
-  nav.textContent = "";
-  filteredData = sortData(filteredData, "name", event.target.value);
-  nav.textContent = "";
-  filteredData = sortData(filteredData, "name", event.target.value);
-  renderItems(filteredData);
-});
 
 
-filterPersonality.addEventListener("click", (e) => {
-  if(!e.target.value) {
-    return;
-  }
-  nav.innerHTML = "";
-  filteredData = filterData(filteredData, "personality", e.target.value);
-  renderItems(filteredData);
-});
 
-
-filterSpecie.addEventListener("click", (e) => {
-  if(!e.target.value) {
-    return;
-  }
-  nav.innerHTML = "";
-  filteredData =  filterData(filteredData, "species", e.target.value);
-  renderItems(filteredData);
-});
-
-filterGender.addEventListener("click", (e) => {
-  if(!e.target.value) {
-    return;
-  }
-  nav.innerHTML = "";
-  
-  filteredData =  filterData(filteredData, "gender", e.target.value);
- 
-  renderItems(filteredData);
-});
-
-
-const filterNames = () => { 
-  nav.innerHTML = "";
-  const dataNames = inputSearchAnimal.value.toLowerCase() 
-  for (const items of data) { 
-    const name = items.name.toLowerCase();
-    if (name.indexOf(dataNames) !== -1) {
-      nav.innerHTML += `
-      <dl>
-      <img src=${items.imageUrl} alt=${items.name}/>      
-      <dd>${items.name}</dd>
-      <dd itemprop="species">${items.species}</dd>
-      <dd itemprop="gender">${items.gender}</dd>
-      <dd itemprop="personality">${items.personality}</dd>
-      <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
-      <dd itemprop="birthDate">${items.facts.birthDate}</dd>
-      <dd itemprop="shortDescription">${items.shortDescription}</dd>
-      </dl>  `
-    }
-  } 
-  if (nav.innerHTML === "") {
-    nav.innerHTML += `
-    <li>Sin resultados</li>`
-  }
-};
-inputSearchAnimal.addEventListener("keyup", filterNames); 
-buttonClearName.addEventListener("click", function() {
-  nav.innerHTML = "";
-  renderItems(data);
-});
-*/

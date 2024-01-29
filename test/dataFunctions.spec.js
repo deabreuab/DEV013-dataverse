@@ -3,13 +3,7 @@ import { data as fakeData } from './data.js';//fakedata para trabar pocos elemen
 
 const testData = [fakeData[1], fakeData[3], fakeData[2], fakeData[0]];
 const testDataFilterFe = [fakeData[0][3], fakeData[2][3]];
-//const testDataFilterMas = [fakeData[0].gender, fakeData[2].gender];
 const expectDataAsc = [fakeData[0], fakeData[1], fakeData[3], fakeData[2]];
-//const expectDataDesc = [fakeData[3], fakeData[2], fakeData[1], fakeData[0]];
-//const expectDataGender = [fakeData[1]];
-//const expectDataFemale = expectDataGender.gender;
-//const prueba = [fakeData[0][4]];
-//const stats = //total 4 mujer 2/4*100
 const pruebatext = "El porcentaje de personajes femeninos es: 33.33% y el porcentaje de personajes masculinos: 66.67%"
 
 describe('Ordenar la data "asc"', () => {//crear una colección de test filter data
@@ -26,13 +20,13 @@ describe('Ordenar la data "asc"', () => {//crear una colección de test filter d
 
 describe("Filtrar la data por especie, por género y por personalidad", () => {
   it("Debería filtrar los animales por género", () => {
-    expect(filterData(testDataFilterFe, "gender", "Femenino")).no.toEqual("Femenino")    
+    expect(filterData(testDataFilterFe, "gender", "Femenino")).no.toEqual("Femenino");   
   })
 })
 
 describe("Estadística númerica por género de los personajes", () => {
   it("Debería darnos el porcentaje de personajes femeninos", () => {
-    expect(computeStats(fakeData)).toBe(pruebatext)
+    expect(computeStats(fakeData)).toBe(pruebatext);
   })
 })
 
@@ -73,3 +67,13 @@ Función estadistica, el resultado de la data mostrada debe ser de tipo número
 
 /*SE PUEDEN HACER TEST SIN JEST, ya esta instalado
 COMO SE AGREGA EN JSON O SE AGREGA LA PAQUETERIA DE JEST SOLA DE TENERLA, COMO LA CARPETA NPM */
+
+
+
+/*
+const perceFeme = "El porcentaje de personajes femeninos es: 33.33%";
+const perceMas =  "El porcentaje de personajes masculinos: 66.67%";
+expect(computeStats(perceFeme)).toBe(33.33);
+expect(computeStats(perceMas)).toBe(66.67);
+
+*/

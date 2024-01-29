@@ -68,12 +68,33 @@
     width: 200px;
     height: 300px;
     display: flex;
-    position: relative; left: 80px; top: -950px;
     background-size: cover;
-    background-image: url(images/cardAltanera.png);
+    position: relative; left: 80px; top: -950px;
     text-align: center;
   }
-  .img {
+.Gruñón {
+    background-image: url(images/cardGruñon.png) !important;
+}
+.Altanera {
+    background-image: url(images/cardAltanera.png);
+}
+.Deportista {
+    background-image: url(images/cardDeportista.png);
+}
+.Perezoso {
+    background-image: url(images/cardPerezoso.png);
+}
+.Esnob {
+    background-image: url(images/cardEsnob.png);
+}
+
+.Dulce {
+    background-image: url(images/cardDulce.png);
+}
+.Vivaracha {
+    background-image: url(images/cardVivaracha.png);
+}
+.img {
     height: 200px;
     width: 150px;
     margin-left: 30px;
@@ -94,6 +115,28 @@
     font-weight: bold;
     padding-left: 35%;
   }
+  /*dd[itemprop="gender"] {
+    
+    background-size: cover;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+  }*/
+  /*
+  .Femenino {
+    background-size: cover;
+    border-radius: 7px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-image: url(images/female.png);
+  }*/
+  /*
+  .Masculino {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-image: url(images/male.png);
+  }*/
   dd[itemprop="species"] {
     display: flex;
     float: right; 

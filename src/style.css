@@ -71,12 +71,32 @@ ul {
     width: 184px;
     height: 279px;
     display: flex;
-    position: relative; left: 80px; top: -900px;
+    background-size: cover;
+    /*position: relative; left: 80px; top: -900px;
     margin-bottom: 20px;
     margin-left: 60px;
-    background-size: cover;
+    text-align: center;*/
+}
+.Altanera {
     background-image: url(images/cardAltanera.png);
-    text-align: center;
+}
+.Deportista {
+    background-image: url(images/cardDeportista.png);
+}
+.Perezoso {
+    background-image: url(images/cardPerezoso.png);
+}
+.Esnob {
+    background-image: url(images/cardEsnob.png);
+}
+.Gruñon {
+    background-image: url(images/cardGruñon.png);
+}
+.Dulce {
+    background-image: url(images/cardDulce.png);
+}
+.Vivaracha {
+    background-image: url(images/cardVivaracha.png);
 }
 .img {
     height: 200px;
@@ -84,6 +104,17 @@ ul {
     margin-left: 40px;
     margin-top: 1px;
 }
+.Femenino {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-image: url(images/female.png);
+  }
+  /*
+  .Masculino {
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-image: url(images/male.png);
+  }*/
 dl {
     width: 100%;
     display: flex;
