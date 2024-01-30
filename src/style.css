@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Encode Sans Condensed", sans-serif;
 }
 header {
@@ -12,7 +13,7 @@ header {
 }
 
 body {
-  font-family: "Encode Sans Condensed", sans-serif;
+  /*font-family: "Encode Sans Condensed", sans-serif;*/
   background-color: #f7f3e7;
 }
 
@@ -165,11 +166,11 @@ dd[itemprop="gender"] {
   border-radius: 7px;
 }
 
-.genderFemenino {
+.genderFemale {
   background-image: url("./images/female.png");
 }
 
-.genderMasculino {
+.genderMale {
   background-image: url("./images/male.png");
 }
 
@@ -184,7 +185,7 @@ dd[itemprop="zodiacSign"] {
   background-image: url("./images/zodiacs/Cancer.png");
 }
 
-.signCapricornio {
+.signCapricorn {
   background-image: url("./images/zodiacs/Capricornio.png");
 }
 
@@ -196,19 +197,19 @@ dd[itemprop="zodiacSign"] {
   background-image: url("./images/zodiacs/Libra.png");
 }
 
-.signAcuario {
+.signAquarius {
   background-image: url("./images/zodiacs/Acuario.png");
 }
 
-.signSagitario {
+.signSagittarius {
   background-image: url("./images/zodiacs/Sagitario.png");
 }
 
-.signEscorpio {
+.signScorpio {
   background-image: url("./images/zodiacs/Escorpio.png");
 }
 
-.signPiscis {
+.signPisces {
   background-image: url("./images/zodiacs/Picis.png");
 }
 
@@ -224,7 +225,7 @@ dd[itemprop="zodiacSign"] {
   background-image: url("./images/zodiacs/Virgo.png");
 }
 
-.signTauro {
+.signTaurus {
   background-image: url("./images/zodiacs/Tauro.png");
 }
 

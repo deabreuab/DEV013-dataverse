@@ -19,169 +19,112 @@
     </header>
     <main>
       <aside>
-        <label for="gender">Genero</label>
-        <select name="gender" id="gender" data-testid="select-filter">
-          <option value="Cualquiera">Cualquiera</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
-        </select>
-        <hr />
-        <!-- // Genero -->
-
-        <h2>Especie</h2>
-        <ul>
-          <li>
-            <input type="checkbox" id="perro" name="species" value="Perro" />
-            <label for="perro">Perro</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="gallo" name="species" value="Gallo" />
-            <label for="gallo">Gallo</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="raton" name="species" value="Raton" />
-            <label for="raton">Ratón</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="ardilla"
-              name="species"
-              value="Ardilla"
-            />
-            <label for="ardilla">Ardilla</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="tigre" name="species" value="Tigre" />
-            <label for="tigre">Tigre</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="lobo" name="species" value="Lobo" />
-            <label for="lobo">Lobo</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="ciervo" name="species" value="Ciervo" />
-            <label for="ciervo">Ciervo</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="pato" name="species" value="Pato" />
-            <label for="pato">Pato</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="gato" name="species" value="Gato" />
-            <label for="gato">Gato</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="cabra" name="species" value="Cabra" />
-            <label for="cabra">Cabra</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="oso" name="species" value="Oso" />
-            <label for="oso">Oso</label>
-          </li>
-
-          <li>
-            <input type="checkbox" id="aguila" name="species" value="Águila" />
-            <label for="aguila">Aguila</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="caballo"
-              name="species"
-              value="Caballo"
-            />
-            <label for="caballo">Caballo</label>
-          </li>
-        </ul>
-        <hr />
-        <!-- // Especie -->
-
-        <h2>Personalidad</h2>
-        <ul>
-          <li>
-            <input
-              type="checkbox"
-              id="dulce"
-              name="personality"
-              value="Dulce"
-            />
-            <label for="dulce">Dulce</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="perezoso"
-              name="personality"
-              value="Perezoso"
-            />
-            <label for="perezoso">Perezoso</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="deportista"
-              name="personality"
-              value="Deportista"
-            />
-            <label for="deportista">Deportista</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="esnob"
-              name="personality"
-              value="Esnob"
-            />
-            <label for="esnob">Esnob</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="grunon"
-              name="personality"
-              value="Gruñon"
-            />
-            <label for="grunon">Gruñon</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="altanera"
-              name="personality"
-              value="Altanera"
-            />
-            <label for="altanera">Altanera</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="vivaracha"
-              name="personality"
-              value="Vivaracha"
-            />
-            <label for="vivaracha">Vivaracha</label>
-          </li>
-        </ul>
-        <hr />
-        <!-- // Personalidad -->
+        <div data-testid="select-filterGender" name="gender">
+          <label for="filter"><h2>Genero</h2></label>
+          <ul>
+            <li>
+              <input type="radio" name="optionOne" id="genderMasculine" value="Masculino">
+              <label for="genderMasculine">Masculino</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionOne" id="genderWomen" value="Femenino">
+              <label for="genderWomen">Femenino</label> 
+            </li>
+          </ul>
+        </div>
+        <hr/>
+        <div data-testid="select-filter" name="species">
+          <label for="filterForSpecies"><h2>Especie</h2></label>
+          <ul>
+            <li>
+              <input type="radio" name="optionTwo" id="specieTiger" value="Tigre">
+              <label for="specieTiger">Tigre</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieDog" value="Perro">
+              <label for="specieDog">Perro</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieSquirrel" value="Ardilla">
+              <label for="specieSquirrel">Ardilla</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieChicken" value="Gallo">
+              <label for="specieChicken">Gallo</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieMouse" value="Ratón">
+              <label for="specieMouse">Ratón</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieWolf" value="Lobo">
+              <label for="specieWolf">Lobo</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieDeer" value="Ciervo">
+              <label for="specieDeer">Ciervo</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieDuck" value="Pato">
+              <label for="specieDuck">Pato</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieCat" value="Gato">
+              <label for="specieCat">Gato</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieGoat" value="Cabra">
+              <label for="specieGoat">Cabra</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieBear" value="Oso">
+              <label for="specieBear">Oso</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieEagle" value="Águila">
+              <label for="specieEagle">Águila</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionTwo" id="specieHorse" value="Caballo">
+              <label for="specieHorse">Caballo</label> 
+            </li>
+          </ul>
+        </div>   
+        <hr/>
+        <div data-testid="select-filterPersonality" name="personality">
+          <label for="filterForPersonality"><h2>Personalidad</h2></label>
+          <ul>
+            <li>
+              <input type="radio" name="optionThree" id="personalityJock" value="Deportista">
+              <label for="personalityJock">Deportista</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalityCranky" value="Gruñón">
+              <label for="personalityCranky">Gruñón</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalityLazy" value="Perezoso">
+              <label for="personalityLazy">Perezoso</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalitySmug" value="Esnob">
+              <label for="personalitySmug">Esnob</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalitySweet" value="Dulce">
+              <label for="personalitySweet">Dulce</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalityPeppy" value="Vivaracha">
+              <label for="personalityPeppy">Vivaracha</label> 
+            </li>
+            <li>
+              <input type="radio" name="optionThree" id="personalitySnooty" value="Altanera">
+              <label for="personalitySnooty">Altanera</label> 
+            </li>
+          </ul>
+        </div>
+        <hr/>
       </aside>
       <section>
         <div class="container">
@@ -189,20 +132,20 @@
             <h2>Lista de vecinos</h2>
             <div>
               <label for="sort">Ordenar por:</label>
-              <select name="sort" id="sort">
-                <option value="">Elige una opción</option>
-                <option value="az">Ordenar de la A-Z</option>
-                <option value="za">Ordenar de la Z-A</option>
+              <select name="sort" id="sort" data-testid="select-sort">
+                <option value="all">Elige una opción</option>
+                <option value="asc">Ordenar de la A-Z</option>
+                <option value="desc">Ordenar de la Z-A</option>
               </select>
-              <input type="text" id="search" placeholder="Buscar vecino" />
-              <!-- <button id="search-btn">Buscar</button> -->
+              <input type="text" id="searchAnimal" placeholder="Buscar vecino"/>
             </div>
           </div>
-          <div id="root"></div>
-        </div>
-        <!-- // este será el contenedor de las cards -->
-      </section>
+          <div>
+            <button type="button" data-testid="button-clear"> Limpiar filtros </button>
+          </div>
+            <div id="root"></div>
     </main>
+    
     <!-- <footer></footer> -->
     <footer>
       <p>2024. All rights reserved</p>
