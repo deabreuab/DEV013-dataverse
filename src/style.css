@@ -1,308 +1,306 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Encode Sans Condensed", sans-serif;
     box-sizing: border-box;
-}
-body {
-    font-size: 14px;
-    background-color: #f7f3e7;
-    /*
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #F5EFE3, #FEE9D7 90%, #5cc0d4 100%, #02bdd6);*/
-}
-header {
+    font-family: "Encode Sans Condensed", sans-serif;
+  }
+  header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    /*
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: rgb(218, 65, 65);
-    font-size: 24px;
-    font-size: x-large;
-    color: yellow;
-    text-align: center;*/
-}
-footer {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  body {
+    /*font-family: "Encode Sans Condensed", sans-serif;*/
+    background-color: #f7f3e7;
+  }
+  
+  footer {
     position: fixed;
     width: 100%;
     height: 150px;
     bottom: 0;
     overflow: hidden;
-}
-footer p {
+  }
+  
+  footer p {
     position: absolute;
     bottom: 0;
     padding: 1.5rem;
-    color: rgb(7, 7, 7);
+    color: white;
     font-weight: bold;
     z-index: 2;
-}
+  }
   
-footer svg {
+  footer svg {
     position: absolute;
     bottom: 0;
     z-index: 1;
-}
+  }
   
-footer img {
+  footer img {
     position: absolute;
     right: 10px;
     bottom: 10px;
     z-index: 2;
-}
-aside {
-    padding: 3rem 3rem 3rem auto;
-}
-hr {
+  }
+  
+  aside {
+    padding: 3rem 3rem 3rem 10%;
+  }
+  
+  main {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  
+  section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  hr {
     border: 1px solid #e0e0e0;
     margin: 1rem 0;
-}
-#containerOrder {
-    display: flex;
-    flex-direction: row-reverse;
-}
-ul {
-    display: flexbox;
+  }
+  
+  ul {
     list-style: none;
-}
-.card {
+  }
+  
+  .buscador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 600px) {
+    /* CSS rules for sizes smaller than 600px */
+    header {
+      padding: 10px 5%;
+    }
+  
+    aside {
+      padding: 1.5rem;
+      display: none;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    section {
+      width: 100%;
+    }
+  
+    .buscador h2 {
+      display: none;
+    }
+  
+    .buscador div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  .card {
     width: 184px;
     height: 279px;
     display: flex;
     background-size: cover;
-    /*position: relative; left: 80px; top: -900px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-    text-align: center;*/
-}
-.Altanera {
-    background-image: url(images/cardAltanera.png);
-}
-.Deportista {
-    background-image: url(images/cardDeportista.png);
-}
-.Perezoso {
-    background-image: url(images/cardPerezoso.png);
-}
-.Esnob {
-    background-image: url(images/cardEsnob.png);
-}
-.Gruñon {
-    background-image: url(images/cardGruñon.png);
-}
-.Dulce {
-    background-image: url(images/cardDulce.png);
-}
-.Vivaracha {
-    background-image: url(images/cardVivaracha.png);
-}
-.img {
-    height: 200px;
-    width: 100px;
-    margin-left: 40px;
-    margin-top: 1px;
-}
-.Femenino {
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-image: url(images/female.png);
   }
-  /*
-  .Masculino {
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-image: url(images/male.png);
-  }*/
-dl {
+  
+  .cardGrunon {
+    background-image: url("./images/cardGruñon.png");
+  }
+  
+  .cardPerezoso {
+    background-image: url("./images/cardPerezoso.png");
+  }
+  
+  .cardDeportista {
+    background-image: url("./images/cardDeportista.png");
+  }
+  
+  .cardAltanera {
+    background-image: url("./images/cardAltanera.png");
+  }
+  
+  .cardDulce {
+    background-image: url("./images/cardDulce.png");
+  }
+  
+  .cardEsnob {
+    background-image: url("./images/cardEsnob.png");
+  }
+  
+  .cardVivaracha {
+    background-image: url("./images/cardVivaracha.png");
+  }
+  
+  .bodyCard {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 147px;
+  }
+  
+  .headerCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  dd[itemprop="gender"] {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border-radius: 7px;
+  }
+  
+  .genderFemale {
+    background-image: url("./images/female.png");
+  }
+  
+  .genderMale {
+    background-image: url("./images/male.png");
+  }
+  
+  dd[itemprop="zodiacSign"] {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border-radius: 7px;
+  }
+  
+  .signCancer {
+    background-image: url("./images/zodiacs/Cancer.png");
+  }
+  
+  .signCapricorn {
+    background-image: url("./images/zodiacs/Capricornio.png");
+  }
+  
+  .signAries {
+    background-image: url("./images/zodiacs/Aries.png");
+  }
+  
+  .signLibra {
+    background-image: url("./images/zodiacs/Libra.png");
+  }
+  
+  .signAquarius {
+    background-image: url("./images/zodiacs/Acuario.png");
+  }
+  
+  .signSagittarius {
+    background-image: url("./images/zodiacs/Sagitario.png");
+  }
+  
+  .signScorpio {
+    background-image: url("./images/zodiacs/Escorpio.png");
+  }
+  
+  .signPisces {
+    background-image: url("./images/zodiacs/Picis.png");
+  }
+  
+  .signLeo {
+    background-image: url("./images/zodiacs/Leo.png");
+  }
+  
+  .signGeminis {
+    background-image: url("./images/zodiacs/Geminis.png");
+  }
+  
+  .signVirgo {
+    background-image: url("./images/zodiacs/Virgo.png");
+  }
+  
+  .signTaurus {
+    background-image: url("./images/zodiacs/Tauro.png");
+  }
+  
+  .footerCard {
+    color: #f7f3e7;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  dt {
+    display: none;
+  }
+  
+  dl {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-dd {
-    width: 50%;
-    height: 16px;
-    border-radius: 6px;
-}
-dd[itemprop="name"]{
-    font-size: 18px;
-    font-weight: bold;
-    padding-left: 36%;
-}
-dd[itemprop="species"] {
+  }
+  
+  .date {
     display: flex;
-    float: right; 
-    position: relative; left: 40px;
-    margin-top: 2px;   
-}
-dd[itemprop="birthDate"] {
-    background-color: #e0e0e0;
-    display: flex;
-    text-align: center;
-}
-dd[itemprop="personality"] {
-    padding: auto 1px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    position: relative; top: -14px;
-}
-dt {
-    display: none;
-}
-ion-icon {
-    font-size: 20px;
-}
-p {/*la uso para info html*/
-    font-size: 14px;
-}
-#info {/*falta centrar el icono al texto*/
-    padding: 4px 12px;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 14px;
-    border: 3px solid blue;
-    cursor: pointer;
-    transition: all 0.6s ease; /*para ver mas lento la transicion del color al poner el mouse encima*/
-}
-#info:hover{
-    background-color: rgb(54, 190, 210);
-    box-shadow: 0 0 20px rgb(117, 110, 110);
-}
-#search {/*contenedor de buscar por nombre*/
-    display: flex;
-    padding: 1px 4px;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    margin-left: 30%;
-    justify-content: end;
-
-}
-[data-testid="button-clearName"] {/*contenedor de buscar por nombre, botón para borrar el nombre*/
-    letter-spacing: 2px;
-    background-color: rgba(93, 91, 89, 0.3);
-    border-radius: 4px;
-    font-size: 11px;
-    margin: 2px;
-}
-label {/*contenedor de buscar por nombre, input del texto*/
-    font-size: 14px;
-    padding: 1px 4px;
-}
-#personage { /*h2 titulo personajes*/
-    margin: 6px;
-    font-size: 18px;
-    text-align: center;
-    border-top: 1px solid black;/*línea divisora entre personajes y buscar*/
-}
-.container-nav{ /*contenedor de los filtros*/
-    position: sticky;
-    line-height: 30px;/*espaciado entre palabras en los filtros*/
-}
-label[for=filter], label[for=filterForSpecies], label[for=filterForPersonality] {/*grosor de letras*/
-    font-weight: 800; 
-}
-/*
-[data-testid="select-filterGender"] {/*filtro por genero*
-    top: 100px;
-    bottom: 0;
-    right: 0;
-    left: 200px;
-    font-size: 1em;
-    list-style: none;
-    /*border-top: 1px solid black;*
-    margin-top: 4px;/*separado de arriba*
-    margin-bottom: 12px; /*separado entre los apartados género, especie*
-    margin-left: 8px;/*espacio a la izquierda*
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*
-}
-[data-testid="select-filter"] {/*filtro por especies*
-    top: 100px;
-    bottom: 0;
-    right: 0;
-    left: 200px;
-    font-size: 1em;
-    list-style: none;
-    /*border-top: 1px solid black;*
-    margin-top: 4px;/*separado de arriba*
-    margin-bottom: 12px; /*separado entre los partados género, especie*
-    margin-left: 8px;/*espacio a la izquierda*
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje*
-}
-[data-testid="select-filterPersonality"] {
-    top: 100px;
-    bottom: 0;
-    right: 0;
-    left: 200px;
-    font-size: 1em;
-    list-style: none;
-    /*border-top: 1px solid black;*
-    margin-top: 4px;/*separado de arriba*
-    margin-bottom: 12px; /*separado entre los partados género, especie*
-    margin-left: 8px;/*espacio a la izquierda*
-    margin-right: 80%;/*espacio a la derecha checar porque solo funciona con porcentaje* 
-}*/
-[data-testid="button-clear"] {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    padding: 6px 12px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-/*#root ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    grid-template-rows: 1fr 1fr 1fr;
-    list-style: none;
-    padding: 1rem;
-    justify-content: space-between;
-    align-items: center;
-}
-dd[itemprop]{
-    box-sizing: content-box;
-    width: 180px;
-    display: flex;
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*
-    flex: 1;
     justify-content: center;
-    background-color: rgb(248, 106, 182);
-}
-#root dl img {
-    width: 100%;
-    height: auto;
-    background: url(images/cardDulce.png);
-    background-size: cover;
-    transition: 300ms;
-    filter: drop-shadow(5px -4px 10px #000);
-}
-dt {/*quitar valores nombre, genero, etc*
-    display: none;
-}*/
-/*
-#openModal {
-    margin-top: 50px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: rgba(78, 76, 76, 0.3);
-    font-size: 30px;
-}
-.container-modal {
-    margin: 15% auto;
-    padding: 20px;
     align-items: center;
-}
-#centerModal {
-    flex-direction: row-reverse;
-}
-#close {
-    font-size: 28px;
-}*/
-.content-modal {
+    gap: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .date img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .information {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    align-items: flex-end;
+  }
+  
+  #root ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .bodyCard img {
+    max-width: 147px;
+    max-height: 164px;
+  }
+  
+  dd[itemprop="name"]{
+      font-size: 20px;
+      font-weight: bold;
+  }
+  
+  dd[itemprop="species"]{
+      width: 48px;
+      overflow: hidden;
+      text-align: left;
+  }
+  
+  dd[itemprop="personality"]{
+      width: 48px;
+      overflow: hidden;
+      text-align: right;
+  }
+  
+  .container {
+      max-width: 790px;
+      width: 790px;
+      height: 100%;
+  }
+  .content-modal {/*lo ocupo para el modal*/
     display: none;  
     position: fixed;
     z-index: 1;  
@@ -312,28 +310,15 @@ dt {/*quitar valores nombre, genero, etc*
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0, 0.5);
-}
-  #page {
+  }
+  #page {/*esto se puede modificar*/
     font-size: 28px;
     font-weight: 800 ;
   }
-  .buttonOpenModal{
-    float: right;    
+  .buttonOpenModal{/*esto es para el boton de estadistica*/
+    cursor: pointer; 
     font-size: 50px;
   }
-#seeMoreModal {/*para quitar el borde y subrayar el texto del boton*/
-    color: blue;
-    border: none;
-    text-decoration: underline;
-    background-color: transparent;
-    font-weight: 600;
+  #close {
     cursor: pointer;
-    display: flex;
-    float: right;
-}
-[name="stats-chart-outline"] {
-    font-size: 30px;
-}
-[name="help-circle-outline"] {
-    font-size: 40px;
-}
+  }

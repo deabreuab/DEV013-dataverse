@@ -1,3 +1,4 @@
+
 import { computeStats, filterData, sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
@@ -86,25 +87,8 @@ const filterSearchNames = () => { //Buscador
   navRoot.innerHTML = "";// debe iniciar vacio
   const dataNames = inputSearchAnimal.value.toLowerCase() //pasa todo a minuscula
   const filterNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames));
-  renderItems(filterNames);
-  /*for (const items of data) { //recorrer la data
-    const name = items.name.toLowerCase();//name referencia a la data
-    if (name.indexOf(dataNames) !== -1) {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-      nav.innerHTML += `
-      <dl>
-      <img src=${items.imageUrl} alt=${items.name}/>      
-      <dd>${items.name}</dd>
-      <dd itemprop="species">${items.species}</dd>
-      <dd itemprop="gender">${items.gender}</dd>
-      <dd itemprop="personality">${items.personality}</dd>
-      <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
-      <dd itemprop="birthDate">${items.facts.birthDate}</dd>
-      <dd itemprop="shortDescription">${items.shortDescription}</dd>
-      </dl>  `
-    }*/
-} //si sigue vacio en nav
-/*if (navRoot.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-  navRoot.innerHTML += `<li>Sin resultados</li>`};*/
+  renderItems(filterNames); 
+}
 
 inputSearchAnimal.addEventListener("keyup", filterSearchNames); 
 buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
@@ -112,16 +96,6 @@ buttonClearName.addEventListener("click", function(e) {//con esto limpio el nomb
   navRoot.innerHTML = "";
   renderItems(filteredData);
 });
-
-/*
-  if (e.target.matches(input)) {
-    console.log(e.target.value);
-  }
-  /*if(e.target.inputName) {
-    data.forEach(names => {
-      console.log(names.textContent.toLowerCase().includes(e.target.value));
-    })
-  }*/
   
 
 // ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
@@ -131,6 +105,33 @@ const openModal = document.querySelector("#openModal"); //botón abrir el modal
 //const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
 // const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
 // const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
+
+openModal.addEventListener("click", function(event) {  
+  console.log("hola");
+  //computeStats(data)
+  modal.style.display = "block";
+  const pageText = document.getElementById("page");//contenedor modal dialog
+  if (event.currentTarget === openModal) {
+    pageText.innerText = computeStats(data);
+  }
+});
+
+closeModal.addEventListener("click", ()=> {
+  modal.style.display = "none";
+})
+
+/*
+seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
+  dialogModal.showModal();
+  const containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  if (e.target === seeMoreModal) {
+    containerModalSeeMore.innerHTML = "";
+  }
+});
+seeMoreClose.addEventListener("click", ()=> {
+  dialogModal.close();
+})*/
+
 
 openModal.addEventListener("click", function(event) {  
   //computeStats(data)
