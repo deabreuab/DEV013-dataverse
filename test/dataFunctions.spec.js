@@ -1,8 +1,11 @@
 import { computeStats, filterData, sortData } from '../src/dataFunctions.js';//IMPORTAR LAS FUNCIONES
 import { data as fakeData } from './data.js';//fakedata para trabar pocos elementos y nos los 24 en data.js
 
+//const expectData = [{name:"Bea"}, {name:"Biskit"}, {name:"Bones"}, {name:"Goose"}];
+//const  testData= [{name:"Goose"}, {name:"Bones"}, {name:"Biskit"}, {name:"Bea"}];
 const testData = [fakeData[1], fakeData[3], fakeData[2], fakeData[0]];
 const expectDataAsc = [fakeData[0], fakeData[1], fakeData[3], fakeData[2]];
+//const expectDataDesc = [fakeData[2], fakeData[3], fakeData[1], fakeData[0]]
 //tipo number
 const statsText = "Porcentaje personajes Masculinos 50.00% porcentaje personajes femeninos 50.00%";
 //filtrar solo elementos femenino
@@ -12,10 +15,8 @@ console.log(testDataFilterFe);
 
 describe('Ordenar la data "asc"', () => {//crear una colección de test filter data
   it('Debería ordenarse de forma ascendente y descendente', () => {//inician con it o test, descripción de que estamos configurando, empezar con debería quehace(ordenar en forma ascendente los nombres de la data) //ESO QUE VA HACER MI TEST DEBE HACER... SE PUEDEN AGREGAR DOS O MAS IT
-    //const expectData = [{name:"Bea"}, {name:"Biskit"}, {name:"Bones"}, {name:"Goose"}];
-    //const  testData= [{name:"Goose"}, {name:"Bones"}, {name:"Biskit"}, {name:"Bea"}];
     expect(sortData(testData, "name", "asc")).toEqual(expectDataAsc);//tobe exminar los parametros de mi función//TO EQUAL COMPARA OBJETOS Y ARRAY expect(sortData(testData, "name", "desc")).toEqual(expectDataDesc);  //(TOBE: DATOS PRIMITIVOS) EL ARREGLO FILTRADO
-    expect(sortData(testData, "name", "desc")).not.toEqual(expectDataAsc);
+    expect(sortData(testData, "name", "desc")).no.toEqual(expectDataAsc);
   });
   //it('Debería ordenarse de forma descendente', () => {
   //expect(sortData(testData, "name", "desc")).toEqual(expectDataDesc);

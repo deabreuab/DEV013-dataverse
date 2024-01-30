@@ -308,8 +308,13 @@
     font-weight: 800 ;
   }
   .buttonOpenModal{
-    float: right;    
+    cursor: pointer;
+    justify-content: center;
+    float: left;    
     font-size: 50px;
+  }
+  #close {
+    cursor: pointer;
   }
   
   /*

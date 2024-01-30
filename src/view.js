@@ -81,6 +81,20 @@ const nav = document.getElementById("root"); // id del nav donde van los element
     divFooter.className = "footerCard";
     dl.appendChild(divFooter);
 
+
+
+
+    const buttonSeeMore = document.createElement("div");
+    buttonSeeMore.className = "buttonMore";
+    const createButton = document.createElement("button");
+    createButton.setAtributte("p", "Ver más...");
+    buttonSeeMore.appendChild(createButton)
+
+
+
+
+
+
     // Cabecera
     const dtGender = document.createElement("dt");
     dtGender.innerText = "Genero";

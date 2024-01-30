@@ -21,7 +21,7 @@ filteredData = data; //acomplar la inf de la base de datos para usarla de manera
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   navRoot.innerHTML = "";
   filteredData = data
-  let radioButton = document.querySelectorAll('input[type="radio"]');
+  const radioButton = document.querySelectorAll('input[type="radio"]');
   radioButton.forEach(item => item.checked = false);
   renderItems(data);
 });
@@ -85,7 +85,7 @@ const filterSearchNames = () => { //Buscador
   //console.log(inputSearchAnimal.value);
   navRoot.innerHTML = "";// debe iniciar vacio
   const dataNames = inputSearchAnimal.value.toLowerCase() //pasa todo a minuscula
-  let filterNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames));
+  const filterNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames));
   renderItems(filterNames);
   /*for (const items of data) { //recorrer la data
     const name = items.name.toLowerCase();//name referencia a la data
@@ -102,11 +102,9 @@ const filterSearchNames = () => { //Buscador
       <dd itemprop="shortDescription">${items.shortDescription}</dd>
       </dl>  `
     }*/
-  } //si sigue vacio en nav
-  if (navRoot.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-    navRoot.innerHTML += `
-    <li>Sin resultados</li>`
-  };
+} //si sigue vacio en nav
+/*if (navRoot.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
+  navRoot.innerHTML += `<li>Sin resultados</li>`};*/
 
 inputSearchAnimal.addEventListener("keyup", filterSearchNames); 
 buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
@@ -128,7 +126,6 @@ buttonClearName.addEventListener("click", function(e) {//con esto limpio el nomb
 
 // ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
 const modal = document.querySelector("#modal");
-const pageText = document.getElementById("page");//contenedor modal dialog
 const closeModal = document.querySelector("#close");//cerrar modal
 const openModal = document.querySelector("#openModal"); //botón abrir el modal
 //const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
@@ -138,6 +135,7 @@ const openModal = document.querySelector("#openModal"); //botón abrir el modal
 openModal.addEventListener("click", function(event) {  
   //computeStats(data)
   modal.style.display = "block";
+  const pageText = document.getElementById("page");//contenedor modal dialog
   if (event.currentTarget === openModal) {
     pageText.innerText = computeStats(data);
   }
