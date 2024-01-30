@@ -17,7 +17,6 @@ export const filterData = (data, filterBy, value) => {
       species: item.species,
       personality: item.personality,
       gender: item.gender,
-      shortDescription: item.shortDescription,
       imageUrl: item.imageUrl,
       facts:{birthDate: item.facts.birthDate, zodiacSign: item.facts.zodiacSign},
     };
@@ -30,7 +29,6 @@ export const computeStats = (data) => {
     if (item.gender === "Masculino") {
       acumuladorMen++;
     }
-    console.log(acumuladorMen);
     return acumuladorMen;
   }, 0);
   
@@ -38,8 +36,7 @@ export const computeStats = (data) => {
     if (item.gender === "Femenino") {
       acumuladorWomen++;
     }
-    console.log(acumuladorWomen);
-    return acumuladorWomen;
+     return acumuladorWomen;
   }, 0);
   const totalMen = parseFloat((acumuladorMen/data.length)*100).toFixed(2); 
   const totalWomen = parseFloat((acumuladorWomen/data.length)*100).toFixed(2); 

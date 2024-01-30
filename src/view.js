@@ -1,10 +1,10 @@
 export const renderItems = (data) => {
   
-  const nav = document.querySelector("#root");
+  const navRoot = document.querySelector("#root");
   const listUl = document.createElement("ul");
   data.forEach(element => {
     const listLi = document.createElement('li');
-    listLi.setAttribute("class", `card ${element.personality} ${element.gender}`);
+    listLi.setAttribute("class", `card ${element.personality} ${element.gender}`);//css
     listLi.setAttribute("itemscope", "");
     listLi.setAttribute("itemtype", "http://schema.org/Person");
     listLi.innerHTML = `
@@ -21,19 +21,12 @@ export const renderItems = (data) => {
       <dt>Descripción:</dt><dd itemprop="shortDescription" hidden>${element.shortDescription}</dd>
       <div>
         <button id="seeMoreModal"> Ver mas... </button>
-        <dd class="descriptionSeeMore"> 
-          <dialog id="dialogModal">
-            <p id="containerModalSeeMore"> CONTENEDOR VER MAS</p>  
-            <button id="seeMoreClose"> 
-              <ion-icon name="close-circle-outline"></ion-icon>Cerrar
-            </button> 
-          </dialog> 
-        </dd>
       </div>
       </dl>`
     listUl.appendChild(listLi);
   });
-  nav.appendChild(listUl)
+  navRoot.appendChild(listUl)//quitarlo de aquí y pasarlo a main
+  return listUl;
 };
 //AGREGAR CLASES A LAS LI
 
