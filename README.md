@@ -73,10 +73,11 @@ Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunc
 
 Se diseñaron dos prototipos uno de media fidelidad que nos muestras las funcionalidades esperamos tuviera el proyecto.
 
-![prototipo media fidelidad](prototipoMediaFidelidad.png)
+<img src="prototipoMediaFidelidad.png" alt="Prototipo media fidelidad" width="200" height="150">
+
 
 Encuanto al prototipo de alta fidelidad es la culminación del proyecto, en cuanto a interacción con el usuario, así como los acabados quedebe tener la página y las tarjetas mostradas.
-![prototipo alta fidelidad](prototipoAltaFidelidad.png)
+<img src="prototipoAltaFidelidad.png" alt="Prototipo alta fidelidad" width="200" height="150">
 
 #### Testeos de usabilidad
 
