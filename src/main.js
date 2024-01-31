@@ -6,26 +6,23 @@ import data from './data/dataset.js';
 //ctrl + k + u
 renderItems(data);//contiene la data incial
 let filteredData;
-const nav = document.querySelector('#root'); //contenedor
+const navRoot = document.querySelector('#root'); //contenedor
 const buttonClearFilter = document.querySelector("button[data-testid='button-clear']"); //botón limpiar filtros
 const inputSearchAnimal = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const buttonClearName = document.querySelector("button[data-testid='button-clearName']"); //limpiar nombre de inputSearchAnimal
 const order = document.querySelector("[data-testid='select-sort']");//para ordenar
-const statistics = document.getElementById("statistics");//contenedor modal dialog
-const closeModal = document.querySelector("#close");//cerrar modal
-const openModal = document.querySelector("#openModal"); //botón abrir el modal
-const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
-const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
-const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
+// const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
+// const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
+// const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
 filteredData = data; //acomplar la inf de la base de datos para usarla de manera interna, ya la uso de forma que quiera, para mantener la data filtrada()
 
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
-  nav.innerHTML = "";
+  navRoot.innerHTML = "";
   filteredData = data;
-  let radioButton = document.querySelectorAll('input[type="radio"]');
+  const radioButton = document.querySelectorAll('input[type="radio"]');
   console.log(radioButton);
   radioButton.forEach(item => item.checked = false );
   //falta que se quite la marca de los botones, el valor queda guardado, se debe resetar los valores no guardar
@@ -43,9 +40,9 @@ seeMoreClose.addEventListener("click", ()=> {
 })*/
 
 order.addEventListener("change", (event) => {
-  nav.textContent = "";
+  navRoot.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
-  nav.textContent = "";
+  navRoot.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
   renderItems(filteredData);
 });
@@ -55,7 +52,7 @@ filterPersonality.addEventListener("click", (e) => {//filtro personalidad
   if(!e.target.value) {//para que al dar clic fuera no haga nada
     return;
   }
-  nav.innerHTML = "";
+  navRoot.innerHTML = "";
   filteredData = filterData(filteredData, "personality", e.target.value);//filteredData me esta guardando los filtros, si al filtrar quedan 10, se filtra sobre eso
   //filterResult.push(filterData(data, "gender", gender));
   renderItems(filteredData);
@@ -66,7 +63,7 @@ filterSpecie.addEventListener("click", (e) => {// CON ESTO FILTRO POR ESPECIES
   if(!e.target.value) {
     return;
   }
-  nav.innerHTML = "";
+  navRoot.innerHTML = "";
   filteredData =  filterData(filteredData, "species", e.target.value);
   renderItems(filteredData);
 });
@@ -75,7 +72,7 @@ filterGender.addEventListener("click", (e) => {//  CON ESTE CÓDIGO LLAMO AL FIL
   if(!e.target.value) {
     return;
   }
-  nav.innerHTML = "";//si es masculino que me muestre el contenido, si es mujer que me muetre el contenido
+  navRoot.innerHTML = "";//si es masculino que me muestre el contenido, si es mujer que me muetre el contenido
   //filterdData = "";
   filteredData =  filterData(filteredData, "gender", e.target.value);
   renderItems(filteredData);
@@ -84,9 +81,9 @@ filterGender.addEventListener("click", (e) => {//  CON ESTE CÓDIGO LLAMO AL FIL
 
 const filterSearchNames = () => { //Buscador
   //console.log(inputSearchAnimal.value);
-  nav.innerHTML = "";// debe iniciar vacio
-  let dataNames = inputSearchAnimal.value.toLowerCase() //pasa todo a minuscula
-  let filteredNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames))
+  navRoot.innerHTML = "";// debe iniciar vacio
+  const dataNames = inputSearchAnimal.value.toLowerCase() //pasa todo a minuscula
+  const filteredNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames))
   //item => item.name.toLowerCase().indexOf(dataNames) !== -1
   renderItems(filteredNames);
  
@@ -107,21 +104,20 @@ const filterSearchNames = () => { //Buscador
       <dd itemprop="shortDescription">${items.shortDescription}</dd>
       </dl>  `
     }*/
-  } //si sigue vacio en nav
-  if (nav.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-    nav.innerHTML += `
+} //si sigue vacio en nav
+/*if (navRoot.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
+    navRoot.innerHTML += `
     <li>Sin resultados</li>`
-  }
+  }*/
 
 
 inputSearchAnimal.addEventListener("keyup", filterSearchNames); 
 
-// buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
-//   e.target.value = inputSearchAnimal.value = "";
-//   nav.innerHTML = "";
-//   renderItems(data);//corregir al dar clic me aparecen todos y el que busque
-// });
-//filterSearchNames();
+buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
+  e.target.value = inputSearchAnimal.value = "";
+  navRoot.innerHTML = "";
+  renderItems(filteredData);
+});
 
 /*
   if (e.target.matches(input)) {
@@ -134,125 +130,19 @@ inputSearchAnimal.addEventListener("keyup", filterSearchNames);
   }*/
   
 
-// ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
-/*
-openModal.addEventListener("click", (e) => {  
-  statistics.showModal();
-  computeStats(data)
-  const titleH2 = document.getElementById("stats");
-  if (e.target === openModal ) {
-    titleH2.innerHTML = computeStats(data);
+const modal = document.querySelector("#modal");
+const closeModal = document.querySelector("#close");//cerrar modal
+const openModal = document.querySelector("#openModal"); //botón abrir el modal
+
+openModal.addEventListener("click", function(event) {  
+  console.log("hola");
+  modal.style.display = "block";
+  const pageText = document.getElementById("page");//contenedor modal dialog
+  if (event.currentTarget === openModal) {
+    pageText.innerText = computeStats(data);
   }
 });
 
 closeModal.addEventListener("click", ()=> {
-  statistics.close(); 
-});*/
-
-
-
-
-
-
-// import { renderItems } from "./view.js";
-// import { filtrarVecinos } from "./dataFunctions.js";
-
-// import data from "./data/dataset.js";
-// let selectedGender = "Cualquiera";
-// let selectedSpecies = [];
-// let selectedPersonalities = [];
-// let selectedSort = "";
-// let searchText = "";
-
-// const selectGender = document.querySelector("#gender");
-// const selectPersonality = document.querySelectorAll(
-//   'input[name="personality"]'
-// );
-// const selectSpecie = document.querySelectorAll('input[name="species"]');
-// const selectSort = document.querySelector("#sort");
-// const searchBar = document.querySelector('#search')
-
-// searchBar.addEventListener("keyup", () => {
-//   searchText = searchBar.value
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort,
-//     searchText
-//   )
-//   renderItems(dataFiltrada);
-// })
-
-
-// selectSort.addEventListener("change", () => {
-//   selectedSort = selectSort.value;
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort,
-//     searchText
-//   );
-//   renderItems(dataFiltrada);
-// });
-
-// selectGender.addEventListener("change", () => {
-//   selectedGender = selectGender.value;
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort,
-//     searchText
-//   );
-//   // const dataFiltrada = filterBy(data, "gender", selectedGender)
-//   renderItems(dataFiltrada);
-// });
-
-// const checkboxPersonality = () => {
-//   const valoresEnArray = Array.from(selectPersonality);
-//   const valoresFiltrados = valoresEnArray.filter(
-//     (checkbox) => checkbox.checked
-//   );
-//   selectedPersonalities = valoresFiltrados.map((checkbox) => checkbox.value);
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort,
-//     searchText
-//   );
-//   renderItems(dataFiltrada);
-// };
-
-// const checkboxSpecie = () => {
-//   const valoresEnArray = Array.from(selectSpecie);
-//   const valoresFiltrados = valoresEnArray.filter(
-//     (checkbox) => checkbox.checked
-//   );
-//   selectedSpecies = valoresFiltrados.map((checkbox) => checkbox.value);
-//   const dataFiltrada = filtrarVecinos(
-//     data,
-//     selectedGender,
-//     selectedSpecies,
-//     selectedPersonalities,
-//     selectedSort,
-//     searchText
-//   );
-//   renderItems(dataFiltrada);
-// };
-
-// selectPersonality.forEach((checkbox) => {
-//   checkbox.addEventListener("change", checkboxPersonality);
-// });
-
-// selectSpecie.forEach((checkbox) => {
-//   checkbox.addEventListener("change", checkboxSpecie);
-// });
-
-// renderItems(data);
+  modal.style.display = "none";
+});
