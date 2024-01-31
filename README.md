@@ -17,11 +17,9 @@ Bienvenido a data Dataverse, la página donde encontraras información de person
 ## 2. Descripción del proyecto.
 Dataverse es un proyecto para la diversión del público en general, es una página que tiene un estilo adaptable, para laptop, tablet y celular, en el que podras encontrar las tarjetas de tu personaje favorito, pero no solo eso, puedes hacer una búsqueda por nombre de tu personaje favorito, también puedes filtrar las tarjetas por orden, especie, etc.
 
-<img src="paginaTerminada2.png" alt="dataverse1" width="400" height="250">
-<img src="paginaTerminada3.png" alt="dataverse3" width="400" height="250">
-<img src="dataverse.gif" alt="Gif dataverse" width="500" height="350">
-
-
+![Imagen página completa](dataverse1.png)
+![Imagen página completa filtrada](dataverse2.png)
+![Imagen página completa gif](dataverse.gif)
 
 ## 3. Funcionalidades
 
