@@ -3,14 +3,13 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Descripción del proyecto](#2-Descripción del proyecto)
+* [2. Descripción del proyecto](#2-Descripción-del-proeyecto)
 * [3. Funcionalidades](#3-funcionalidades)
-* [4. Historia de usuario](#4-Historia de usuario)
-* [5.Tecnologías utilizadas](#5-Tecnologías utilizadas)
-* [6. Prototipo de alta y media fidelidad](#6-Prototipo de alta y media fidelidad)
+* [4. Historia de usuario](#4-Historia-de-usuario)
+* [5.Tecnologías utilizadas](#5-Tecnologías-utilizadas)
+* [6. Prototipo de alta y media fidelidad](#6-Prototipo-de-alta-y-media-fidelidad)
 * [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
 
-***
 
 ## 1. Introducción
 Bienvenido a data Dataverse, la página donde encontraras información de personajes del video juego animal crossin en forma de tarjetas.
@@ -31,53 +30,57 @@ Dataverse es un proyecto para la diversión del público en general, es una pág
 
 ## 4. Historias de ususario
 
-Aquí contamos con un documento que nos permite conocer los pasos en los que se desarrollo el proyecto
+Se realizo un documento con las funcionalidades del proyecto, pedidas desde el punto de vista de un usuario, simulando una situación en la que podría ser usada. 
+Aquí mostramos el enlace del documento realizada para el usuario que nos permite conocer los pasos en los que se desarrollo el proyecto.
 [Enlace del documento](https://docs.google.com/document/d/1K8NoQyA83kZ_FGCIBDcJ6XyT0XXSpx40iVrrJk-1XwY/edit)
 
 
 ## 5. Tecnologías utilizadas
 
 ### Prompt utilizado
-Se utiliza chatGPT como IA requerida, este nos facilito la extración de información que requeriamos para las tarjetas.
+Se utiliza chatGPT como IA requerida, este nos facilito la extración de información que requeriamos para mostrar la data de las tarjetas.
 
 ![chatGPT para generar la data](chat1.png)
 ![chatGPT para generar la data](chat.png)
 
-### `/index.html`
+### `index.html`
 
-En este apartado encontraras la estructura de la página.
-
-### `/main.js`
-
-Aqui se realiza el llamado del DOM que nos permite la interacción con el mouse
-
-
-### `/dataFunctions.js`
-
-Este apartado cuenta con tres funciones que nos permiten realizar la parte dinamica de la página
-### `/data`
-
-Aquí se puden encontrar los datos generados con ayuda de la IA
-
-### `test/dataFunctions.spec.js`
-
-Aquí se realizaron test de prueba unitaria que nos ayudan con el buen funcionamiento de las tres funciones realizadas
-
-### `test/data.js`
-
-Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunction.spec.js
+Se uso index como página principal de la estructura del proyecto.
 
 ### `src/view.js`
 
-En este archivo se relizaron la estructura de las tarjetas mostradas en el THML
+En este archivo se relizaron interacciones con el HTML, creando la estructura de las tarjetas mostradas.
 
+### `main.js, dataFunctions.js`
+
+En el main se realiza el llamado del DOM que nos permite la interacción con los filtros mostrados en la página.
+En cuanto al dataFunction es el apartado que se utilizo para realizar las tres funciones que nos permiten realizar la parte dinamica de la página.
+
+### `data.js`
+
+Aquí se puden encontrar los datos generados con ayuda de la IA.
+
+### `dataFunctions.spec.js`
+
+Aquí se realizaron test de prueba unitaria que nos ayudan con el buen funcionamiento de las tres funciones realizadas.
+
+### `test/data.js`
+
+Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunction.spec.js.
 
 
 ## 6. Prototipo de alta y media fidelidad
 
+Se diseñaron dos prototipos uno de media fidelidad que nos muestras las funcionalidades esperamos tuviera el proyecto.
+
 ![prototipo media fidelidad](prototipoMediaFidelidad.png)
+
+Encuanto al prototipo de alta fidelidad es la culminación del proyecto, en cuanto a interacción con el usuario, así como los acabados quedebe tener la página y las tarjetas mostradas.
 ![prototipo alta fidelidad](prototipoAltaFidelidad.png)
 
-
 #### Testeos de usabilidad
+
+Se realizo una prueba de usabilidad con usarios elegidos al azar para ayudarnos a generar información que nos fue de utilidad para el mejoramiento dinámico y visual de la página.
+
+[Enlace del documento](https://docs.google.com/document/d/1moavw2dL9eJssKzZC8Xq0elcS4KpEhgRxF3GcTFZ-sI/edit#heading=h.icq4iwform4o)
   
