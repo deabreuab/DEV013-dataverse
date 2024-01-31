@@ -2,90 +2,89 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Funcionalidades](#4-funcionalidades)
-* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
-* [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
-* [10. Consideraciones para pedir tu Project Feedback](#10-consideraciones-para-pedir-tu-project-feedback)
+* [1. Introducción](#1-introducción)
+* [2. Descripción del proyecto](#2-Descripción-del-proeyecto)
+* [3. Funcionalidades](#3-funcionalidades)
+* [4. Historia de usuario](#4-Historia-de-usuario)
+* [5.Tecnologías utilizadas](#5-Tecnologías-utilizadas)
+* [6. Prototipo de alta y media fidelidad](#6-Prototipo-de-alta-y-media-fidelidad)
+* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
 
-***
 
 ## 1. Introducción
-Bienvenido a Wikinoot
+Bienvenido a data Dataverse, la página donde encontraras información de personajes del video juego animal crossin en forma de tarjetas.
 
+## 2. Descripción del proyecto.
+Dataverse es un proyecto para la diversión del público en general, es una página que tiene un estilo adaptable, para laptop, tablet y celular, en el que podras encontrar las tarjetas de tu personaje favorito, pero no solo eso, puedes hacer una búsqueda por nombre de tu personaje favorito, también puedes filtrar las tarjetas por orden, especie, etc.
 
-## 2. Resumen del proyecto
-En dataverse un proyecto dedicado al publico en general muestra información de los personajes de animal crossing, es adaptable a laptop, tablet o celular
+<img src="paginaTerminada2.png" alt="dataverse1" width="400" height="250">
+<img src="paginaTerminada3.png" alt="dataverse3" width="400" height="250">
+<img src="dataverse.gif" alt="Gif dataverse" width="500" height="350">
+
 
 
 ## 3. Funcionalidades
 
-* Tiene un botón que te permite acceder a información secundaria y fiera de la página
-* Este proyecto permite al usuario filtrar las tarjetas de los personajes, por género, por especie y por personalidad.
-* Se puede organizar en forma ascendente o descendente
-* 
+* Cuenta con una barra de búsqueda y esta contiene un botón de limpiar.
+* tiene un espacio que te permite filtrar por especie, personalidad y género.
+* Tiene un botón que permite organizar las tarjetas en orden ascendente y descendente.
+* Tiene un botón que te permite borrar todos los filtros antes seleccionados.
+* Tiene un botón que te permite ver la estadistica encuanto a personajes por su género.
 
 ## 4. Historias de ususario
 
-*Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**.
+Se realizo un documento con las funcionalidades del proyecto, pedidas desde el punto de vista de un usuario, simulando una situación en la que podría ser usada. 
+Aquí mostramos el enlace del documento realizada para el usuario que nos permite conocer los pasos en los que se desarrollo el proyecto.
+[Enlace del documento](https://docs.google.com/document/d/1K8NoQyA83kZ_FGCIBDcJ6XyT0XXSpx40iVrrJk-1XwY/edit)
 
 
+## 5. Tecnologías utilizadas
 
-### `src/index.html`
+### Prompt utilizado
+Se utiliza chatGPT como IA requerida, este nos facilito la extración de información que requeriamos para mostrar la data de las tarjetas.
 
-En este apartado encontraras la estructura de la página.
+![chatGPT para generar la data](chat1.png)
+![chatGPT para generar la data](chat.png)
 
-### `src/main.js`
+### `index.html`
 
-Aqui se realiza el llamado del DOM que nos permite la interacción con el mouse
-
-
-### `src/dataFunctions.js`
-
-Este apartado cuenta con tres funciones que nos permiten realizar la parte dinamica de la página
-### `src/data`
-
-Aquí se puden encontrar los datos generados con ayuda de la IA
-
-### `test/dataFunctions.spec.js`
-
-Aquí se realizaron test de prueba unitaria que nos ayudan con el buen funcionamiento de las tres funciones realizadas
-
-### `test/data.js`
-
-Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunction.spec.js
+Se uso index como página principal de la estructura del proyecto.
 
 ### `src/view.js`
 
-En este archivo se relizaron la estructura de las tarjetas mostradas en el THML
+En este archivo se relizaron interacciones con el HTML, creando la estructura de las tarjetas mostradas.
 
-## 6. Historia de usuario
+### `main.js, dataFunctions.js`
+
+En el main se realiza el llamado del DOM que nos permite la interacción con los filtros mostrados en la página.
+En cuanto al dataFunction es el apartado que se utilizo para realizar las tres funciones que nos permiten realizar la parte dinamica de la página.
+
+### `data.js`
+
+Aquí se puden encontrar los datos generados con ayuda de la IA.
+
+### `dataFunctions.spec.js`
+
+Aquí se realizaron test de prueba unitaria que nos ayudan con el buen funcionamiento de las tres funciones realizadas.
+
+### `test/data.js`
+
+Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunction.spec.js.
 
 
+## 6. Prototipo de alta y media fidelidad
 
-#### Prompt utilizado
+Se diseñaron dos prototipos uno de media fidelidad que nos muestras las funcionalidades esperamos tuviera el proyecto.
 
-Dentro del readme que armarás, debe incluir una captura de pantalla
-de tu prompt utilizado para generar los datos. Si utilizaste varios prompts,
-puedes adjuntar todas las capturas que necesites.
+<img src="prototipoMediaFidelidad.png" alt="Prototipo media fidelidad" width="500" height="350">
 
-#### Diseño de la Interfaz de Usuaria
 
-##### Prototipo de alta fidelidad
-
-![prototipo media fidelidad](prototipoMediaFidelidad.png)
-![prototipo alta fidelidad](prototipoAltaFidelidad.png)
-
+Encuanto al prototipo de alta fidelidad es la culminación del proyecto, en cuanto a interacción con el usuario, así como los acabados quedebe tener la página y las tarjetas mostradas.
+<img src="prototipoAltaFidelidad.png" alt="Prototipo alta fidelidad" width="500" height="350">
 
 #### Testeos de usabilidad
 
+Se realizo una prueba de usabilidad con usarios elegidos al azar para ayudarnos a generar información que nos fue de utilidad para el mejoramiento dinámico y visual de la página.
 
-
-#### Pruebas unitarias
+[Enlace del documento](https://docs.google.com/document/d/1moavw2dL9eJssKzZC8Xq0elcS4KpEhgRxF3GcTFZ-sI/edit#heading=h.icq4iwform4o)
   
