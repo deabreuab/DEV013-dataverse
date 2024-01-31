@@ -2,52 +2,60 @@
 
 ## Índice
 
-* [1. Introducción]
-* [2. Resumen del proyecto]
+* [1. Introducción](#1-introducción)
+* [2. Descripción del proyecto](#2-Descripción del proyecto)
 * [3. Funcionalidades](#3-funcionalidades)
-* [6. Historia de usuario]()
-* [7. Prototipo de alta y media fidelidad](#7-hacker-edition)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
-* [10. Consideraciones para pedir tu Project Feedback](#10-consideraciones-para-pedir-tu-project-feedback)
+* [4. Historia de usuario](#4-Historia de usuario)
+* [5.Tecnologías utilizadas](#5-Tecnologías utilizadas)
+* [6. Prototipo de alta y media fidelidad](#6-Prototipo de alta y media fidelidad)
+* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
 
 ***
 
 ## 1. Introducción
-Bienvenido a Wikinoot
+Bienvenido a data Dataverse, la página donde encontraras información de personajes del video juego animal crossin en forma de tarjetas.
 
+## 2. Descripción del proyecto.
+Dataverse es un proyecto para la diversión del público en general, es una página que tiene un estilo adaptable, para laptop, tablet y celular, en el que podras encontrar las tarjetas de tu personaje favorito, pero no solo eso, puedes hacer una búsqueda por nombre de tu personaje favorito, también puedes filtrar las tarjetas por orden, especie, etc.
 
-## 2. Resumen del proyecto
-En dataverse un proyecto dedicado al publico en general muestra información de los personajes de animal crossing, es adaptable a laptop, tablet o celular
+![Visualización de la página terminada](.png)
 
 
 ## 3. Funcionalidades
 
-* Tiene un botón que te permite acceder a información secundaria y fiera de la página
-* Este proyecto permite al usuario filtrar las tarjetas de los personajes, por género, por especie y por personalidad.
-* Se puede organizar en forma ascendente o descendente
-* 
+* Cuenta con una barra de búsqueda y esta contiene un botón de limpiar.
+* tiene un espacio que te permite filtrar por especie, personalidad y género.
+* Tiene un botón que permite organizar las tarjetas en orden ascendente y descendente.
+* Tiene un botón que te permite borrar todos los filtros antes seleccionados.
+* Tiene un botón que te permite ver la estadistica encuanto a personajes por su género.
 
 ## 4. Historias de ususario
 
-*Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**.
+Aquí contamos con un documento que nos permite conocer los pasos en los que se desarrollo el proyecto
+[Enlace del documento](https://docs.google.com/document/d/1K8NoQyA83kZ_FGCIBDcJ6XyT0XXSpx40iVrrJk-1XwY/edit)
 
 
+## 5. Tecnologías utilizadas
 
-### `src/index.html`
+### Prompt utilizado
+Se utiliza chatGPT como IA requerida, este nos facilito la extración de información que requeriamos para las tarjetas.
+
+![chatGPT para generar la data](chat1.png)
+![chatGPT para generar la data](chat.png)
+
+### `/index.html`
 
 En este apartado encontraras la estructura de la página.
 
-### `src/main.js`
+### `/main.js`
 
 Aqui se realiza el llamado del DOM que nos permite la interacción con el mouse
 
 
-### `src/dataFunctions.js`
+### `/dataFunctions.js`
 
 Este apartado cuenta con tres funciones que nos permiten realizar la parte dinamica de la página
-### `src/data`
+### `/data`
 
 Aquí se puden encontrar los datos generados con ayuda de la IA
 
@@ -63,26 +71,13 @@ Este archivo no ayuda en la prueba de los test realizados en el archivo dataFunc
 
 En este archivo se relizaron la estructura de las tarjetas mostradas en el THML
 
-## 6. Historia de usuario
 
 
-
-#### Prompt utilizado
-
-![chatGPT para generar la data](chat1.png)
-![chatGPT para generar la data](chat.png)
-
-
-
-##### Prototipo de alta fidelidad
+## 6. Prototipo de alta y media fidelidad
 
 ![prototipo media fidelidad](prototipoMediaFidelidad.png)
 ![prototipo alta fidelidad](prototipoAltaFidelidad.png)
 
 
 #### Testeos de usabilidad
-
-
-
-#### Pruebas unitarias
   
