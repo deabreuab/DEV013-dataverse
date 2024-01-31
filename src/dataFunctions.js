@@ -40,6 +40,6 @@ export const computeStats = (data) => {
   }, 0);
   const totalMen = parseFloat((acumuladorMen/data.length)*100).toFixed(2); 
   const totalWomen = parseFloat((acumuladorWomen/data.length)*100).toFixed(2); 
-  console.log(typeof totalMen, totalWomen);
-  return `Porcentaje personajes Masculinos ${totalMen}% porcentaje personajes femeninos ${totalWomen}%`
+  console.log(typeof parseFloat(totalMen), totalWomen);
+  return `Porcentaje personajes Masculinos ${parseFloat(totalMen)}% porcentaje personajes femeninos ${parseFloat(totalWomen)}%`
 };

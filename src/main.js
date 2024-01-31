@@ -52,6 +52,7 @@ filterSpecie.addEventListener("click", (e) => {// CON ESTO FILTRO POR ESPECIES
   }
   navRoot.innerHTML = "";//sustituir por data filteredData
   filteredData =  filterData(filteredData, "species", e.target.value);
+  //filteredData =  filterData(data, "species", e.target.value); para que no sea acumulativa
   renderItems(filteredData);
 });
 
