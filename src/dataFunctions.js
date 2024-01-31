@@ -11,7 +11,7 @@ export const sortData = (data, sortBy, sortOrder ) => {
 export const filterData = (data, filterBy, value) => {
   console.log(data);
   const array = data.filter((items => items[filterBy] === value));
-  /*const filterMap = array.map(item => {
+  const filterMap = array.map(item => {
     return {
       name: item.name,
       species: item.species,
@@ -20,8 +20,8 @@ export const filterData = (data, filterBy, value) => {
       imageUrl: item.imageUrl,
       facts:{birthDate: item.facts.birthDate, zodiacSign: item.facts.zodiacSign},
     };
-  });*/
-  return array;
+  });
+  return filterMap;
 };
 
 export const computeStats = (data) => {
