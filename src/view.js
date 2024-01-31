@@ -5,6 +5,7 @@ export const renderItems = (data) => {
   data.forEach((element) => {
     const listLi = document.createElement("li"); // creación de etiqueta li
     listUl.appendChild(listLi);
+    listLi.setAttribute("class", "listLi");
     listLi.setAttribute('itemscope','') // Esto lo agregue para que pasarán los test HTML, aunque ya lo teníamos lo exigía dentro del li
     listLi.setAttribute('itemtype', 'https://schema.org/Game')
     const divCard = document.createElement("div");

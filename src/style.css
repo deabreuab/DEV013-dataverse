@@ -303,6 +303,9 @@
   select{
     font-size: 14px;
   }
+  .listLi {
+    margin: auto;
+  }
   .content-modal {/*lo ocupo para el modal*/
     display: none;  
     position: fixed;
@@ -315,6 +318,7 @@
     background-color: rgb(0, 0, 0, 0.5);
   }
   #page {/*esto se puede modificar*/
+    text-align: center;
     font-size: 28px;
     font-weight: 800 ;
   }
@@ -323,5 +327,7 @@
     font-size: 50px;
   }
   #close {
+    font-size: 30px;
     cursor: pointer;
   }
+  
