@@ -2,11 +2,13 @@
 
 ## Índice
 
-* [1. Introducción]
-* [2. Resumen del proyecto]
-* [3. Funcionalidades](#3-funcionalidades)
-* [6. Historia de usuario]()
-* [7. Prototipo de alta y media fidelidad](#7-hacker-edition)
+* [1. Preámbulo](#1-preámbulo)
+* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [3. Consideraciones generales](#3-consideraciones-generales)
+* [4. Funcionalidades](#4-funcionalidades)
+* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
+* [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
+* [7. Hacker edition](#7-hacker-edition)
 * [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
 * [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
 * [10. Consideraciones para pedir tu Project Feedback](#10-consideraciones-para-pedir-tu-project-feedback)
@@ -69,10 +71,11 @@ En este archivo se relizaron la estructura de las tarjetas mostradas en el THML
 
 #### Prompt utilizado
 
-![chatGPT para generar la data](chat1.png)
-![chatGPT para generar la data](chat.png)
+Dentro del readme que armarás, debe incluir una captura de pantalla
+de tu prompt utilizado para generar los datos. Si utilizaste varios prompts,
+puedes adjuntar todas las capturas que necesites.
 
-
+#### Diseño de la Interfaz de Usuaria
 
 ##### Prototipo de alta fidelidad
 
