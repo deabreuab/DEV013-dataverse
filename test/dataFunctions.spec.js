@@ -8,7 +8,7 @@ const expectDataAsc = [fakeData[0], fakeData[1], fakeData[3], fakeData[2]];
 const expectDataDesc = [fakeData[2], fakeData[3], fakeData[1], fakeData[0]];
 const filterSpecie = [fakeData[0], fakeData[1]];
 const filterPesonality = [fakeData[1], fakeData[3]];
-const statsText = "Porcentaje personajes Masculinos 50.00% porcentaje personajes femeninos 50.00%";
+const statsText = "Porcentaje personajes masculinos: 50.00% " + "\nPorcentaje personajes femeninos: 50.00%";
 const testDataFilterFe = [fakeData[0], fakeData[2]];//nos trae los un array con los dos objetos, completos
 //const prueba  =  [{"facts": {"birthDate": "15 de octubre", "zodiacSign": "Leo"}, "gender": "Femenino", "imageUrl": "https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png", "name": "Bea", "personality": "Dulce", "shortDescription": "Perro deportista y enérgico, amante del ejercicio y las competiciones.", "species": "Perro"}, {"facts": {"birthDate": "31/10", "zodiacSign": "Libra"}, "gender": "Femenino", "imageUrl": "https://dodo.ac/np/images/2/26/Shino_amiibo.png", "name": "Yuki", "personality": "Vivaracha", "shortDescription": "Yuki es una aldeana ciervo animada en la serie Animal Crossing", "species": "Ciervo"}] 
 

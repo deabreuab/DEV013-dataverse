@@ -7,6 +7,7 @@ export const renderItems = (data) => {
     listUl.appendChild(listLi);
     listLi.setAttribute('itemscope','') // Esto lo agregue para que pasarán los test HTML, aunque ya lo teníamos lo exigía dentro del li
     listLi.setAttribute('itemtype', 'https://schema.org/Game')
+    listLi.className = "cardList"
     const divCard = document.createElement("div");
     divCard.className = "card";
     if (element.personality === "Gruñon") {

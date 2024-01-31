@@ -135,9 +135,8 @@ const closeModal = document.querySelector("#close");//cerrar modal
 const openModal = document.querySelector("#openModal"); //botón abrir el modal
 
 openModal.addEventListener("click", function(event) {  
-  console.log("hola");
-  modal.style.display = "block";
-  const pageText = document.getElementById("page");//contenedor modal dialog
+  modal.style.display = "flex"; // mostramos el modal
+  const pageText = document.getElementById("page"); //contenedor modal dialog
   if (event.currentTarget === openModal) {
     pageText.innerText = computeStats(data);
   }
