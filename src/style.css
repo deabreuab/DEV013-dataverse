@@ -22,11 +22,10 @@
 * {
   padding: 0;
   margin: 0;
-    font-family: "Encode Sans Condensed", sans-serif;
+  font-family: "Encode Sans Condensed", sans-serif;
   box-sizing: border-box;
   font-family: "EncodeSansCondensedRegular", sans-serif;
 }
-
 header {
   display: flex;
   justify-content: space-between;
@@ -34,28 +33,22 @@ header {
   padding: 20px 10%;
   border-bottom: 1px solid #e0e0e0;
 }
-
 .header-title {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .header-user {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .header-user img {
   width: 3rem;
 }
-
 body {
-  /*font-family: "Encode Sans Condensed", sans-serif;*/
   background-color: #f7f3e7;
 }
-
 footer {
   position: fixed;
   width: 100%;
@@ -63,7 +56,6 @@ footer {
   bottom: 0;
   overflow: hidden;
 }
-
 footer p {
   position: absolute;
   bottom: 0;
@@ -72,45 +64,37 @@ footer p {
   font-weight: bold;
   z-index: 2;
 }
-
 footer svg {
   position: absolute;
   bottom: 0;
   z-index: 1;
 }
-
 footer img {
   position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 2;
 }
-
 aside {
   padding: 3rem 3rem 3rem 10%;
 }
-
 main {
   display: flex;
   margin-bottom: 100px;
 }
-
 section {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 hr {
   border: 1px solid #e0e0e0;
   margin: 1rem 0;
 }
-
 ul {
   list-style: none;
 }
-
 ul .cardList {
   display: flex;
   gap: 1rem;
@@ -118,7 +102,6 @@ ul .cardList {
   justify-content: center;
   margin: 0
 }
-
 .buscador {
   display: flex;
   justify-content: space-between;
@@ -132,24 +115,19 @@ ul .cardList {
   header {
     padding: 10px 5%;
   }
-
   aside {
     padding: 1.5rem;
     display: none;
   }
-
   main {
     flex-direction: column;
   }
-
   section {
     width: 100%;
   }
-
   .buscador h2 {
     display: none;
   }
-
   .buscador div {
     display: flex;
     flex-direction: column;
@@ -163,35 +141,27 @@ ul .cardList {
   display: flex;
   background-size: cover;
 }
-
 .cardGrunon {
   background-image: url("./images/cardGruñon.png");
 }
-
 .cardPerezoso {
   background-image: url("./images/cardPerezoso.png");
 }
-
 .cardDeportista {
   background-image: url("./images/cardDeportista.png");
 }
-
 .cardAltanera {
   background-image: url("./images/cardAltanera.png");
 }
-
 .cardDulce {
   background-image: url("./images/cardDulce.png");
 }
-
 .cardEsnob {
   background-image: url("./images/cardEsnob.png");
 }
-
 .cardVivaracha {
   background-image: url("./images/cardVivaracha.png");
 }
-
 .bodyCard {
   flex: 1;
   display: flex;
@@ -199,83 +169,65 @@ ul .cardList {
   align-items: center;
   height: 147px;
 }
-
 .headerCard {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1rem 0 1rem;
 }
-
 dd[itemprop="gender"] {
   width: 30px;
   height: 30px;
   background-size: cover;
   border-radius: 7px;
 }
-
 .genderFemale {
   background-image: url("./images/female.png");
 }
-
 .genderMale {
   background-image: url("./images/male.png");
 }
-
 dd[itemprop="zodiacSign"] {
   width: 30px;
   height: 30px;
   background-size: cover;
   border-radius: 7px;
 }
-
 .signCancer {
   background-image: url("./images/zodiacs/Cancer.png");
 }
-
 .signCapricorn {
   background-image: url("./images/zodiacs/Capricornio.png");
 }
-
 .signAries {
   background-image: url("./images/zodiacs/Aries.png");
 }
-
 .signLibra {
   background-image: url("./images/zodiacs/Libra.png");
 }
-
 .signAquarius {
   background-image: url("./images/zodiacs/Acuario.png");
 }
-
 .signSagittarius {
   background-image: url("./images/zodiacs/Sagitario.png");
 }
-
 .signScorpio {
   background-image: url("./images/zodiacs/Escorpio.png");
 }
-
 .signPisces {
   background-image: url("./images/zodiacs/Picis.png");
 }
-
 .signLeo {
   background-image: url("./images/zodiacs/Leo.png");
 }
-
 .signGeminis {
   background-image: url("./images/zodiacs/Geminis.png");
 }
-
 .signVirgo {
   background-image: url("./images/zodiacs/Virgo.png");
 }
-
 .signTaurus {
   background-image: url("./images/zodiacs/Tauro.png");
 }
-
 .footerCard {
   color: #f7f3e7;
   padding: 1rem;
@@ -283,17 +235,14 @@ dd[itemprop="zodiacSign"] {
   flex-direction: column;
   gap: 8px;
 }
-
 dt {
   display: none;
 }
-
 dl {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .date {
   display: flex;
   justify-content: center;
@@ -301,51 +250,44 @@ dl {
   gap: 0.5rem;
   font-weight: bold;
 }
-
 .date img {
   width: 24px;
   height: 24px;
 }
-
 .information {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid white;
   align-items: flex-end;
 }
-
 #root ul {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .bodyCard img {
   max-width: 147px;
   max-height: 164px;
 }
-
 dd[itemprop="name"]{
-    font-size: 20px;
-    font-weight: bold;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
 }
-
 dd[itemprop="species"]{
-    width: 48px;
-    overflow: hidden;
-    text-align: left;
+  width: 48px;
+  overflow: hidden;
+  text-align: left;
 }
-
 dd[itemprop="personality"]{
-    width: 48px;
-    overflow: hidden;
-    text-align: right;
+  width: 48px;
+  overflow: hidden;
+  text-align: right;
 }
-
 .container {
-    max-width: 790px;
-    width: 790px;
-    height: 100%;
+  max-width: 790px;
+  width: 790px;
+  height: 100%;
 }
 .content-modal {/*lo ocupo para el modal*/
   display: none;
@@ -359,33 +301,27 @@ dd[itemprop="personality"]{
   align-items: center;
   justify-content: center;
 }
-
 #page {/*esto se puede modificar*/
   font-size: 28px;
 }
-
 #close {
   cursor: pointer;
 }
-
 select {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
 }
-
 input[type="text"] {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
 }
-
 .buscador div {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .btn-clear,.btn-clear-search {
   background-color: #8ac68a;
   border-radius: 8px;
@@ -398,17 +334,14 @@ input[type="text"] {
   position: relative;
   z-index: 1;
 }
-
 .btn-clear-search {
   padding: 0.4rem 0.5rem;
   border-radius: 5px;
 }
-
 .btn-clear:hover,.btn-clear:focus,
 .btn-clear-search:hover,.btn-clear-search:focus {
   background-color: #7ab37a;
 }
-
 .btn-statics{
   background-color: #8ac68a;
   border-radius: 8px;
@@ -421,7 +354,6 @@ input[type="text"] {
   position: relative;
   z-index: 1;
 }
-
 .modal-body {
   position: relative;
   display: flex;
@@ -432,13 +364,11 @@ input[type="text"] {
   border: 1px solid rgba(0,0,0,.2);
   border-radius: 0.3rem;
 }
-
 .modal-header {
   padding: 1rem;
   border-bottom: 1px solid #e9ecef;
   text-align: center;
 }
-
 .modal-main {
   flex: 1;
   padding: 0 1rem;
@@ -446,13 +376,11 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
 }
-
 .modal-footer {
   padding: 1rem;
   display: flex;
   flex-direction: row-reverse;
 }
-
 .btn-close {
   background-color: #fc736d;
   border-radius: 8px;
