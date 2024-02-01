@@ -77,7 +77,6 @@ const closeModal = document.querySelector("#close");
 const openModal = document.querySelector("#openModal"); 
 
 openModal.addEventListener("click", function(event) {  
-  console.log("hola");
   modal.style.display = "block";
   const pageText = document.getElementById("page");
   if (event.currentTarget === openModal) {

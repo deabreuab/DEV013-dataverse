@@ -9,7 +9,6 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 export const filterData = (data, filterBy, value) => {
-  console.log(data);
   const array = data.filter((items => items[filterBy] === value));
   return array;
 };
@@ -19,7 +18,6 @@ export const computeStats = (data) => {
     if (item.gender === "Masculino") {
       acumuladorMen++;
     }
-    console.log(acumuladorMen);
     return acumuladorMen;
   }, 0);
 
@@ -27,11 +25,9 @@ export const computeStats = (data) => {
     if (item.gender === "Femenino") {
       acumuladorWomen++;
     }
-    console.log(acumuladorWomen);
     return acumuladorWomen;
   }, 0);
   const totalMen = parseFloat((acumuladorMen / data.length) * 100).toFixed(2);
   const totalWomen = parseFloat((acumuladorWomen / data.length) * 100).toFixed(2);
-  console.log(typeof totalMen, totalWomen);
   return `Porcentaje personajes masculinos: ${totalMen}% \nPorcentaje personajes femeninos: ${totalWomen}%`;
 };
