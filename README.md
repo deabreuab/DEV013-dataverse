@@ -15,7 +15,7 @@
 ¡Bienvenido a WikiNook 🏡!</br>
 Este proyecto es una aplicación web dedicada a los amantes del videojuego Animal Crossing, específicamente diseñada para explorar y conocer más sobre los adorables vecinos del juego. Con un diseño inspirado en la estética de Animal Crossing, WikiNook ofrece una experiencia interactiva para descubrir información detallada sobre cada vecino, clasificándolos según su especie, personalidad y género.
 
-## 2. Descripción del proyecto.
+## 2. Descripción del proyecto
 WikiNook tiene como objetivo proporcionar a los jugadores de Animal Crossing una plataforma intuitiva y atractiva para explorar información detallada sobre sus vecinos favoritos. Desde clasificar a los vecinos por personalidad y especie hasta la posibilidad de buscarlos por nombre, WikiNook es la guía perfecta para conocer a fondo la comunidad animal de tu isla.
 
 ![Imagen página completa gif](dataverse.gif)
@@ -39,7 +39,7 @@ El desarrollo de WikiNook se benefició de un conjunto diverso de tecnologías y
 ### Prompt utilizado
 Se utiliza chatGPT como IA requerida, este nos facilito la extración de información que requeriamos para mostrar la data de las tarjetas.
 
-![chatGPT para generar la data](chat1.png)
+![chatGPT para generar la data](promptingImage.png)
 ![chatGPT para generar la data](chat.png)
 
 ### HTML
