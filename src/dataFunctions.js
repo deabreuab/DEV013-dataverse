@@ -3,7 +3,7 @@ export const sortData = (data, sortBy, sortOrder ) => {
     const valueA = a[sortBy];  
     const valueB = b[sortBy]; 
     const compare = valueA.localeCompare(valueB);
-    return (sortOrder === "asc" ? compare : -compare);
+    return (sortOrder === "asc" ? compare : -compare); //operador ternario
   });
   return data;
 };
@@ -41,5 +41,5 @@ export const computeStats = (data) => {
   const totalMen = parseFloat((acumuladorMen/data.length)*100).toFixed(2); 
   const totalWomen = parseFloat((acumuladorWomen/data.length)*100).toFixed(2); 
   console.log(typeof parseFloat(totalMen), totalWomen);
-  return `Porcentaje personajes Masculinos ${parseFloat(totalMen)}% porcentaje personajes femeninos ${parseFloat(totalWomen)}%`
+  return `Porcentaje personajes Masculinos \n ${parseFloat(totalMen)}% porcentaje personajes femeninos ${parseFloat(totalWomen)}%`
 };
