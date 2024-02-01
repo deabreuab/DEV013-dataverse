@@ -142,7 +142,7 @@ test.describe('Pagina interraciones', () => {
       await page.goto('http://localhost:3000/');
       const originalLis = await page.$$(liSelector);
       const select = await page.getByTestId('select-filter');
-      await select.selectOption({ index: 1 });
+      await select.selectOption({ index: 0 });
       const liElements = await page.$$(liSelector);
       expect(liElements.length).not.toEqual(originalLis.length); // probar si no hay mismo cantidad elementos
 
