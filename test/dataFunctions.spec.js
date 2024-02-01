@@ -11,7 +11,7 @@ const testDataFilterFe = [fakeData[0], fakeData[2]];//nos trae los un array con 
 const filterSpecies = [fakeData[0], fakeData[1]];
 const filterPersonality = [fakeData[1], fakeData[3]];
 //tipo number
-const statsText = "Porcentaje personajes Masculinos 50.00% porcentaje personajes femeninos 50.00%";
+const statsText = "Porcentaje personajes masculinos 50.00% Porcentaje personajes femeninos 50.00%";
 
 describe('Ordenar la data "asc"', () => {//crear una colección de test filter data
   it('Debería ordenarse de forma ascendente', () => {//inician con it o test, descripción de que estamos configurando, empezar con debería quehace(ordenar en forma ascendente los nombres de la data) //ESO QUE VA HACER MI TEST DEBE HACER... SE PUEDEN AGREGAR DOS O MAS IT

@@ -172,38 +172,3 @@ export const renderItems = (data) => {
   });
   return navRoot.appendChild(listUl);
 };
-
-
-
-
-/*
-export const renderItems = (data) => {
-  
-  const navRoot = document.querySelector("#root");
-  const listUl = document.createElement("ul");
-  data.forEach(element => {
-    const listLi = document.createElement('li');
-    listLi.setAttribute("class", `card ${element.personality} ${element.gender}`);//css
-    listLi.setAttribute("itemscope", "");
-    listLi.setAttribute("itemtype", "http://schema.org/Person");
-    listLi.innerHTML = `
-      <dl>
-      <img class="img" src=${element.imageUrl} alt=${element.name}/>
-      <dt>Nombre:</dt><dd itemprop="name">${element.name}</dd>
-      <div class="details">
-      <dt>Especies:</dt><dd itemprop="species">${element.species}</dd>
-      <dt>Genero:</dt><dd itemprop="gender" hidden>${element.gender}</dd>
-      </div>
-      <dt>Personalidad:</dt><dd itemprop="personality">${element.personality}</dd>
-      <dt>Signo zodiacal:</dt><dd itemprop="zodiacSign" hidden>${element.facts.zodiacSign}</dd>
-      <dt>Cumpleaños:</dt><dd itemprop="birthDate">${element.facts.birthDate}</dd>
-      <dt>Descripción:</dt><dd itemprop="shortDescription" hidden>${element.shortDescription}</dd>
-      <div>
-        <button id="seeMoreModal"> Ver mas... </button>
-      </div>
-      </dl>`
-    listUl.appendChild(listLi);
-  });
-  navRoot.appendChild(listUl)//quitarlo de aquí y pasarlo a main
-  return listUl;
-  */

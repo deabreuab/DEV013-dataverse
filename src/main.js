@@ -20,10 +20,11 @@ filteredData = data; //acomplar la inf de la base de datos para usarla de manera
 //navRoot.appendChild(renderItems(data));
 
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
+  filteredData = data;
   navRoot.innerHTML = "";
-  filteredData = data
+  order.selectedIndex = 0;//reiniciar el select
   const radioButton = document.querySelectorAll('input[type="radio"]');
-  radioButton.forEach(item => item.checked = false);
+  radioButton.forEach(item => item.checked = false);//para desmarcar los radio button
   renderItems(data);
 });
 
