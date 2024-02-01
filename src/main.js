@@ -1,9 +1,11 @@
+
 import { computeStats, filterData, sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 //ctrl + k + c
 //ctrl + k + u
+//cursor encima de la palabra + f2
 renderItems(data);//contiene la data incial
 let filteredData;
 const navRoot = document.querySelector('#root'); //contenedor
@@ -11,33 +13,19 @@ const buttonClearFilter = document.querySelector("button[data-testid='button-cle
 const inputSearchAnimal = document.getElementById("searchAnimal"); //llamar el input donde va el nombre
 const buttonClearName = document.querySelector("button[data-testid='button-clearName']"); //limpiar nombre de inputSearchAnimal
 const order = document.querySelector("[data-testid='select-sort']");//para ordenar
-// const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
-// const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
-// const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
 filteredData = data; //acomplar la inf de la base de datos para usarla de manera interna, ya la uso de forma que quiera, para mantener la data filtrada()
+//navRoot.appendChild(renderItems(data));
 
 buttonClearFilter.addEventListener("click", () => {//esto lo tengo que usar para limpiar los filtros
   navRoot.innerHTML = "";
-  filteredData = data;
+  filteredData = data
   const radioButton = document.querySelectorAll('input[type="radio"]');
-  console.log(radioButton);
-  radioButton.forEach(item => item.checked = false );
-  //falta que se quite la marca de los botones, el valor queda guardado, se debe resetar los valores no guardar
+  radioButton.forEach(item => item.checked = false);
   renderItems(data);
-});/*
-seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
-  dialogModal.showModal();
-  const containerModalSeeMore = document.getElementById("containerModalSeeMore");
-  if (e.target === seeMoreModal) {
-    containerModalSeeMore.innerHTML = "";
-  }
 });
-seeMoreClose.addEventListener("click", ()=> {
-  dialogModal.close();
-})*/
 
 order.addEventListener("change", (event) => {
   navRoot.textContent = "";
@@ -58,12 +46,11 @@ filterPersonality.addEventListener("click", (e) => {//filtro personalidad
   renderItems(filteredData);
 });
 
-
 filterSpecie.addEventListener("click", (e) => {// CON ESTO FILTRO POR ESPECIES
   if(!e.target.value) {
     return;
   }
-  navRoot.innerHTML = "";
+  navRoot.innerHTML = "";//sustituir por data filteredData
   filteredData =  filterData(filteredData, "species", e.target.value);
   renderItems(filteredData);
 });
@@ -75,68 +62,55 @@ filterGender.addEventListener("click", (e) => {//  CON ESTE CÓDIGO LLAMO AL FIL
   navRoot.innerHTML = "";//si es masculino que me muestre el contenido, si es mujer que me muetre el contenido
   //filterdData = "";
   filteredData =  filterData(filteredData, "gender", e.target.value);
+  /*if (document.getElementById("genderAll").checked){
+    //nav.innerHTML;
+    nav.innerHTML;//FALTA QUE LLAME A TODOS
+    filterResult = filterData(data, "gender", "All");
+    //return filterResult= event.target.value = filterData(data, "gender", "All")
+  }
+  if (document.getElementById("genderWomen").checked){
+    nav.innerHTML = "";
+    filterResult = filterData(data, "gender", "Femenino");
+    //return filterResult = event.target.value = filterData(data, "gender", "Femenino");
+  }
+  if (document.getElementById("genderMasculine").checked){
+    nav.innerHTML = "";
+    //console.log(filterData(data, "gender", "Masculino"));
+    filterResult = filterData(data, "gender", "Masculino");
+    //return filterResult = event.target.value = filterData(data, "gender", "Masculino");
+  }*/
   renderItems(filteredData);
 });
-
 
 const filterSearchNames = () => { //Buscador
   //console.log(inputSearchAnimal.value);
   navRoot.innerHTML = "";// debe iniciar vacio
   const dataNames = inputSearchAnimal.value.toLowerCase() //pasa todo a minuscula
-  const filteredNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames))
-  //item => item.name.toLowerCase().indexOf(dataNames) !== -1
-  renderItems(filteredNames);
- 
-  
-  /*for (const items of data) { //recorrer la data
-    const name = items.name.toLowerCase();//name referencia a la data
-  
-    if (name.indexOf(dataNames) !== -1) {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-      nav.innerHTML += `
-      <dl>
-      <img src=${items.imageUrl} alt=${items.name}/>      
-      <dd>${items.name}</dd>
-      <dd itemprop="species">${items.species}</dd>
-      <dd itemprop="gender">${items.gender}</dd>
-      <dd itemprop="personality">${items.personality}</dd>
-      <dd itemprop="zodiacSign">${items.facts.zodiacSign}</dd>
-      <dd itemprop="birthDate">${items.facts.birthDate}</dd>
-      <dd itemprop="shortDescription">${items.shortDescription}</dd>
-      </dl>  `
-    }*/
-} //si sigue vacio en nav
-/*if (navRoot.innerHTML === "") {// retorna el indice del elemento dado o -1 si no esta, dentro del index va lo que vamos escribiendo el dataNames
-    navRoot.innerHTML += `
-    <li>Sin resultados</li>`
-  }*/
-
+  const filterNames = filteredData.filter(item => item.name.toLowerCase().includes(dataNames));
+  renderItems(filterNames); 
+}
 
 inputSearchAnimal.addEventListener("keyup", filterSearchNames); 
-
 buttonClearName.addEventListener("click", function(e) {//con esto limpio el nombre escrito
   e.target.value = inputSearchAnimal.value = "";
   navRoot.innerHTML = "";
   renderItems(filteredData);
 });
-
-/*
-  if (e.target.matches(input)) {
-    console.log(e.target.value);
-  }
-  /*if(e.target.inputName) {
-    data.forEach(names => {
-      console.log(names.textContent.toLowerCase().includes(e.target.value));
-    })
-  }*/
   
 
+// ESTE ES EL QUE USO PARA ABRIR EL MODAL DE LA ESTADISTICA, DE MOMENTO NO ME ABRE, VOY A BUSCAR LA FALLA
 const modal = document.querySelector("#modal");
 const closeModal = document.querySelector("#close");//cerrar modal
 const openModal = document.querySelector("#openModal"); //botón abrir el modal
+//const seeMoreModal = document.querySelector("#seeMoreModal"); // para abrir la opcion de ver mas en las tarjetas
+// const seeMoreClose = document.querySelector("#seeMoreClose"); //cerrar ver más
+// const dialogModal = document.querySelector("#dialogModal"); //contenedor del modal ver más
 
 openModal.addEventListener("click", function(event) {  
-  modal.style.display = "flex"; // mostramos el modal
-  const pageText = document.getElementById("page"); //contenedor modal dialog
+  console.log("hola");
+  //computeStats(data)
+  modal.style.display = "block";
+  const pageText = document.getElementById("page");//contenedor modal dialog
   if (event.currentTarget === openModal) {
     pageText.innerText = computeStats(data);
   }
@@ -144,4 +118,57 @@ openModal.addEventListener("click", function(event) {
 
 closeModal.addEventListener("click", ()=> {
   modal.style.display = "none";
+})
+
+/*
+seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
+  dialogModal.showModal();
+  const containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  if (e.target === seeMoreModal) {
+    containerModalSeeMore.innerHTML = "";
+  }
 });
+seeMoreClose.addEventListener("click", ()=> {
+  dialogModal.close();
+})*/
+
+
+openModal.addEventListener("click", function(event) {  
+  //computeStats(data)
+  modal.style.display = "block";
+  const pageText = document.getElementById("page");//contenedor modal dialog
+  if (event.currentTarget === openModal) {
+    pageText.innerText = computeStats(data);
+  }
+});
+
+closeModal.addEventListener("click", ()=> {
+  modal.style.display = "none";
+})
+
+/*
+openModal.addEventListener("click", (e) => {  
+  statistics.showModal();
+  //computeStats(data)
+  const titleH2 = document.getElementById("stats");
+  if (e.target === openModal) {
+    titleH2.innerHTML = computeStats(data);
+  }
+});
+
+closeModal.addEventListener("click", ()=> {
+  statistics.close(); 
+});*/
+/*
+seeMoreModal.addEventListener("click", (e)=> { //boton ver mas desde JS abre, solo falta mostrar la información
+  dialogModal.showModal();
+  const containerModalSeeMore = document.getElementById("containerModalSeeMore");
+  if (e.target === seeMoreModal) {
+    containerModalSeeMore.innerHTML = "";
+  }
+});
+seeMoreClose.addEventListener("click", ()=> {
+  dialogModal.close();
+})*/
+
+
