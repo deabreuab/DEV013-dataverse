@@ -7,7 +7,7 @@ const expectDataDesc = [fakeData[2], fakeData[3], fakeData[1], fakeData[0]];
 const testDataFilterFe = [fakeData[0], fakeData[2]];
 const filterSpecies = [fakeData[0], fakeData[1]];
 const filterPersonality = [fakeData[1], fakeData[3]];
-const statsText = "Porcentaje personajes masculinos 50.00% Porcentaje personajes femeninos 50.00%";
+const statsText = "Porcentaje personajes masculinos: 50.00% " + "\nPorcentaje personajes femeninos: 50.00%";
 
 describe('Ordenar la data "asc"', () => {
   it('Debería ordenarse de forma ascendente y descendente', () => {
