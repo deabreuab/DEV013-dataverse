@@ -45,5 +45,5 @@ export const computeStats = (data) => {
     2
   );
   console.log(typeof totalMen, totalWomen);
-  return `Porcentaje personajes masculinos ${totalMen}% Porcentaje personajes femeninos ${totalWomen}%`;
+  return `Porcentaje personajes masculinos: ${totalMen}% \nPorcentaje personajes femeninos: ${totalWomen}%`; // \n se usa para hacer un salto de linea en un texto
 };
