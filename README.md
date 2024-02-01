@@ -12,7 +12,9 @@
 
 
 ## 1. Introducción
-Bienvenido a data Dataverse, la página donde encontraras información de personajes del video juego animal crossin en forma de tarjetas.
+¡Bienvenido a WikiNook 🏡!
+Este proyecto es una aplicación web dedicada a los amantes del videojuego Animal Crossing, específicamente diseñada para explorar y conocer más sobre los adorables vecinos del juego. Con un diseño inspirado en la estética de Animal Crossing, WikiNook ofrece una experiencia interactiva para descubrir información detallada sobre cada vecino, clasificándolos según su especie, personalidad y género.
+
 
 ## 2. Descripción del proyecto.
 Dataverse es un proyecto para la diversión del público en general, es una página que tiene un estilo adaptable, para laptop, tablet y celular, en el que podras encontrar las tarjetas de tu personaje favorito, pero no solo eso, puedes hacer una búsqueda por nombre de tu personaje favorito, también puedes filtrar las tarjetas por orden, especie, etc.
