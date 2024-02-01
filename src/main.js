@@ -18,7 +18,8 @@ filteredData = data;
 
 buttonClearFilter.addEventListener("click", () => {
   navRoot.innerHTML = "";
-  filteredData = data
+  filteredData = data;
+  order.selectedIndex = 0;
   const radioButton = document.querySelectorAll('input[type="radio"]');
   radioButton.forEach(item => item.checked = false);
   renderItems(data);
