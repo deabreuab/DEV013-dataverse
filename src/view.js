@@ -1,11 +1,10 @@
 export const renderItems = (data) => {
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
-  const navRoot = document.getElementById("root"); // id del nav donde van los elemento ul y li
-  const listUl = document.createElement("ul"); // creación de etiqueta ul
+  const navRoot = document.getElementById("root");
+  const listUl = document.createElement("ul");
   data.forEach((element) => {
-    const listLi = document.createElement("li"); // creación de etiqueta li
+    const listLi = document.createElement("li");
     listUl.appendChild(listLi);
-    listLi.setAttribute('itemscope','') // Esto lo agregue para que pasarán los test HTML, aunque ya lo teníamos lo exigía dentro del li
+    listLi.setAttribute('itemscope','')
     listLi.setAttribute('itemtype', 'https://schema.org/Game')
     listLi.className = "cardList"
     const divCard = document.createElement("div");
