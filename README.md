@@ -3,12 +3,11 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Descripción del proyecto](#2-Descripción-del-proeyecto)
+* [2. Descripción del proyecto](#2-Descripción-del-proyecto)
 * [3. Funcionalidades](#3-funcionalidades)
 * [4. Historia de usuario](#4-Historia-de-usuario)
 * [5.Tecnologías utilizadas](#5-Tecnologías-utilizadas)
 * [6. Diseño y Desarrollo del Prototipo](#6-Diseño-y-Desarrollo-del-Prototipo)
-* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
 
 
 ## 1. Introducción
@@ -27,7 +26,7 @@ WikiNook tiene como objetivo proporcionar a los jugadores de Animal Crossing una
 * Barra de Búsqueda: Encuentra rápidamente a tu vecino favorito por su nombre, cuenta con un botón que limpia la búsqueda realizada.
 * Estadísticas: Muestra porcentualmente en un modal la cantidad de vecinos del género femenino y del género masculino existentes en la plataforma. 
 
-## 4. Historias de ususario
+## 4. Historia de usuario
 
 Se realizo un documento con las funcionalidades del proyecto, pedidas desde el punto de vista de un usuario, simulando una situación en la que podría ser usada. 
 Aquí mostramos el enlace del documento realizada para el usuario que nos permite conocer los pasos en los que se desarrollo el proyecto.
