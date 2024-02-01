@@ -27,7 +27,6 @@ buttonClearFilter.addEventListener("click", () => {
 order.addEventListener("change", (event) => {
   navRoot.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
-  
   renderItems(filteredData);
 });
 
