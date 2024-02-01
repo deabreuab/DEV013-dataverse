@@ -14,11 +14,10 @@ const order = document.querySelector("[data-testid='select-sort']");
 const filterGender = document.querySelector("[data-testid='select-filterGender']");
 const filterSpecie = document.querySelector("[data-testid='select-filter']");
 const filterPersonality = document.querySelector("[data-testid='select-filterPersonality']");
-filteredData = data;
+filteredData = [...data];
 
 buttonClearFilter.addEventListener("click", () => {
   navRoot.innerHTML = "";
-  filteredData = data;
   order.selectedIndex = 0;
   const radioButton = document.querySelectorAll('input[type="radio"]');
   radioButton.forEach(item => item.checked = false);
@@ -28,8 +27,7 @@ buttonClearFilter.addEventListener("click", () => {
 order.addEventListener("change", (event) => {
   navRoot.textContent = "";
   filteredData = sortData(filteredData, "name", event.target.value);
-  navRoot.textContent = "";
-  filteredData = sortData(filteredData, "name", event.target.value);
+  
   renderItems(filteredData);
 });
 
