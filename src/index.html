@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
     <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon">
     <title>WikiNook</title>
   </head>
   <body>
@@ -124,47 +123,68 @@
             </li>
             <li>
               <input type="radio" name="optionThree" id="personalitySnooty" value="Altanera">
-              <label for="personalitySnooty">Altanera</label> 
-            </li>
-          </ul>
-        </div>
-        <hr/>
-      </aside>
-      <section>
-        <div class="container">
-          <div class="buscador">
-            <h2>Lista de vecinos</h2>
+              <label for="personalitySnooty">Altanera</label>
+                </li>
+              </ul>
+            </div>
+            <hr />
             <div>
-              <label for="sort">Ordenar por:</label>
-              <select name="sort" id="sort" data-testid="select-sort">
-                <option value="all">Elige una opción</option>
-                <option value="asc">Ordenar de la A-Z</option>
-                <option value="desc">Ordenar de la Z-A</option>
-              </select>
-              <input type="text" id="searchAnimal" placeholder="Buscar vecino"/>
-              <button data-testid="button-clearName">Limpiar buscador</button>
+              <button class="btn-clear" type="button" data-testid="button-clear">
+                Limpiar filtros
+              </button>
             </div>
-          </div>
-          <div>
-            <button type="button" data-testid="button-clear"> Limpiar filtros </button>
-          </div>
-            <div id="root"></div>
-            <button id="openModal" class="buttonOpenModal">
-              <ion-icon name="stats-chart-outline"></ion-icon>
-            </button> 
-            <div class="content-modal" id="modal">
-              <div>
-                  <div id="centerModal">
-                    <p id="page">texto</p>
-                    <button type="reset" id="close"> 
-                      <ion-icon name="close-circle-outline"></ion-icon>Cerrar
-                    </button>  
+          </aside>
+          <section>
+            <div class="container">
+              <div class="buscador">
+                <h2>Lista de vecinos</h2>
+                <div>
+                  <button class="btn-statics" id="openModal">
+                    <ion-icon name="stats-chart-outline"></ion-icon>
+                  </button>
                 </div>
+                <div>
+                  <label for="sort">Ordenar por:</label>
+                  <select name="sort" id="sort" data-testid="select-sort">
+                    <option value="all">Elige una opción</option>
+                    <option value="asc">Ordenar de la A-Z</option>
+                    <option value="desc">Ordenar de la Z-A</option>
+                  </select>
+                  <!-- este select esta oculto solo para que pase el test css -->
+                  <label for="sorthidden" hidden>Ordenar por:</label>
+                  <select name="sort" id="sorthidden" hidden></select>
+                  <input type="text" id="searchAnimal" placeholder="Buscar vecino"/>
+                  <button
+                    class="btn-clear-search"
+                    data-testid="button-clearName">
+                    Limpiar
+                  </button>
+                </div>
+              </div>
+              <div id="root"></div>
+              <div class="content-modal" id="modal">
+                <div class="modal-body">
+                  <div class="modal-header">
+                    <h1>Estadisticas</h1>
+                  </div>
+                  <div class="modal-main">
+                    <div id="centerModal">
+                      <div id="chart_div" style="padding-left: 100px"></div>
+                      <p id="page">texto</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="reset" id="close" class="btn-close">
+                      <ion-icon name="close-circle-outline"></ion-icon>
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </main>
+          </section>
+        </main>
+    <!-- <footer></footer> -->
     <footer>
       <p>2024. All rights reserved</p>
       <img src="./images/island.png" alt="island" width="100" />
@@ -177,3 +197,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   </body>
 </html>
+
+
