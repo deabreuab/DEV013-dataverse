@@ -249,8 +249,7 @@ export default [
     personality: "Dulce",
     gender: "Femenino",
     imageUrl: "https://dodo.ac/np/images/thumb/9/91/Fauna_NH.png/150px-Fauna_NH.png",
-    shortDescription:
-      "Fauna es una aldeana ciervo normal en la serie Animal Crossing",
+    shortDescription: "Fauna es una aldeana ciervo normal en la serie Animal Crossing",
     description: "Fauna tiene personalidad normal, por lo que tendrá un carácter amable, cariñoso y tranquilo. Fauna disfruta de los pasatiempos comunes, tales como la pesca y atrapar bichos, generalmente para mantenerse activa. Fauna frecuentemente invitará al Jugador a su casa, donde denotará sus preocupaciones por la higiene y la limpieza. Fauna se sentirá decepcionada u ofendida fácilmente por otros vecinos, en particular con los vecinos vagos que se despistan fácilmente en sus conversaciones y los vecinos picajosos que tienen una naturaleza grosera e irritable.",
     facts: {
       zodiacSign: "Aries",
@@ -265,10 +264,8 @@ export default [
     personality: "Esnob",
     gender: "Masculino",
     imageUrl: "https://dodo.ac/np/images/2/2a/Raymond_NH.png",
-    shortDescription:
-      "Narciso es un aldeano gato Esnob en la serie Animal Crossing",
-    description:
-      "Narciso es un gato con pelaje de color gris con un mechón de pelo rubio en la frente y puntas de sus orejas, patas y cola son de color negro. Narciso tiene heterocromía, por lo que sus ojos son de colores diferentes, su ojo izquierdo es de color verde mientras que su ojo derecho es de color marrón, tiene una boca triangular de la cual sobresalen un par de colmillos que solo pueden verse cuando abre la boca. Lleva un par de gafas de pasta gruesa de color negro.",
+    shortDescription: "Narciso es un aldeano gato Esnob en la serie Animal Crossing",
+    description: "Narciso es un gato con pelaje de color gris con un mechón de pelo rubio en la frente y puntas de sus orejas, patas y cola son de color negro. Narciso tiene heterocromía, por lo que sus ojos son de colores diferentes, su ojo izquierdo es de color verde mientras que su ojo derecho es de color marrón, tiene una boca triangular de la cual sobresalen un par de colmillos que solo pueden verse cuando abre la boca. Lleva un par de gafas de pasta gruesa de color negro.",
     facts: {
       zodiacSign: "Libra",
       birthDate: "01/10",
