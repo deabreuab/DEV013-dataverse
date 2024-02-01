@@ -1,11 +1,9 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
 export const sortData = (data, sortBy, sortOrder) => {
-  //aquí debo llamar lo que debe realizar que es el sort
   data.sort((a, b) => {
     const valueA = a[sortBy];
     const valueB = b[sortBy];
     const compare = valueA.localeCompare(valueB);
-    return sortOrder === "asc" ? compare : -compare; //operador ternario
+    return sortOrder === "asc" ? compare : -compare; 
   });
   return data;
 };
@@ -47,5 +45,5 @@ export const computeStats = (data) => {
     2
   );
   console.log(typeof totalMen, totalWomen);
-  return `Porcentaje personajes masculinos: ${totalMen}% \nPorcentaje personajes femeninos: ${totalWomen}%`; // \n se usa para hacer un salto de linea en un texto
+  return `Porcentaje personajes masculinos: ${totalMen}% \nPorcentaje personajes femeninos: ${totalWomen}%`;
 };
