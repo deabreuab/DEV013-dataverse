@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon"><!--con esto aparece un icono en la pestaña-->
+    <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styleInfo.css">
     <title>DATAVERSE</title>
 </head>
@@ -16,7 +16,7 @@
       
       <article class="contentVisible" hidden="hidden" >
       <h2>WIKINOOK</h2>
-        <p>Bienvenido a la wikinook, a continuación te explicaremos de que trata</p> <!--ME FALTA OCULTAR ESTE APARTADO-->
+        <p>Bienvenido a la wikinook, a continuación te explicaremos de que trata</p> 
         <button type="button" id="continue">
           <a href="#sectionOne">
             <ion-icon name="caret-forward"></ion-icon>
@@ -43,68 +43,68 @@
       </article>
     
       <article id="sectionThree" hidden="until-found" class="contentHidden">
-        <span>
+        <div>
           <p>Podrás filtrarlos por especie, personalidad y hasta signo zodiacal</p>
           <br/>
           <p class="page">PERSONALIDAD</p>    
-          <span>
+          <div>
             <input type="radio" name="checkSweet" id="checkOne"> 
             <label for="checkOne">Dulce</label>
-          </span>
-        <span>
+          </div>
+        <div>
           <input type="radio" name="checkSnooty" id="checkTwo"> 
           <label for="checkTwo">Altanera</label>
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkCranky" id="checkThree">
           <label for="checkThree">Gruñona</label> 
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkJock" id="checkFour">
           <label for="checkFour">Deportiva</label> 
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkLazy" id="checkFive">
           <label for="checkFive">Perezosa</label> 
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkSmug" id="checkSix">
           <label for="checkSix">Esnob</label> 
-        </span>
+        </div>
       <p class="page">ESPECIES</p>
-        <span>
+        <div>
           <input type="radio" name="checkDog" id="dog"> 
           <label for="dog">Perro</label>
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkCat" id="cat"> 
           <label for="cat">Gato</label>
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkChicken" id="chicken"> 
           <label for="chicken">Pollo</label>
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkSquirrel" id="squirrel"> 
           <label for="squirrel">Ardilla</label>
-        </span>
-        <span>
+        </div>
+        <div>
           <input type="radio" name="checkMouse" id="mouse"> 
           <label for="mouse">Ratón</label>
-        </span>
-      </span>
-    <span>
+        </div>
+      </div>
+    <div>
       <button type="button" class="next">
           <a href="#sectionFour"><ion-icon name="caret-forward"></ion-icon></a>
       </button>
-    </span>
+    </div>
       </article>
     
       <article id="sectionFour" hidden="until-found" class="contentHidden">
         <h2>WIKINOOK</h2>
         <p>¡Ahora si! ¿Puedes brindarnos tu nombre antes de comenzar? Te registraremos en un segundo...</p>
         <input type="text" name="name" id="name" placeholder="Nombre">
-        <button type="button"><ion-icon name="send"></ion-icon></button>
+        <button type="button" class="infoAdditional"><a href="index.html"><ion-icon name="send"></ion-icon></a></button>
       </article>
 
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>    

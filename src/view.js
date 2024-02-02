@@ -1,42 +1,38 @@
 export const renderItems = (data) => {
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
-  const navRoot = document.getElementById("root"); // id del nav donde van los elemento ul y li
-  navRoot.innerHTML = ''
-  
-  const listUl = document.createElement("ul"); // creación de etiqueta ul
-  data.forEach((vecino) => {
-    const listLi = document.createElement("li"); // creación de etiqueta li
+  const navRoot = document.getElementById("root");
+  const listUl = document.createElement("ul");
+  data.forEach((element) => {
+    const listLi = document.createElement("li");
     listUl.appendChild(listLi);
-    listLi.setAttribute('itemscope','') // Esto lo agregue para que pasarán los test HTML, aunque ya lo teníamos lo exigía dentro del li
+    listLi.setAttribute('itemscope','')
     listLi.setAttribute('itemtype', 'https://schema.org/Game')
+    listLi.className = "cardList"
     const divCard = document.createElement("div");
     divCard.className = "card";
-    if (vecino.personality === "Gruñon") {
+    if (element.personality === "Gruñon") {
       divCard.classList.add("cardGrunon");
     }
-    if (vecino.personality === "Deportista") {
+    if (element.personality === "Deportista") {
       divCard.classList.add("cardDeportista");
     }
-    if (vecino.personality === "Altanera") {
+    if (element.personality === "Altanera") {
       divCard.classList.add("cardAltanera");
     }
-    if (vecino.personality === "Dulce") {
+    if (element.personality === "Dulce") {
       divCard.classList.add("cardDulce");
     }
-    if (vecino.personality === "Perezoso") {
+    if (element.personality === "Perezoso") {
       divCard.classList.add("cardPerezoso");
     }
-    if (vecino.personality === "Esnob") {
+    if (element.personality === "Esnob") {
       divCard.classList.add("cardEsnob");
     }
-    if (vecino.personality === "Vivaracha") {
+    if (element.personality === "Vivaracha") {
       divCard.classList.add("cardVivaracha");
     }
     listLi.appendChild(divCard);
 
     const dl = document.createElement("dl");
-    dl.setAttribute("itemscope", "");
-    dl.setAttribute("itemtype", "https://schema.org/Game");
     divCard.appendChild(dl);
 
     const divHeader = document.createElement("div");
@@ -58,10 +54,10 @@ export const renderItems = (data) => {
 
     const ddGender = document.createElement("dd");
     ddGender.setAttribute("itemprop", "gender");
-    if (vecino.gender === "Femenino") {
-      ddGender.classList.add("genderFemenino");
+    if (element.gender === "Femenino") {
+      ddGender.classList.add("genderFemale");
     } else {
-      ddGender.classList.add("genderMasculino");
+      ddGender.classList.add("genderMale");
     }
     divHeader.appendChild(ddGender);
 
@@ -71,7 +67,7 @@ export const renderItems = (data) => {
 
     const ddSign = document.createElement("dd");
     ddSign.setAttribute("itemprop", "zodiacSign");
-    switch (vecino.facts.zodiacSign) {
+    switch (element.facts.zodiacSign) {
     case "Libra":
       ddSign.classList.add("signLibra");
       break;
@@ -79,10 +75,10 @@ export const renderItems = (data) => {
       ddSign.classList.add("signAries");
       break;
     case "Capricornio":
-      ddSign.classList.add("signCapricornio");
+      ddSign.classList.add("signCapricorn");
       break;
     case "Acuario":
-      ddSign.classList.add("signAcuario");
+      ddSign.classList.add("signAquarius");
       break;
     case "Leo":
       ddSign.classList.add("signLeo");
@@ -91,22 +87,22 @@ export const renderItems = (data) => {
       ddSign.classList.add("signVirgo");
       break;
     case "Piscis":
-      ddSign.classList.add("signPiscis");
+      ddSign.classList.add("signPisces");
       break;
     case "Cancer":
       ddSign.classList.add("signCancer");
       break;
     case "Sagitario":
-      ddSign.classList.add("signSagitario");
+      ddSign.classList.add("signSagittarius");
       break;
     case "Escorpio":
-      ddSign.classList.add("signEscorpio");
+      ddSign.classList.add("signScorpio");
       break;
     case "Geminis":
       ddSign.classList.add("signLibra");
       break;
     case "Tauro":
-      ddSign.classList.add("signTauro");
+      ddSign.classList.add("signTaurus");
       break;
     default:
       break;
@@ -115,8 +111,8 @@ export const renderItems = (data) => {
 
     // Body
     const image = document.createElement("img");
-    image.setAttribute("alt", vecino.name);
-    image.setAttribute("src", vecino.imageUrl);
+    image.setAttribute("alt", element.name);
+    image.setAttribute("src", element.imageUrl);
     divBody.appendChild(image);
 
     // Footer
@@ -130,7 +126,7 @@ export const renderItems = (data) => {
 
     const ddSpecie = document.createElement("dd");
     ddSpecie.setAttribute("itemprop", "species");
-    ddSpecie.innerText = vecino.species;
+    ddSpecie.innerText = element.species;
     divInfo.appendChild(ddSpecie);
 
     const dtName = document.createElement("dt");
@@ -139,7 +135,7 @@ export const renderItems = (data) => {
 
     const ddName = document.createElement("dd");
     ddName.setAttribute("itemprop", "name");
-    ddName.innerText = vecino.name;
+    ddName.innerText = element.name;
     divInfo.appendChild(ddName);
 
     const dtPersonality = document.createElement("dt");
@@ -148,7 +144,7 @@ export const renderItems = (data) => {
 
     const ddPersonality = document.createElement("dd");
     ddPersonality.setAttribute("itemprop", "personality");
-    let personality = vecino.personality;
+    let personality = element.personality;
     if (personality.length > 5) {
       personality = personality.substring(0, 5) + "..";
     }
@@ -170,7 +166,7 @@ export const renderItems = (data) => {
 
     const ddBirthday = document.createElement("dd");
     ddBirthday.setAttribute("itemprop", "birthDate");
-    ddBirthday.innerText = vecino.facts.birthDate;
+    ddBirthday.innerText = element.facts.birthDate;
     divDate.appendChild(ddBirthday);
   });
   return navRoot.appendChild(listUl);
