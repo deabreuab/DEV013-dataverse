@@ -1,0 +1,85 @@
+/*estos se utilizan para que no aparezca el contenido del HTML hasta que le das clic al botón*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: rgb(11, 10, 12);
+    text-align: center;
+    font-size: 14px;
+}
+p {
+    font-size: 14px;
+}
+.page {
+    font-size: 16px;
+    color: black;
+}
+label {
+    font-size: 14px;
+}
+.next {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+body {
+    background-image: url(../src/images/fondo.webp);
+    background-size: cover;
+}
+img {
+    height: 150px;
+    width: 150px;
+}
+.contentVisible {
+    display: block;
+    font-size: 48px;
+    text-align: center;
+    
+}
+.contentHidden {
+    font-size: 48px;
+    text-align: center;
+    display: none;
+}
+.contentHidden:target {
+    display: block;
+}
+.contentVisible:target {
+    display: none;
+}
+@media (min-width: 1200px) {
+    h1 {
+        color: rgb(11, 10, 12);
+        text-align: center;
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    body {
+      background-color:beige;
+    }
+    p {
+        font-size: 32px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    button {
+        font-size: 22px;
+    }
+    #name {
+        font-size: 22px;
+    }
+    img {
+        width: 400px;
+        height: 400px;
+    }
+    .page {
+        font-size: 34px;
+        color: black;
+    }
+    label {
+        font-size: 32px;
+    }
+}

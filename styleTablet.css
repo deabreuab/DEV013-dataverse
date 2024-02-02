@@ -1,0 +1,25 @@
+@media (min-width: 600px){
+    body {
+        font-size: 16px;
+        background: linear-gradient(to bottom, #F5EFE3, #FEE9D7 90%, #61d2e7 100%, #02bdd6);
+    }   
+    h1 {  
+        font-size: 28px;
+        color: rgb(164, 116, 219);
+        text-align: center;
+    }
+    footer {
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+        text-align: end;
+    }
+    p {
+        font-size: 16px;
+    }
+    #root img {
+        width: 150px;
+        height: 200px;
+    }
+}
+/*Este color es de prueba, para ver la diferencia al hacer más pequeña la panatalla y ver como cambia*/

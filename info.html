@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/animal.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styleInfo.css">
+    <title>DATAVERSE</title>
+</head>
+<body>
+    <header >
+        <h1>
+          Tarjetas Animal Crossing
+        </h1>
+      </header>
+      
+      <article class="contentVisible" hidden="hidden" >
+      <h2>WIKINOOK</h2>
+        <p>Bienvenido a la wikinook, a continuación te explicaremos de que trata</p> 
+        <button type="button" id="continue">
+          <a href="#sectionOne">
+            <ion-icon name="caret-forward"></ion-icon>
+          </a>
+        </button>
+        <button type="button" id="following">
+          <a href="#sectionFour">SALTAR</a>
+        </button>
+    </article>
+    
+      <article id="sectionOne" hidden="until-found" class="contentHidden">
+        <h2 >WIKINOOK</h2>
+        <p>Aquí podrás encontrar diferentes vecinos de Animal Crossing y conocerlos mucho mejor</p>
+        <button type="button">
+          <a href="#sectionTwo"> <ion-icon name="caret-forward"></ion-icon></a></button>
+      </article>
+    
+      <article id="sectionTwo" hidden="until-found" class="contentHidden">
+        <p>Visualizarás a tus vecinos preferidos en tarjetas que guardan su información</p>
+        <figure><img src="https://areajugones.sport.es/wp-content/uploads/2020/09/cartas-amiibo-animal-crossing-2.jpg" alt="tajetas animal Crossing" ></figure>
+        <button type="button">
+          <a href="#sectionThree"><ion-icon name="caret-forward"></ion-icon></a>
+        </button>
+      </article>
+    
+      <article id="sectionThree" hidden="until-found" class="contentHidden">
+        <div>
+          <p>Podrás filtrarlos por especie, personalidad y hasta signo zodiacal</p>
+          <br/>
+          <p class="page">PERSONALIDAD</p>    
+          <div>
+            <input type="radio" name="checkSweet" id="checkOne"> 
+            <label for="checkOne">Dulce</label>
+          </div>
+        <div>
+          <input type="radio" name="checkSnooty" id="checkTwo"> 
+          <label for="checkTwo">Altanera</label>
+        </div>
+        <div>
+          <input type="radio" name="checkCranky" id="checkThree">
+          <label for="checkThree">Gruñona</label> 
+        </div>
+        <div>
+          <input type="radio" name="checkJock" id="checkFour">
+          <label for="checkFour">Deportiva</label> 
+        </div>
+        <div>
+          <input type="radio" name="checkLazy" id="checkFive">
+          <label for="checkFive">Perezosa</label> 
+        </div>
+        <div>
+          <input type="radio" name="checkSmug" id="checkSix">
+          <label for="checkSix">Esnob</label> 
+        </div>
+      <p class="page">ESPECIES</p>
+        <div>
+          <input type="radio" name="checkDog" id="dog"> 
+          <label for="dog">Perro</label>
+        </div>
+        <div>
+          <input type="radio" name="checkCat" id="cat"> 
+          <label for="cat">Gato</label>
+        </div>
+        <div>
+          <input type="radio" name="checkChicken" id="chicken"> 
+          <label for="chicken">Pollo</label>
+        </div>
+        <div>
+          <input type="radio" name="checkSquirrel" id="squirrel"> 
+          <label for="squirrel">Ardilla</label>
+        </div>
+        <div>
+          <input type="radio" name="checkMouse" id="mouse"> 
+          <label for="mouse">Ratón</label>
+        </div>
+      </div>
+    <div>
+      <button type="button" class="next">
+          <a href="#sectionFour"><ion-icon name="caret-forward"></ion-icon></a>
+      </button>
+    </div>
+      </article>
+    
+      <article id="sectionFour" hidden="until-found" class="contentHidden">
+        <h2>WIKINOOK</h2>
+        <p>¡Ahora si! ¿Puedes brindarnos tu nombre antes de comenzar? Te registraremos en un segundo...</p>
+        <input type="text" name="name" id="name" placeholder="Nombre">
+        <button type="button" class="infoAdditional"><a href="index.html"><ion-icon name="send"></ion-icon></a></button>
+      </article>
+
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>    
+</body>
+</html>
